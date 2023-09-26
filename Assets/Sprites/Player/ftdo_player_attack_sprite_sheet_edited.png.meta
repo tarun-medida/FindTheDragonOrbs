@@ -1,0 +1,883 @@
+fileFormatVersion: 2
+guid: d5bb2590861e345458814c842c729c64
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 8
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ftdo_player_attack_sprite_sheet_edited_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 40
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6456b93832c4d34d94ee83686747119
+      internalID: -1823664590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_player_attack_sprite_sheet_edited_1
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 40
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c64e26b4e80c564a8622399319343c6
+      internalID: -307171712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_player_attack_sprite_sheet_edited_2
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 40
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25164a19332e9a743a581873f9818564
+      internalID: -1875133519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_player_attack_sprite_sheet_edited_4
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 40
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e05b39e6afaac54fadb0e235fc4c2bb
+      internalID: -563409681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_player_attack_sprite_sheet_edited_5
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 40
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f04493f601aad21469cac1e08d225eea
+      internalID: 1208673013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_player_attack_sprite_sheet_edited_6
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 40
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebeeabf3949bfa1489ccc0cfebc4a098
+      internalID: -945487167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_player_attack_sprite_sheet_edited_7
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 40
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f2747ac9590e2446a3bbdda8f19f49f
+      internalID: -351997375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_player_attack_sprite_sheet_edited_8
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 40
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bda3e61b499d85040bef43291da85300
+      internalID: 1572488674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_player_attack_sprite_sheet_edited_10
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 41
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbc78e45eafca5c4f807fb3a2b8c5368
+      internalID: -229842996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_player_attack_sprite_sheet_edited_11
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 41
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41fcf8e73cc9c144faf08d5e469215b5
+      internalID: 1811187904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_player_attack_sprite_sheet_edited_13
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 41
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02d8193a6401496478bcaccec9f93078
+      internalID: -1493444855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_player_attack_sprite_sheet_edited_14
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 41
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deb5bb07567b239498e849134d491c98
+      internalID: -368642651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_player_attack_sprite_sheet_edited_15
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 40
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9319cc810e357842b6153c2d6eee55f
+      internalID: 1538260885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_player_attack_sprite_sheet_edited_16
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 40
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12a17d599c8ce4846983a9440d5eaf83
+      internalID: 1063037130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_player_attack_sprite_sheet_edited_18
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 40
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2572e785af0bf4418926fb40569d506
+      internalID: 848209939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_player_attack_sprite_sheet_edited_20
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 41
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7803d17130eff95478fc5e1e1320dc9b
+      internalID: -928879294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_player_attack_sprite_sheet_edited_21
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 40
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d79982fbdd0537148a83db2a59887055
+      internalID: -28764807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_player_attack_sprite_sheet_edited_22
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 40
+        width: 21
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78b03c1fd8c032d4fa01c5a739a379ad
+      internalID: -827940690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_player_attack_sprite_sheet_edited_23
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 5
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49ab41ba13e5693408b1687162ef01f4
+      internalID: -791504933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_player_attack_sprite_sheet_edited_24
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 5
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81a257e92d4af1c48b9be7397fcfdfb2
+      internalID: -217624731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_player_attack_sprite_sheet_edited_25
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 5
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7e3e117403f13b4d95fa4c6f0c55d42
+      internalID: 437035253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_player_attack_sprite_sheet_edited_26
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 5
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b118891c3f086d48abaacb836228f56
+      internalID: 1858675768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_player_attack_sprite_sheet_edited_28
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 5
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcccbf9c65217bb4fa6c764619e21feb
+      internalID: -166655117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_player_attack_sprite_sheet_edited_29
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 5
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23b9c8b07e15e804c862fe4c31c11d8b
+      internalID: -1471824302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_player_attack_sprite_sheet_edited_30
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 4
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0feb1cbacf482a144a16c5511e88b08b
+      internalID: -1210364039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_player_attack_sprite_sheet_edited_32
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 3
+        width: 21
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba328876a0c390b40ab45bed333997c1
+      internalID: -1807580546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_player_attack_sprite_sheet_edited_33
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 4
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c95a9527c783244dacdb6e44f30ec3f
+      internalID: -874910825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_player_attack_sprite_sheet_edited_35
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 4
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 776661fc9482f19448218f3bfd276d2d
+      internalID: -1823280359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_player_attack_sprite_sheet_edited_36
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 4
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 364c2562299c231448e78d3d3c9a2b6e
+      internalID: 1777511250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_player_attack_sprite_sheet_edited_37
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 4
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e6ac4e2c9a86644f87a5f3d1d5f50a9
+      internalID: -1244111818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_player_attack_sprite_sheet_edited_38
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 5
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b69d07e8e48b3174c96d34d2f998f987
+      internalID: -456034974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_player_attack_sprite_sheet_edited_39
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 5
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e6018628251e8349ab3bc333a930375
+      internalID: -1421563733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_player_attack_sprite_sheet_edited_40
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 6
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17b08b5adb6443949bd297e1f3b92347
+      internalID: -47500198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_player_attack_sprite_sheet_edited_41
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 6
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 173896f261a8ae149a5283196c09ee52
+      internalID: 275531912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ftdo_player_attack_sprite_sheet_edited_0: -1823664590
+      ftdo_player_attack_sprite_sheet_edited_1: -307171712
+      ftdo_player_attack_sprite_sheet_edited_10: -229842996
+      ftdo_player_attack_sprite_sheet_edited_11: 1811187904
+      ftdo_player_attack_sprite_sheet_edited_12: 1876907488
+      ftdo_player_attack_sprite_sheet_edited_13: -1493444855
+      ftdo_player_attack_sprite_sheet_edited_14: -368642651
+      ftdo_player_attack_sprite_sheet_edited_15: 1538260885
+      ftdo_player_attack_sprite_sheet_edited_16: 1063037130
+      ftdo_player_attack_sprite_sheet_edited_17: 1304204253
+      ftdo_player_attack_sprite_sheet_edited_18: 848209939
+      ftdo_player_attack_sprite_sheet_edited_19: 1935415524
+      ftdo_player_attack_sprite_sheet_edited_2: -1875133519
+      ftdo_player_attack_sprite_sheet_edited_20: -928879294
+      ftdo_player_attack_sprite_sheet_edited_21: -28764807
+      ftdo_player_attack_sprite_sheet_edited_22: -827940690
+      ftdo_player_attack_sprite_sheet_edited_23: -791504933
+      ftdo_player_attack_sprite_sheet_edited_24: -217624731
+      ftdo_player_attack_sprite_sheet_edited_25: 437035253
+      ftdo_player_attack_sprite_sheet_edited_26: 1858675768
+      ftdo_player_attack_sprite_sheet_edited_27: -419448162
+      ftdo_player_attack_sprite_sheet_edited_28: -166655117
+      ftdo_player_attack_sprite_sheet_edited_29: -1471824302
+      ftdo_player_attack_sprite_sheet_edited_3: -219931008
+      ftdo_player_attack_sprite_sheet_edited_30: -1210364039
+      ftdo_player_attack_sprite_sheet_edited_31: 977415120
+      ftdo_player_attack_sprite_sheet_edited_32: -1807580546
+      ftdo_player_attack_sprite_sheet_edited_33: -874910825
+      ftdo_player_attack_sprite_sheet_edited_34: 1451626353
+      ftdo_player_attack_sprite_sheet_edited_35: -1823280359
+      ftdo_player_attack_sprite_sheet_edited_36: 1777511250
+      ftdo_player_attack_sprite_sheet_edited_37: -1244111818
+      ftdo_player_attack_sprite_sheet_edited_38: -456034974
+      ftdo_player_attack_sprite_sheet_edited_39: -1421563733
+      ftdo_player_attack_sprite_sheet_edited_4: -563409681
+      ftdo_player_attack_sprite_sheet_edited_40: -47500198
+      ftdo_player_attack_sprite_sheet_edited_41: 275531912
+      ftdo_player_attack_sprite_sheet_edited_5: 1208673013
+      ftdo_player_attack_sprite_sheet_edited_6: -945487167
+      ftdo_player_attack_sprite_sheet_edited_7: -351997375
+      ftdo_player_attack_sprite_sheet_edited_8: 1572488674
+      ftdo_player_attack_sprite_sheet_edited_9: 158509866
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

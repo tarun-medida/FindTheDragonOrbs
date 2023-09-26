@@ -1,0 +1,4 @@
+repository "FindTheDragonOrbs@FDTO@cloud"
+  path "/"
+    br "/main"
+    co "/main"
