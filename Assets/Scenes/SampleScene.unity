@@ -59018,7 +59018,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -153, y: 88.4}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &841449097
@@ -60279,8 +60279,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 348.50302, y: 195.9998}
-  m_SizeDelta: {x: 580.84, y: 496.67}
+  m_AnchoredPosition: {x: 536.089, y: 301.5179}
+  m_SizeDelta: {x: 890.3575, y: 502.4735}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1191089508
 GameObject:
@@ -63253,7 +63253,7 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 8
-  attackDamage: 20
+  attackDamage: 10
 --- !u!50 &1665433177
 Rigidbody2D:
   serializedVersion: 4
@@ -63341,7 +63341,6 @@ MonoBehaviour:
   health: 10
   maxHealth: 10
   coins: {fileID: 6201843436008572030, guid: ea5ee8c545beb024793e11ca8d179eda, type: 3}
-  healthBar: {fileID: 0}
 --- !u!114 &1665433180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63351,7 +63350,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1665433171}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee03d8c33eed03d45af8edec28cce687, type: 3}
+  m_Script: {fileID: 11500000, guid: 942a15fe7a13dcb4b8f285fb8e9e888b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 1377790708}

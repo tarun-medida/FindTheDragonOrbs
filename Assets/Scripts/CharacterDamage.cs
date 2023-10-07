@@ -12,7 +12,7 @@ public class CharacterDamage : MonoBehaviour, IDamageable
     Animator animator;
     public GameObject coins;
     private int no_of_coins;
-    [SerializeField] BossHealthBar healthBar;
+    BossHealthBar healthBar;
 
     public float Health
     {
@@ -56,7 +56,7 @@ public class CharacterDamage : MonoBehaviour, IDamageable
         if (gameObject.tag != "Player")
         {
             Destroy(gameObject);
-            no_of_coins = Random.Range(0, 4);
+            no_of_coins = Random.Range(1, 4);
             for (int i = 0; i < no_of_coins; i++)
             {
                 Instantiate(coins, transform.position, Quaternion.identity);
@@ -72,6 +72,6 @@ public class CharacterDamage : MonoBehaviour, IDamageable
     {
         Health = health - damage;
         rb.AddForce(push);
-        healthBar.UpdateHealth(Health, maxHealth);
+        healthBar.UpdateHealth(health,maxHealth);
     }
 }
