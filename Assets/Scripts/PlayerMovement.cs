@@ -90,9 +90,7 @@ public class PlayerMovement : MonoBehaviour
         if(health <= 0) 
         {
             deathHUD.SetActive(true);
-            Time.timeScale = 0;
         }
-
     }
 
     private void OnMove(InputValue playerInput)

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8982870483688355226}
   - component: {fileID: 2059209345291817946}
   - component: {fileID: 1291335760122973187}
+  - component: {fileID: 156971607981768440}
   - component: {fileID: 3883049427020322078}
   m_Layer: 3
   m_Name: Player
@@ -36,6 +37,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4990601347774548189}
+  - {fileID: 1356251954647062443}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -132,12 +134,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   maxHealth: 100
-  no_of_hearts: 3
+  no_of_hearts: 5
   maxNoOfHeartsAllowed: 15
   moveSpeed: 1500
   maxSpeed: 10
   idleFriction: 0.9
   inventory: {fileID: 0}
+  deathHUD: {fileID: 0}
 --- !u!114 &8982870483688355226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,6 +237,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &156971607981768440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2664209976693478659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfb70abe13ff7d247baca5e50f0dd4ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 0}
+  deadMenuUI: {fileID: 0}
 --- !u!114 &3883049427020322078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,7 +263,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7cf977d614ad474394c5b0e65de9cdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 100
+  maxHealth: 100
+  coins: {fileID: 6201843436008572030, guid: ea5ee8c545beb024793e11ca8d179eda, type: 3}
 --- !u!1 &7138262848497482945
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,3 +361,61 @@ MonoBehaviour:
   right: {x: 1.86, y: 0, z: 0}
   left: {x: -1.86, y: 0, z: 0}
   knockbackForce: 500
+--- !u!1 &7486964379489302509
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1356251954647062443}
+  - component: {fileID: 5890990215459691689}
+  m_Layer: 0
+  m_Name: EnemySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1356251954647062443
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7486964379489302509}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.2698412, y: 1.1940298, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1870396013751257188}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5890990215459691689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7486964379489302509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e305f393aac2f8d4eb485dd17167463c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minion: {fileID: 2624753239672429036, guid: d3110d817a79336448c81fb10a19931a, type: 3}
+  waves:
+  - name: Wave 1
+    count: 5
+    rate: 0.5
+  - name: Wave 2
+    count: 10
+    rate: 1
+  - name: Final Wave
+    count: 20
+    rate: 0.7
+  timeBetweenWaves: 5
+  waveCountDown: 0
+  state: 2

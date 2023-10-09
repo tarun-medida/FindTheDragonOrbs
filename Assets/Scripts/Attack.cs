@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
-    public float attackDamage = 1f;
+    public float attackDamage = 5f;
     public Collider2D attackCollider;
     public Vector3 right = new Vector3(1.86f, 0f, 0f);
     public Vector3 left = new Vector3(-1.86f, 0f, 0f);

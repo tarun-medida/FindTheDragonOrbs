@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Minion
   - Coin
+  - Boss
   layers:
   - Default
   - TransparentFX
