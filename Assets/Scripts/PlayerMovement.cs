@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static CoinPick;
 
 public class PlayerMovement : MonoBehaviour 
 {
@@ -102,6 +103,4 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("YInput", moveInput.y);
         }
     }
-
-
 }

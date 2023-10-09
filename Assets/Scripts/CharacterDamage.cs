@@ -77,6 +77,5 @@ public class CharacterDamage : MonoBehaviour, IDamageable
         Health = health - damage;
         rb.AddForce(push);
         healthBar.UpdateHealth(health,maxHealth);
-        Debug.Log(health);
     }
 }

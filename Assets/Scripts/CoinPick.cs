@@ -2,14 +2,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CoinPick : MonoBehaviour
 {
     public enum PickupObject { COIN,GEM};
 
     public PickupObject type = PickupObject.COIN;
-
-    private static int no_of_coins = 0;
+    private static int coins = 0;
+    public int score=0;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -17,15 +18,12 @@ public class CoinPick : MonoBehaviour
         {
             if (type == PickupObject.COIN)
             {
-                no_of_coins++;
-                Debug.Log(no_of_coins);
+                coins++;
+                score = coins;
+                Debug.Log(score);
                 Destroy(gameObject);
+                Score.instance.IncreaseScore();
             }
         }
-    }
-
-    internal void RandomCoins()
-    {
-        Debug.Log("Coinnsss");
     }
 }
