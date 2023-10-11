@@ -293,7 +293,7 @@ Transform:
   m_Children:
   - {fileID: 6000654561742540242}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8934877454865141328
 MonoBehaviour:
@@ -310,7 +310,6 @@ MonoBehaviour:
   health: 20
   maxHealth: 20
   coins: {fileID: 6201843436008572030, guid: ea5ee8c545beb024793e11ca8d179eda, type: 3}
-  winHud: {fileID: 0}
 --- !u!212 &2976309671951494
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -403,7 +402,9 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 8
+  winHud: {fileID: 3504043131845481363, guid: 12cbeedd906a58c49891bc7d73238e37, type: 3}
   attackDamage: 10
+  health: 50
 --- !u!50 &6549869990418249319
 Rigidbody2D:
   serializedVersion: 4

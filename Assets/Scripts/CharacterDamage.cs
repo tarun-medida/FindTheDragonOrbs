@@ -13,7 +13,6 @@ public class CharacterDamage : MonoBehaviour, IDamageable
     public GameObject coins;
     private int no_of_coins;
     BossHealthBar healthBar;
-    public GameObject winHud;
     public float Health
     {
         set
@@ -23,11 +22,6 @@ public class CharacterDamage : MonoBehaviour, IDamageable
             {
                 if(gameObject.tag== "Player")
                 {
-                    Time.timeScale = 0;
-                }
-                if(gameObject.tag == "Boss")
-                {
-                    winHud.SetActive(true);
                     Time.timeScale = 0;
                 }
                 Defeated();

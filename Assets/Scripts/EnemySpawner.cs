@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject minion;
+    public GameObject boss;
     public enum SpawnState { Spawning, Waiting, Counting};
     [System.Serializable]
     public class Wave
@@ -83,8 +84,13 @@ public class EnemySpawner : MonoBehaviour
     IEnumerator SpawnWave(Wave _wave)
     {
         state = SpawnState.Spawning;
+        
         for (int i = 0;i < _wave.count;i++)
         {
+            if (_wave.name == "Final Wave" && i ==4)
+            {
+                Instantiate(boss, new Vector3(Random.Range(10f, -10f), Random.Range(10f, -10f), 0), Quaternion.identity);
+            }
             Instantiate(minion, new Vector3(Random.Range(10f, -10f), Random.Range(10f, -10f), 0), Quaternion.identity);
             yield return new WaitForSeconds(1f/ _wave.rate);
         }

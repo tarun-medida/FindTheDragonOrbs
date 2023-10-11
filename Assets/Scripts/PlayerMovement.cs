@@ -8,8 +8,8 @@ public class PlayerMovement : MonoBehaviour
 {
     CharacterDamage characterDamage;
 
-    public float health=100;
-    public float maxHealth = 100;
+    public float health=200;
+    public float maxHealth = 200;
 
     public int no_of_hearts = 3;
     public int maxNoOfHeartsAllowed = 15;
@@ -26,7 +26,10 @@ public class PlayerMovement : MonoBehaviour
     private GameObject inventory;
 
     public GameObject deathHUD;
-    
+    public Enemy enemy;
+    public GameObject winHud;
+    private float enemyHealth=10;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -34,6 +37,8 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         characterDamage = GetComponent<CharacterDamage>();
         health = characterDamage.Health;
+        if(enemy.tag == "Boss")
+        enemyHealth = enemy.health;
     }
 
     private void FixedUpdate()
@@ -92,6 +97,24 @@ public class PlayerMovement : MonoBehaviour
         {
             deathHUD.SetActive(true);
         }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            moveSpeed = 2500f;
+        }
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            moveSpeed = 1000f;
+        }
+        if(enemy.tag == "Boss")
+        {
+            enemyHealth = enemy.health;
+            if (enemyHealth == 0)
+            {
+                Debug.Log(enemyHealth);
+                winHud.SetActive(false);
+            }
+        }
+        Debug.Log(enemyHealth);
     }
 
     private void OnMove(InputValue playerInput)
