@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class BossHealthBar : MonoBehaviour
 {
     [SerializeField] private Slider slider;
-    private CharacterDamage character;
 
     public void UpdateHealth(float health,float maxHealth)
     {

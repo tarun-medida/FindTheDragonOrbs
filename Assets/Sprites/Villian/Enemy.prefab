@@ -114,7 +114,7 @@ Transform:
   m_Children:
   - {fileID: 3147693320984113064}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5753780177004029881
 MonoBehaviour:
@@ -131,6 +131,8 @@ MonoBehaviour:
   health: 50
   maxHealth: 50
   coins: {fileID: 6201843436008572030, guid: ea5ee8c545beb024793e11ca8d179eda, type: 3}
+  playerMovement: {fileID: 3787394740917709967, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
+  winScreen: 0
 --- !u!212 &3855809021679708226
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -219,12 +221,13 @@ MonoBehaviour:
   speed: 5
   checkRadius: 100
   attackRadius: 2
+  characterDamage: {fileID: 5753780177004029881}
   shouldRotate: 1
   mask:
     serializedVersion: 2
     m_Bits: 8
-  winHud: {fileID: 3504043131845481363, guid: 12cbeedd906a58c49891bc7d73238e37, type: 3}
   attackDamage: 10
+  winHud: {fileID: 8564545092389672093, guid: 12cbeedd906a58c49891bc7d73238e37, type: 3}
 --- !u!50 &3440256854121006334
 Rigidbody2D:
   serializedVersion: 4

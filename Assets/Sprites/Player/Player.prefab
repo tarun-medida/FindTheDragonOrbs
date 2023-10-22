@@ -32,7 +32,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2664209976693478659}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.49, y: -16.1, z: 0}
+  m_LocalPosition: {x: -2, y: -2, z: 0}
   m_LocalScale: {x: 0.7875, y: 0.8375, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -141,6 +141,7 @@ MonoBehaviour:
   idleFriction: 0.9
   inventory: {fileID: 0}
   deathHUD: {fileID: 0}
+  winHUD: {fileID: 0}
 --- !u!114 &8982870483688355226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,6 +267,7 @@ MonoBehaviour:
   health: 100
   maxHealth: 100
   coins: {fileID: 6201843436008572030, guid: ea5ee8c545beb024793e11ca8d179eda, type: 3}
+  playerMovement: {fileID: 3787394740917709967}
 --- !u!1 &7138262848497482945
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,7 +358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 211fb6461b1e8e94c87ac2889f28cccd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 1
+  attackDamage: 5
   attackCollider: {fileID: 6816762286748277952}
   right: {x: 1.86, y: 0, z: 0}
   left: {x: -1.86, y: 0, z: 0}
@@ -406,16 +408,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minion: {fileID: 2624753239672429036, guid: d3110d817a79336448c81fb10a19931a, type: 3}
+  boss: {fileID: 2199941372347920905, guid: 10e7f01850fef254ea2e5a4d6d21a0fa, type: 3}
   waves:
   - name: Wave 1
     count: 5
     rate: 0.5
+    area: {fileID: 0}
   - name: Wave 2
     count: 10
     rate: 1
+    area: {fileID: 0}
   - name: Final Wave
     count: 20
     rate: 0.7
+    area: {fileID: 0}
   timeBetweenWaves: 5
   waveCountDown: 0
   state: 2

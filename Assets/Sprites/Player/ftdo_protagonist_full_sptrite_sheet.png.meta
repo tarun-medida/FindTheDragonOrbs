@@ -1,0 +1,1309 @@
+fileFormatVersion: 2
+guid: 7d851cd529ae83043ba831e610729fac
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 8
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 359
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 778fbdf2f38b7454d9675187218711d6
+      internalID: 64244727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 359
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c927614f9e373da4e99d4d456f4f3a73
+      internalID: -740301403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 359
+        width: 13
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8290605111d4924da14b521f9be0c73
+      internalID: 1538445889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 359
+        width: 13
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8b1f7e8d8bf2c54e8c1db139f6fed47
+      internalID: 140993405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 327
+        width: 15
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6c25b13ea0720b41bca6e12c434eed9
+      internalID: -1246606139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 327
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df49159e4dff44e4e88efa0309e7a153
+      internalID: 1479688171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 327
+        width: 15
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f1d4b8c6bb0f2042b5dc15776bfcb38
+      internalID: -1397131852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 327
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a18f819709a0371469cb3c80328d26cd
+      internalID: 619366399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 295
+        width: 12
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eddcbf9d44a6eb447a9b8c8e56b5053c
+      internalID: -117149828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 295
+        width: 15
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3111dab979d3e55479eabb2f9dbcac09
+      internalID: -1590838062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 295
+        width: 12
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47ceb0eb81dcd924b83d34ea9d730401
+      internalID: -139259198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 295
+        width: 15
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f9e8cd0c747504408e9e5412170b35f
+      internalID: -1197242294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 263
+        width: 15
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f92000c6cd101e44aa9da07f0849e1e7
+      internalID: -703831787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 263
+        width: 12
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fd9d40ed3c8b804c94164af4cd2b778
+      internalID: -877034590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 263
+        width: 15
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af64b7f4dae1761498a0b9327480f73b
+      internalID: -362177643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 263
+        width: 12
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39d072917c7ba704da26c311a0009c03
+      internalID: 1876231603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 231
+        width: 15
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35b9e069068c5054daa69700f350f7a7
+      internalID: -1305307087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_17
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 231
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46cbf64bc1ed42141b562df4417082fb
+      internalID: 386569105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_18
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 231
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb2e13f5ad0aec04fb05a2c11099f1a1
+      internalID: 538163527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 231
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3afe957a7845fd34a89226381beb6e6d
+      internalID: 109684467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_20
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 199
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23224b74d64cf61488c3b67b7d9e1dad
+      internalID: -409650368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_22
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 167
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e6815db45761564d86579041eca6d36
+      internalID: -1496465538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_23
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 167
+        width: 20
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a98aa5dda2aaef4190c3b171f4a410a
+      internalID: -1627993448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_24
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 165
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a3a85b9aed14c945b0fa28f16828101
+      internalID: 1438943855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_25
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 165
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba241f65b27d7524888e8af134b14dac
+      internalID: -521148721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_26
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 167
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1ebf739b7ce70f49a3d8439c5edfee0
+      internalID: 2097365681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_27
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 135
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe5ff1a161692524493b29959e0f1a28
+      internalID: 1845517192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_28
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 135
+        width: 19
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0e98d4b4c94c4446b4135514da93750
+      internalID: -750736232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_29
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 135
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbc921d095ebfa641a3389218d6b0ac5
+      internalID: 1775774143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_30
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 135
+        width: 23
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1c10ef15e2ff0441854dc8544bf264d
+      internalID: 343668102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_31
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 135
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c8a097d90dae8f41a18e27012d36374
+      internalID: 611671272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_32
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 135
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3d83ab7885b07a4bbe0ec1c33f660bf
+      internalID: -1779111523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 103
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 962e05f2ea4ed5842955ddfc4d282cca
+      internalID: -1356829155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_34
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 103
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 427992e8552c54b47855464479a30c3c
+      internalID: 1805374869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_35
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 103
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 276099b8ffe681448af611ab22cf713a
+      internalID: 2053974631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_36
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 103
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f6c13f897e57774a870615dfe10f770
+      internalID: -665540285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_37
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 103
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b4be3e9d64cbdc40a04c509a00e76a6
+      internalID: -970465412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 71
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 710595f72b7726549818b7894da03890
+      internalID: 951737864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_39
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 71
+        width: 18
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5c794c43a3a8ad45a33931a56462522
+      internalID: 252864337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_40
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 72
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afd14f704d6a26842b50ede241c5e645
+      internalID: -1683226888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_41
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 71
+        width: 22
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 963aa60cb40a84146b95af48e4abd6c5
+      internalID: 676552126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_42
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 71
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aa7fd2d65b1e55438a05440c9fa1ac7
+      internalID: -17558220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_43
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 71
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e906930fde3a88b4ca6c6ed495ee8afe
+      internalID: -2101935042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_44
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 39
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d3693b4b49500d45b717732e22897bf
+      internalID: 1061784511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_45
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 39
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d40454d787a5b37429f131b4a0ef9872
+      internalID: -758631671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_46
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 39
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f38ab67a8a469d459d0bf0679de42a9
+      internalID: 1579215659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_47
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 39
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b41e73779acd9e49bf5c6544fce762c
+      internalID: 1312552776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_49
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 39
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0926a791c04bb4d4c82156d26320bd71
+      internalID: -505515882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f80503cfdec822c4ba331756c361e7f6
+      internalID: -489294491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_51
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 7
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bb12e366ee08c34a8dcf19034a243de
+      internalID: -1834661494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_53
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 6
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 622abe874ca908d43946a50cda179517
+      internalID: 589060304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_54
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 7
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bcf9ef11e0e93e4f855250658717933
+      internalID: 994181142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ftdo_protagonist_full_sptrite_sheet_55
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 7
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a933647fc06d71247931a5efdee30bfb
+      internalID: -1856106768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ftdo_protagonist_full_sptrite_sheet_0: 64244727
+      ftdo_protagonist_full_sptrite_sheet_1: -740301403
+      ftdo_protagonist_full_sptrite_sheet_10: -139259198
+      ftdo_protagonist_full_sptrite_sheet_11: -1197242294
+      ftdo_protagonist_full_sptrite_sheet_12: -703831787
+      ftdo_protagonist_full_sptrite_sheet_13: -877034590
+      ftdo_protagonist_full_sptrite_sheet_14: -362177643
+      ftdo_protagonist_full_sptrite_sheet_15: 1876231603
+      ftdo_protagonist_full_sptrite_sheet_16: -1305307087
+      ftdo_protagonist_full_sptrite_sheet_17: 386569105
+      ftdo_protagonist_full_sptrite_sheet_18: 538163527
+      ftdo_protagonist_full_sptrite_sheet_19: 109684467
+      ftdo_protagonist_full_sptrite_sheet_2: 1538445889
+      ftdo_protagonist_full_sptrite_sheet_20: -409650368
+      ftdo_protagonist_full_sptrite_sheet_21: 1345635260
+      ftdo_protagonist_full_sptrite_sheet_22: -1496465538
+      ftdo_protagonist_full_sptrite_sheet_23: -1627993448
+      ftdo_protagonist_full_sptrite_sheet_24: 1438943855
+      ftdo_protagonist_full_sptrite_sheet_25: -521148721
+      ftdo_protagonist_full_sptrite_sheet_26: 2097365681
+      ftdo_protagonist_full_sptrite_sheet_27: 1845517192
+      ftdo_protagonist_full_sptrite_sheet_28: -750736232
+      ftdo_protagonist_full_sptrite_sheet_29: 1775774143
+      ftdo_protagonist_full_sptrite_sheet_3: 140993405
+      ftdo_protagonist_full_sptrite_sheet_30: 343668102
+      ftdo_protagonist_full_sptrite_sheet_31: 611671272
+      ftdo_protagonist_full_sptrite_sheet_32: -1779111523
+      ftdo_protagonist_full_sptrite_sheet_33: -1356829155
+      ftdo_protagonist_full_sptrite_sheet_34: 1805374869
+      ftdo_protagonist_full_sptrite_sheet_35: 2053974631
+      ftdo_protagonist_full_sptrite_sheet_36: -665540285
+      ftdo_protagonist_full_sptrite_sheet_37: -970465412
+      ftdo_protagonist_full_sptrite_sheet_38: 951737864
+      ftdo_protagonist_full_sptrite_sheet_39: 252864337
+      ftdo_protagonist_full_sptrite_sheet_4: -1246606139
+      ftdo_protagonist_full_sptrite_sheet_40: -1683226888
+      ftdo_protagonist_full_sptrite_sheet_41: 676552126
+      ftdo_protagonist_full_sptrite_sheet_42: -17558220
+      ftdo_protagonist_full_sptrite_sheet_43: -2101935042
+      ftdo_protagonist_full_sptrite_sheet_44: 1061784511
+      ftdo_protagonist_full_sptrite_sheet_45: -758631671
+      ftdo_protagonist_full_sptrite_sheet_46: 1579215659
+      ftdo_protagonist_full_sptrite_sheet_47: 1312552776
+      ftdo_protagonist_full_sptrite_sheet_48: -5222029
+      ftdo_protagonist_full_sptrite_sheet_49: -505515882
+      ftdo_protagonist_full_sptrite_sheet_5: 1479688171
+      ftdo_protagonist_full_sptrite_sheet_50: -489294491
+      ftdo_protagonist_full_sptrite_sheet_51: -1834661494
+      ftdo_protagonist_full_sptrite_sheet_52: -129055004
+      ftdo_protagonist_full_sptrite_sheet_53: 589060304
+      ftdo_protagonist_full_sptrite_sheet_54: 994181142
+      ftdo_protagonist_full_sptrite_sheet_55: -1856106768
+      ftdo_protagonist_full_sptrite_sheet_6: -1397131852
+      ftdo_protagonist_full_sptrite_sheet_7: 619366399
+      ftdo_protagonist_full_sptrite_sheet_8: -117149828
+      ftdo_protagonist_full_sptrite_sheet_9: -1590838062
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

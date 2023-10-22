@@ -5,7 +5,8 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject minion;
-    public GameObject boss;
+    //public GameObject boss;
+    
     public enum SpawnState { Spawning, Waiting, Counting};
     [System.Serializable]
     public class Wave
@@ -13,6 +14,7 @@ public class EnemySpawner : MonoBehaviour
         public string name;
         public int count;
         public float rate;
+        public Transform area;
     }
 
     public Wave[] waves;
@@ -87,10 +89,10 @@ public class EnemySpawner : MonoBehaviour
         
         for (int i = 0;i < _wave.count;i++)
         {
-            if (_wave.name == "Final Wave" && i ==4)
-            {
-                Instantiate(boss, new Vector3(Random.Range(10f, -10f), Random.Range(10f, -10f), 0), Quaternion.identity);
-            }
+            //if (_wave.name == "Wave 1" && i == 4)
+            //{
+            //    Instantiate(boss, new Vector3(Random.Range(10f, -10f), Random.Range(10f, -10f), 0), Quaternion.identity);
+            //}
             Instantiate(minion, new Vector3(Random.Range(10f, -10f), Random.Range(10f, -10f), 0), Quaternion.identity);
             yield return new WaitForSeconds(1f/ _wave.rate);
         }
@@ -101,58 +103,4 @@ public class EnemySpawner : MonoBehaviour
         yield break;
     }
 }
-//public GameObject minionSpawner;
 
-
-//public float spawnInterval = 3.5f;
-
-//public int no_of_Waves = 3;
-//public int no_of_Wave_Enemies = 5;
-//public int enemiesMultiplier = 2;
-//private int no_of_spawned_enemies = 0;
-
-//// Start is called before the first frame update
-//void Start()
-//{
-//    StartCoroutine(spawnMinion(spawnInterval, minionSpawner));
-//}
-
-//void Update()
-//{
-
-//}
-
-//private IEnumerator spawnMinion(float interval,GameObject minion)
-//{
-
-//    while(no_of_Waves > 0)
-//    {
-
-//        if(no_of_spawned_enemies != no_of_Wave_Enemies)
-//        {
-//            for (int i = 0; i < no_of_Wave_Enemies; i++)
-//            {
-//                GameObject newMinion = Instantiate(minion, new Vector3(Random.Range(10f, -10f), Random.Range(10f, -10f), 0), Quaternion.identity);
-//                yield return new WaitForSeconds(spawnInterval);
-//                no_of_spawned_enemies++;
-//                Debug.Log(i + 1);
-//                Debug.Log(no_of_spawned_enemies);
-//            }
-//            Debug.Log(CharacterDamage.enemiesKilled);
-//        }
-//        if (CharacterDamage.enemiesKilled == no_of_spawned_enemies)
-//        {
-//            no_of_Wave_Enemies = no_of_Wave_Enemies * enemiesMultiplier;
-//            Debug.Log("New wave starting");
-//            no_of_Waves--;
-//            yield return new WaitForSeconds(5f);
-//        }
-//    }
-//    if(no_of_Waves == 0)
-//    {
-//        StopCoroutine(spawnMinion(spawnInterval, minionSpawner));
-//        Debug.Log("Waves Ended");
-//    }
-
-//    yield break;
-//}

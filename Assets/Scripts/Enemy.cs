@@ -8,10 +8,11 @@ public class Enemy : MonoBehaviour
     public float speed;
     public float checkRadius;
     public float attackRadius;
+    public CharacterDamage characterDamage;
 
     public bool shouldRotate;
     public LayerMask mask;
-    public GameObject winHud;
+
 
     private Transform target;
     private Rigidbody2D rb;
@@ -23,9 +24,8 @@ public class Enemy : MonoBehaviour
     private bool isInChaseRange;
     private bool isInAttackRange;
     public float attackDamage = 1.0f;
+    public GameObject winHud;
 
-    CharacterDamage characterDamage;
-    public float health = 50;
 
     private void Start()
     {
@@ -34,7 +34,6 @@ public class Enemy : MonoBehaviour
         target = GameObject.FindWithTag("Player").transform;
         sprite = GetComponent<SpriteRenderer>();
         characterDamage = GetComponent<CharacterDamage>();
-        health = characterDamage.Health;
     }
 
     private void Update()
@@ -63,19 +62,12 @@ public class Enemy : MonoBehaviour
                 sprite.flipX = false;
             }
         }
-        health = characterDamage.Health;
-        
-        if (health <= 0)
+        if(characterDamage.health <= 0)
         {
-            if (gameObject.tag == "Boss")
-            {
-                winHud.SetActive(true);
-                Time.timeScale = 0;
-            }
-        }
-        if (gameObject.tag == "Boss")
-        {
-            Debug.Log(health);
+            Debug.Log("dead");
+            winHud.SetActive(true);
+            Destroy(gameObject);
+            Time.timeScale = 0;
         }
 
     }

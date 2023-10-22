@@ -26,9 +26,8 @@ public class PlayerMovement : MonoBehaviour
     private GameObject inventory;
 
     public GameObject deathHUD;
-    public Enemy enemy;
-    public GameObject winHud;
-    private float enemyHealth=10;
+    
+    
 
     private void Start()
     {
@@ -37,8 +36,6 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         characterDamage = GetComponent<CharacterDamage>();
         health = characterDamage.Health;
-        if(enemy.tag == "Boss")
-        enemyHealth = enemy.health;
     }
 
     private void FixedUpdate()
@@ -73,19 +70,20 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Update()
     {
+        
         if (Input.GetKeyDown(KeyCode.M))
         {
             inventory.SetActive(true);
             if(no_of_hearts<=maxNoOfHeartsAllowed)
             no_of_hearts++;
-
+           
         }
         if (Input.GetKeyDown(KeyCode.N))
         {
             inventory.SetActive(false);
             if(no_of_hearts<=maxNoOfHeartsAllowed)
             no_of_hearts--;
-
+           
         }
         
         if (Input.GetKey(KeyCode.K))
@@ -100,21 +98,14 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             moveSpeed = 2500f;
+           
         }
         if (Input.GetKeyUp(KeyCode.Space))
         {
             moveSpeed = 1000f;
+           
         }
-        if(enemy.tag == "Boss")
-        {
-            enemyHealth = enemy.health;
-            if (enemyHealth == 0)
-            {
-                Debug.Log(enemyHealth);
-                winHud.SetActive(false);
-            }
-        }
-        Debug.Log(enemyHealth);
+       
     }
 
     private void OnMove(InputValue playerInput)
@@ -126,4 +117,11 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("YInput", moveInput.y);
         }
     }
+    //public void WinScreen()
+    //{
+    //    Debug.Log("HIIIII");
+    //    showWinScreen = true;
+    //    Debug.Log(showWinScreen);
+    //    //ShowWinHud();
+    //}
 }

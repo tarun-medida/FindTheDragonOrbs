@@ -20,7 +20,7 @@ public class CoinPick : MonoBehaviour
             {
                 coins++;
                 score = coins;
-                Debug.Log(score);
+                //Debug.Log(score);
                 Destroy(gameObject);
                 Score.instance.IncreaseScore();
             }
