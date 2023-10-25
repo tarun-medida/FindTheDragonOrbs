@@ -61,7 +61,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_TargetDisplay: 0
 --- !u!114 &8699478679433216092
 MonoBehaviour:
@@ -311,6 +311,7 @@ MonoBehaviour:
   maxHealth: 20
   coins: {fileID: 6201843436008572030, guid: ea5ee8c545beb024793e11ca8d179eda, type: 3}
   playerMovement: {fileID: 3787394740917709967, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
+  winScreen: 0
 --- !u!212 &2976309671951494
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -399,11 +400,13 @@ MonoBehaviour:
   speed: 3
   checkRadius: 200
   attackRadius: 1
+  characterDamage: {fileID: 0}
   shouldRotate: 1
   mask:
     serializedVersion: 2
     m_Bits: 8
   attackDamage: 10
+  winHud: {fileID: 0}
 --- !u!50 &6549869990418249319
 Rigidbody2D:
   serializedVersion: 4
@@ -700,7 +703,7 @@ RectTransform:
   m_GameObject: {fileID: 6155639703076008483}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.44315, y: 0.44315, z: 0.44315}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 869826643246904654}

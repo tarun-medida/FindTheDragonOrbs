@@ -6,22 +6,23 @@ public class EnemySpawner : MonoBehaviour
 {
     public GameObject minion;
     //public GameObject boss;
-    
+    public Transform[] spawnPoints;
+    [SerializeField] public int count;
+    [SerializeField] public float spawnRate;
     public enum SpawnState { Spawning, Waiting, Counting};
-    [System.Serializable]
-    public class Wave
-    {
-        public string name;
-        public int count;
-        public float rate;
-        public Transform area;
-    }
+    //[System.Serializable]
+    //public class Wave
+    //{
+    //    public string name;
+    //    public int count;
+    //    public float rate;
+    //}
 
-    public Wave[] waves;
-    private int nextWave = 0;
-    public float timeBetweenWaves = 5f;
+    //public Wave[] waves;
+    //private int nextWave = 0;
+    //public float timeBetweenWaves = 5f;
 
-    public float waveCountDown;
+    //public float waveCountDown;
     public SpawnState state = SpawnState.Counting;
 
     private float searchCountdown = 1f;
@@ -29,7 +30,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void Start()
     {
-        waveCountDown = timeBetweenWaves;
+        //waveCountDown = timeBetweenWaves;
     }
 
     private void Update()
@@ -38,17 +39,18 @@ public class EnemySpawner : MonoBehaviour
         {
             if (!EnemyIsAlive())
             {
-                Debug.Log(waves[nextWave].name + " is completed.");
-                state = SpawnState.Counting;
-                waveCountDown = timeBetweenWaves;
-                if(nextWave+1 > waves.Length - 1)
-                {
-                    return;
-                }
-                else
-                {
-                    nextWave++;
-                }
+                Debug.Log("Spawning is completed.");
+                Destroy(gameObject);
+                //state = SpawnState.Counting;
+                //waveCountDown = timeBetweenWaves;
+                //if(nextWave+1 > waves.Length - 1)
+                //{
+                //    return;
+                //}
+                //else
+                //{
+                //    nextWave++;
+                //}
 
             }
             else
@@ -56,17 +58,17 @@ public class EnemySpawner : MonoBehaviour
                 return;
             }
         }
-        if (waveCountDown <= 0)
-        {
-            if (state != SpawnState.Spawning)
-            {
-                StartCoroutine(SpawnWave(waves[nextWave]));
-            }
-        }
-        else
-        {
-            waveCountDown -= Time.deltaTime;
-        }
+        //if (waveCountDown <= 0)
+        //{
+        //    if (state != SpawnState.Spawning)
+        //    {
+        //        StartCoroutine(SpawnWave(waves[nextWave]));
+        //    }
+        //}
+        //else
+        //{
+        //    waveCountDown -= Time.deltaTime;
+        //}
     }
     bool EnemyIsAlive()
     {
@@ -81,20 +83,37 @@ public class EnemySpawner : MonoBehaviour
         }
         return true;
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            if(state != SpawnState.Spawning)
+            {
+                StartCoroutine(SpawnWave());
+                GetComponent<Collider2D>().enabled = false;
+            }
+        }
+    }
+    //private void OnTriggerExit2D(Collider2D collision)
+    //{
+    //    Destroy(gameObject);
+    //}
 
-
-    IEnumerator SpawnWave(Wave _wave)
+    IEnumerator SpawnWave()
     {
         state = SpawnState.Spawning;
         
-        for (int i = 0;i < _wave.count;i++)
+        for (int i = 0;i < count ;i++)
         {
-            //if (_wave.name == "Wave 1" && i == 4)
-            //{
-            //    Instantiate(boss, new Vector3(Random.Range(10f, -10f), Random.Range(10f, -10f), 0), Quaternion.identity);
-            //}
-            Instantiate(minion, new Vector3(Random.Range(10f, -10f), Random.Range(10f, -10f), 0), Quaternion.identity);
-            yield return new WaitForSeconds(1f/ _wave.rate);
+            int randSpawnPoint = Random.Range(0, spawnPoints.Length);
+            Instantiate(minion, spawnPoints[randSpawnPoint].position, Quaternion.identity);
+            if (i == count)
+            {
+                Debug.Log("All enemies spawned");
+                Destroy(gameObject);
+            }
+            yield return new WaitForSeconds(1f/ spawnRate);
+           
         }
 
 
