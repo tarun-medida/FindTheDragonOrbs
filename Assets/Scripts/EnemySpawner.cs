@@ -26,6 +26,7 @@ public class EnemySpawner : MonoBehaviour
     public SpawnState state = SpawnState.Counting;
 
     private float searchCountdown = 1f;
+    [SerializeField] public GameObject areaBlocker;
 
 
     private void Start()
@@ -41,6 +42,7 @@ public class EnemySpawner : MonoBehaviour
             {
                 Debug.Log("Spawning is completed.");
                 Destroy(gameObject);
+                Destroy(areaBlocker);
                 //state = SpawnState.Counting;
                 //waveCountDown = timeBetweenWaves;
                 //if(nextWave+1 > waves.Length - 1)
