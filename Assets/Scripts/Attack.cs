@@ -10,6 +10,7 @@ public class Attack : MonoBehaviour
     public Vector3 left = new Vector3(-1.86f, 0f, 0f);
     public float knockbackForce = 5f;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +37,7 @@ public class Attack : MonoBehaviour
 
     void FacingRight(bool facingRight)
     {
-        if(facingRight)
+        if (facingRight)
         {
             gameObject.transform.localPosition = right;
         }
