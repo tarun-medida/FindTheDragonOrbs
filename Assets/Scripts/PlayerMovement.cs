@@ -122,5 +122,6 @@ public class PlayerMovement : MonoBehaviour
     public void Dead()
     {
         Time.timeScale = 0;
+        GetComponent<AudioSource>().Pause();
     }
 }
