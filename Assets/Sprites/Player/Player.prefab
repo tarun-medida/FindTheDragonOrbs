@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 139938902, guid: c8466f453ab71d845bf26f1ba939fe15, type: 3}
+  m_Sprite: {fileID: 64244727, guid: 7d851cd529ae83043ba831e610729fac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -141,7 +141,6 @@ MonoBehaviour:
   idleFriction: 0.9
   inventory: {fileID: 0}
   deathHUD: {fileID: 0}
-  winHUD: {fileID: 0}
 --- !u!114 &8982870483688355226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,7 +207,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 3.75}
+    oldSize: {x: 2, y: 3.375}
     newSize: {x: 0.27, y: 0.58}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -268,6 +267,7 @@ MonoBehaviour:
   maxHealth: 100
   coins: {fileID: 6201843436008572030, guid: ea5ee8c545beb024793e11ca8d179eda, type: 3}
   playerMovement: {fileID: 3787394740917709967}
+  winScreen: 0
 --- !u!1 &7138262848497482945
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,20 +408,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minion: {fileID: 2624753239672429036, guid: d3110d817a79336448c81fb10a19931a, type: 3}
-  boss: {fileID: 2199941372347920905, guid: 10e7f01850fef254ea2e5a4d6d21a0fa, type: 3}
-  waves:
-  - name: Wave 1
-    count: 5
-    rate: 0.5
-    area: {fileID: 0}
-  - name: Wave 2
-    count: 10
-    rate: 1
-    area: {fileID: 0}
-  - name: Final Wave
-    count: 20
-    rate: 0.7
-    area: {fileID: 0}
-  timeBetweenWaves: 5
-  waveCountDown: 0
+  spawnPoints: []
+  count: 0
+  spawnRate: 0
   state: 2
+  areaBlocker: {fileID: 0}

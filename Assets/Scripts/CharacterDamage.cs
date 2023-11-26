@@ -22,12 +22,11 @@ public class CharacterDamage : MonoBehaviour, IDamageable
             health = value;
             if (health <= 0)
             {
-                if(gameObject.tag == "Player")
-                {
-                    Time.timeScale = 0;
-                }
-                
                 Defeated();
+                if (gameObject.tag == "Player")
+                {
+                    playerMovement.Invoke("Dead", 2f);
+                }
             }
         }
         get

@@ -43,7 +43,8 @@ public class PlayerMovement : MonoBehaviour
         if(move && moveInput != Vector2.zero)
         {
             rb.AddForce(moveInput * moveSpeed * Time.deltaTime);
-            if(rb.velocity.magnitude > maxSpeed)
+            GetComponent<AudioSource>().UnPause();
+            if (rb.velocity.magnitude > maxSpeed)
             {
                 float speed = Mathf.Lerp(rb.velocity.magnitude,maxSpeed,idleFriction);
                 rb.velocity = rb.velocity.normalized * speed;
@@ -65,6 +66,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = Vector2.Lerp(rb.velocity,Vector2.zero,idleFriction);
             animator.SetBool("isMoving", false);
+            GetComponent<AudioSource>().Pause();
         }
         
     }
@@ -117,11 +119,8 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("YInput", moveInput.y);
         }
     }
-    //public void WinScreen()
-    //{
-    //    Debug.Log("HIIIII");
-    //    showWinScreen = true;
-    //    Debug.Log(showWinScreen);
-    //    //ShowWinHud();
-    //}
+    public void Dead()
+    {
+        Time.timeScale = 0;
+    }
 }
