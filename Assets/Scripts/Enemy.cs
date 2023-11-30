@@ -8,9 +8,11 @@ public class Enemy : MonoBehaviour
     public float speed;
     public float checkRadius;
     public float attackRadius;
+    public CharacterDamage characterDamage;
 
     public bool shouldRotate;
     public LayerMask mask;
+
 
     private Transform target;
     private Rigidbody2D rb;
@@ -22,7 +24,7 @@ public class Enemy : MonoBehaviour
     private bool isInChaseRange;
     private bool isInAttackRange;
     public float attackDamage = 1.0f;
-
+    public GameObject winHud;
 
 
     private void Start()
@@ -31,6 +33,7 @@ public class Enemy : MonoBehaviour
         animator = GetComponent<Animator>();
         target = GameObject.FindWithTag("Player").transform;
         sprite = GetComponent<SpriteRenderer>();
+        characterDamage = GetComponent<CharacterDamage>();
     }
 
     private void Update()
@@ -48,16 +51,23 @@ public class Enemy : MonoBehaviour
 
         if (shouldRotate)
         {
-            animator.SetFloat("X",direction.x);
-            animator.SetFloat ("Y",direction.y);
-            if(direction.x < 0)
+            animator.SetFloat("X", direction.x);
+            animator.SetFloat("Y", direction.y);
+            if (direction.x < 0)
             {
                 sprite.flipX = true;
             }
-            if(direction.x > 0) 
+            if (direction.x > 0)
             {
                 sprite.flipX = false;
             }
+        }
+        if(characterDamage.health <= 0)
+        {
+            Debug.Log("dead");
+            winHud.SetActive(true);
+            Destroy(gameObject);
+            Time.timeScale = 0;
         }
 
     }

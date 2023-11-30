@@ -5,28 +5,33 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject minion;
+    //public GameObject boss;
+    public Transform[] spawnPoints;
+    [SerializeField] public int count;
+    [SerializeField] public float spawnRate;
     public enum SpawnState { Spawning, Waiting, Counting};
-    [System.Serializable]
-    public class Wave
-    {
-        public string name;
-        public int count;
-        public float rate;
-    }
+    //[System.Serializable]
+    //public class Wave
+    //{
+    //    public string name;
+    //    public int count;
+    //    public float rate;
+    //}
 
-    public Wave[] waves;
-    private int nextWave = 0;
-    public float timeBetweenWaves = 5f;
+    //public Wave[] waves;
+    //private int nextWave = 0;
+    //public float timeBetweenWaves = 5f;
 
-    public float waveCountDown;
+    //public float waveCountDown;
     public SpawnState state = SpawnState.Counting;
 
     private float searchCountdown = 1f;
+    [SerializeField] public GameObject areaBlocker;
 
 
     private void Start()
     {
-        waveCountDown = timeBetweenWaves;
+        //waveCountDown = timeBetweenWaves;
     }
 
     private void Update()
@@ -35,17 +40,19 @@ public class EnemySpawner : MonoBehaviour
         {
             if (!EnemyIsAlive())
             {
-                Debug.Log(waves[nextWave].name + " is completed.");
-                state = SpawnState.Counting;
-                waveCountDown = timeBetweenWaves;
-                if(nextWave+1 > waves.Length - 1)
-                {
-                    return;
-                }
-                else
-                {
-                    nextWave++;
-                }
+                Debug.Log("Spawning is completed.");
+                Destroy(gameObject);
+                Destroy(areaBlocker);
+                //state = SpawnState.Counting;
+                //waveCountDown = timeBetweenWaves;
+                //if(nextWave+1 > waves.Length - 1)
+                //{
+                //    return;
+                //}
+                //else
+                //{
+                //    nextWave++;
+                //}
 
             }
             else
@@ -53,17 +60,17 @@ public class EnemySpawner : MonoBehaviour
                 return;
             }
         }
-        if (waveCountDown <= 0)
-        {
-            if (state != SpawnState.Spawning)
-            {
-                StartCoroutine(SpawnWave(waves[nextWave]));
-            }
-        }
-        else
-        {
-            waveCountDown -= Time.deltaTime;
-        }
+        //if (waveCountDown <= 0)
+        //{
+        //    if (state != SpawnState.Spawning)
+        //    {
+        //        StartCoroutine(SpawnWave(waves[nextWave]));
+        //    }
+        //}
+        //else
+        //{
+        //    waveCountDown -= Time.deltaTime;
+        //}
     }
     bool EnemyIsAlive()
     {
@@ -78,15 +85,37 @@ public class EnemySpawner : MonoBehaviour
         }
         return true;
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            if(state != SpawnState.Spawning)
+            {
+                StartCoroutine(SpawnWave());
+                GetComponent<Collider2D>().enabled = false;
+            }
+        }
+    }
+    //private void OnTriggerExit2D(Collider2D collision)
+    //{
+    //    Destroy(gameObject);
+    //}
 
-
-    IEnumerator SpawnWave(Wave _wave)
+    IEnumerator SpawnWave()
     {
         state = SpawnState.Spawning;
-        for (int i = 0;i < _wave.count;i++)
+        
+        for (int i = 0;i < count ;i++)
         {
-            Instantiate(minion, new Vector3(Random.Range(10f, -10f), Random.Range(10f, -10f), 0), Quaternion.identity);
-            yield return new WaitForSeconds(1f/ _wave.rate);
+            int randSpawnPoint = Random.Range(0, spawnPoints.Length);
+            Instantiate(minion, spawnPoints[randSpawnPoint].position, Quaternion.identity);
+            if (i == count)
+            {
+                Debug.Log("All enemies spawned");
+                Destroy(gameObject);
+            }
+            yield return new WaitForSeconds(1f/ spawnRate);
+           
         }
 
 
@@ -95,58 +124,4 @@ public class EnemySpawner : MonoBehaviour
         yield break;
     }
 }
-//public GameObject minionSpawner;
 
-
-//public float spawnInterval = 3.5f;
-
-//public int no_of_Waves = 3;
-//public int no_of_Wave_Enemies = 5;
-//public int enemiesMultiplier = 2;
-//private int no_of_spawned_enemies = 0;
-
-//// Start is called before the first frame update
-//void Start()
-//{
-//    StartCoroutine(spawnMinion(spawnInterval, minionSpawner));
-//}
-
-//void Update()
-//{
-
-//}
-
-//private IEnumerator spawnMinion(float interval,GameObject minion)
-//{
-
-//    while(no_of_Waves > 0)
-//    {
-
-//        if(no_of_spawned_enemies != no_of_Wave_Enemies)
-//        {
-//            for (int i = 0; i < no_of_Wave_Enemies; i++)
-//            {
-//                GameObject newMinion = Instantiate(minion, new Vector3(Random.Range(10f, -10f), Random.Range(10f, -10f), 0), Quaternion.identity);
-//                yield return new WaitForSeconds(spawnInterval);
-//                no_of_spawned_enemies++;
-//                Debug.Log(i + 1);
-//                Debug.Log(no_of_spawned_enemies);
-//            }
-//            Debug.Log(CharacterDamage.enemiesKilled);
-//        }
-//        if (CharacterDamage.enemiesKilled == no_of_spawned_enemies)
-//        {
-//            no_of_Wave_Enemies = no_of_Wave_Enemies * enemiesMultiplier;
-//            Debug.Log("New wave starting");
-//            no_of_Waves--;
-//            yield return new WaitForSeconds(5f);
-//        }
-//    }
-//    if(no_of_Waves == 0)
-//    {
-//        StopCoroutine(spawnMinion(spawnInterval, minionSpawner));
-//        Debug.Log("Waves Ended");
-//    }
-
-//    yield break;
-//}

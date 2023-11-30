@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
-    public float attackDamage = 1f;
+    public float attackDamage = 5f;
     public Collider2D attackCollider;
     public Vector3 right = new Vector3(1.86f, 0f, 0f);
     public Vector3 left = new Vector3(-1.86f, 0f, 0f);
     public float knockbackForce = 5f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +37,7 @@ public class Attack : MonoBehaviour
 
     void FacingRight(bool facingRight)
     {
-        if(facingRight)
+        if (facingRight)
         {
             gameObject.transform.localPosition = right;
         }
