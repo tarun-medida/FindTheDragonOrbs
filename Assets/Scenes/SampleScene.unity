@@ -9601,11 +9601,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1870396013751257188, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 1870396013751257188, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 1870396013751257188, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
       propertyPath: m_LocalScale.z
