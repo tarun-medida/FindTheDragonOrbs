@@ -26,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
     private GameObject inventory;
 
     public GameObject deathHUD;
+
+    public AudioSource walkSound;
     
     
 
@@ -43,7 +45,8 @@ public class PlayerMovement : MonoBehaviour
         if(move && moveInput != Vector2.zero)
         {
             rb.AddForce(moveInput * moveSpeed * Time.deltaTime);
-            GetComponent<AudioSource>().UnPause();
+            //GetComponent<AudioSource>().UnPause();
+            walkSound.UnPause();
             if (rb.velocity.magnitude > maxSpeed)
             {
                 float speed = Mathf.Lerp(rb.velocity.magnitude,maxSpeed,idleFriction);
@@ -66,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = Vector2.Lerp(rb.velocity,Vector2.zero,idleFriction);
             animator.SetBool("isMoving", false);
-            GetComponent<AudioSource>().Pause();
+            walkSound.Pause();
         }
         
     }
@@ -122,6 +125,6 @@ public class PlayerMovement : MonoBehaviour
     public void Dead()
     {
         Time.timeScale = 0;
-        GetComponent<AudioSource>().Pause();
+        walkSound.Pause();
     }
 }

@@ -15,6 +15,7 @@ public class CharacterDamage : MonoBehaviour, IDamageable
     BossHealthBar healthBar;
     public PlayerMovement playerMovement;
     public bool winScreen = false;
+    public AudioSource PlayerHurtSound;
     public float Health
     {
         set
@@ -74,6 +75,7 @@ public class CharacterDamage : MonoBehaviour, IDamageable
     public void Hit(float damage)
     {
         Health = health - damage;
+        PlayerHurtSound.Play();
     }
 
     public void Hit(float damage,Vector2 push)

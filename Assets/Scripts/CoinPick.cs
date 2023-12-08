@@ -11,16 +11,18 @@ public class CoinPick : MonoBehaviour
     public PickupObject type = PickupObject.COIN;
     private static int coins = 0;
     public int score=0;
-
+    public AudioClip coinPickup;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Player")
         {
+            
             if (type == PickupObject.COIN)
             {
                 coins++;
                 score = coins;
                 //Debug.Log(score);
+                AudioSource.PlayClipAtPoint(coinPickup,transform.position,0.8f);
                 Destroy(gameObject);
                 Score.instance.IncreaseScore();
             }

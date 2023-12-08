@@ -7,10 +7,12 @@ public class GameManager : MonoBehaviour
 {
     public GameObject pauseMenuUI;
     public GameObject deadMenuUI;
+    public AudioSource LevelbackgroundScore;
     Rigidbody2D rb;
     public void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        //LevelbackgroundScore.Play();
     }
     public void OnClickPlay()
     {

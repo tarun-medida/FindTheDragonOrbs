@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 06f6efcd4c5a57145b9b910cba747804
+guid: b37ed7b29db0e95478d3cc1b69614e1f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,9 +48,9 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 8
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AXE_1_0
+      name: attack_button_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 16
-        width: 16
-        height: 16
+        x: 1
+        y: 2
+        width: 30
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,41 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a47ba4c5f162914bb30e9f1d5806cea
-      internalID: 1657977093
+      spriteID: 66e860a68cc2b1143bccf7a70b527820
+      internalID: 2135996745
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AXE_1_1
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 16
-        width: 15
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 73ca05f78fbb9b044b07143433446e06
-      internalID: -2009229964
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AXE_1_2
+      name: attack_button_1
       rect:
         serializedVersion: 2
         x: 33
-        y: 17
-        width: 15
-        height: 15
+        y: 2
+        width: 30
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,41 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f9071532e827a549b6292f8fc198afc
-      internalID: 51705118
+      spriteID: 17661269fa2188744a2560c4515939aa
+      internalID: 1038131043
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AXE_1_3
-      rect:
-        serializedVersion: 2
-        x: 49
-        y: 18
-        width: 15
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9e4765ecbbc58c040bae43d6053f5cae
-      internalID: 212543038
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AXE_1_4
+      name: attack_button_2
       rect:
         serializedVersion: 2
         x: 65
-        y: 17
-        width: 15
-        height: 15
+        y: 2
+        width: 30
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,41 +192,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba26e90a652d01043a9b4d0d8b312003
-      internalID: 399468022
+      spriteID: 2084897e7cd093341a41282d4e6b3041
+      internalID: -104397860
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AXE_1_5
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 16
-        width: 15
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f3ccd26c96ff3f945a673c0efc129844
-      internalID: 1976044548
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AXE_1_6
+      name: attack_button_3
       rect:
         serializedVersion: 2
         x: 97
-        y: 17
-        width: 15
-        height: 15
+        y: 2
+        width: 30
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -276,20 +213,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8cfd48a65cb137d408b25f993c3998b6
-      internalID: -1726659530
+      spriteID: 4a41d0fdc1abfc846ba267537372de43
+      internalID: 1980076209
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AXE_1_7
+      name: attack_button_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 15
-        height: 15
+        x: 129
+        y: 2
+        width: 30
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -297,20 +234,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7c3e6f6dbfb3544b86b6f4d4a3573bc
-      internalID: -200287875
+      spriteID: 5b3507696971da846b61317ff04a34cb
+      internalID: 1920881638
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AXE_1_8
+      name: attack_button_5
       rect:
         serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
+        x: 161
+        y: 2
+        width: 30
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -318,20 +255,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d93e011e2783344bb4368425fac61cf
-      internalID: -1931087532
+      spriteID: a2a016914abec864ba656272c653963c
+      internalID: -249979699
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AXE_1_9
+      name: attack_button_6
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 16
+        x: 193
+        y: 2
+        width: 30
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -339,20 +276,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68cf05b40df9b1b4cadfce6e17caa106
-      internalID: -1971947437
+      spriteID: da8b04e0690faf543a3ae3e848601c51
+      internalID: 658052404
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AXE_1_10
+      name: attack_button_7
       rect:
         serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 16
+        x: 225
+        y: 2
+        width: 30
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -360,8 +297,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4dd292c940bf45a428d08c9ea90d5d98
-      internalID: -266312512
+      spriteID: 5f864c13cae9b3d409a8f185694699be
+      internalID: -1125152381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_button_8
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 2
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae2f86deda84f3842a25fb299ae4490b
+      internalID: -927696508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_button_9
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 2
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb6e6aaa007b35942934a44758e0295f
+      internalID: -1851109436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_button_10
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 2
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 402f56f274b5121478ebd02334c8d092
+      internalID: -930563629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_button_11
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 2
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2edf386887d47c74baf5d326fa6ef513
+      internalID: -1663233326
       vertices: []
       indices: 
       edges: []
@@ -377,17 +398,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      AXE_1_0: 1657977093
-      AXE_1_1: -2009229964
-      AXE_1_10: -266312512
-      AXE_1_2: 51705118
-      AXE_1_3: 212543038
-      AXE_1_4: 399468022
-      AXE_1_5: 1976044548
-      AXE_1_6: -1726659530
-      AXE_1_7: -200287875
-      AXE_1_8: -1931087532
-      AXE_1_9: -1971947437
+      attack_button_0: 2135996745
+      attack_button_1: 1038131043
+      attack_button_10: -930563629
+      attack_button_11: -1663233326
+      attack_button_2: -104397860
+      attack_button_3: 1980076209
+      attack_button_4: 1920881638
+      attack_button_5: -249979699
+      attack_button_6: 658052404
+      attack_button_7: -1125152381
+      attack_button_8: -927696508
+      attack_button_9: -1851109436
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
