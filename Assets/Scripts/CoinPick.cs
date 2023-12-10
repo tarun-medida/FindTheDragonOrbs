@@ -22,7 +22,7 @@ public class CoinPick : MonoBehaviour
                 coins++;
                 score = coins;
                 //Debug.Log(score);
-                AudioSource.PlayClipAtPoint(coinPickup,transform.position,0.8f);
+                AudioSource.PlayClipAtPoint(coinPickup,transform.position,1f);
                 Destroy(gameObject);
                 Score.instance.IncreaseScore();
             }

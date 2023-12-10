@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 using static CoinPick;
 
 public class PlayerMovement : MonoBehaviour 
@@ -10,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
     public float health=200;
     public float maxHealth = 200;
-
+    private float heartsTracker;
     public int no_of_hearts = 3;
     public int maxNoOfHeartsAllowed = 15;
 
@@ -28,8 +30,17 @@ public class PlayerMovement : MonoBehaviour
     public GameObject deathHUD;
 
     public AudioSource walkSound;
-    
-    
+
+    public int noOfHealthPortions;
+    public GameObject HealthRegenObject;
+    public TMP_Text healthRegenText;
+    private Animator healtRegenAnimator;
+
+    //special attack delay and time variables
+    private float coolDownTime = 5f;
+    private float coolDownTimer = 0.0f;
+    private bool isInCoolDown = false;
+    public Image specialAttackRegenTimerImage;
 
     private void Start()
     {
@@ -38,12 +49,20 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         characterDamage = GetComponent<CharacterDamage>();
         health = characterDamage.Health;
+        healthRegenText.text = noOfHealthPortions.ToString();
+        healtRegenAnimator = HealthRegenObject.GetComponent<Animator>();
+        // at start what was the maximum number of hearts the player started with
+        // later on when player purchases new health in inventory then the no_of_hearts will be changed
+        heartsTracker = no_of_hearts;
+        // initially player can use special attack with no cooldown
+        specialAttackRegenTimerImage.fillAmount = 0.0f;
     }
 
     private void FixedUpdate()
     {
-        if(move && moveInput != Vector2.zero)
-        {
+        //if(move && moveInput != Vector2.zero)
+        if(moveInput != Vector2.zero)
+            {
             rb.AddForce(moveInput * moveSpeed * Time.deltaTime);
             //GetComponent<AudioSource>().UnPause();
             walkSound.UnPause();
@@ -73,9 +92,12 @@ public class PlayerMovement : MonoBehaviour
         }
         
     }
+
     private void Update()
     {
+        // keep track
         
+        // debug function
         if (Input.GetKeyDown(KeyCode.M))
         {
             inventory.SetActive(true);
@@ -90,9 +112,45 @@ public class PlayerMovement : MonoBehaviour
             no_of_hearts--;
            
         }
-        
+
         if (Input.GetKey(KeyCode.K))
+        {
             animator.SetTrigger("punch");
+        }
+
+        // drink portion
+        if(noOfHealthPortions <= 0)
+        {
+            healtRegenAnimator.SetBool("NoPortions", true);
+        }
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            if (noOfHealthPortions > 0)
+            {
+                healtRegenAnimator.SetBool("NoPortions", false);
+                // decrease the no of health portions
+                if (getNoOfHeartsFromHealth(health) < heartsTracker)
+                {
+                    healtRegenAnimator.SetTrigger("Regen");
+                    noOfHealthPortions -= 1;
+                    healthRegenText.text = noOfHealthPortions.ToString();
+                    characterDamage.Health += 20f;
+                }
+                else
+                {
+                    Debug.Log("Already full health");
+                }
+            }
+        }
+
+        //do special attack
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            DoSpecialAttack();
+        }
+
+        if (isInCoolDown)
+            ApplyCooldown();
 
         health = characterDamage.Health;
 
@@ -100,6 +158,7 @@ public class PlayerMovement : MonoBehaviour
         {
             deathHUD.SetActive(true);
         }
+        // sprint/walk faster condition
         if (Input.GetKeyDown(KeyCode.Space))
         {
             moveSpeed = 2500f;
@@ -112,6 +171,39 @@ public class PlayerMovement : MonoBehaviour
         }
        
     }
+
+    private bool DoSpecialAttack()
+    {
+        if(isInCoolDown == true)
+        {
+            // in cool down, cannot do speical attack
+            return false;
+        }
+        else
+        {
+            // not in cool down
+            isInCoolDown = true;
+            // setting the timer with the cooldown value
+            coolDownTimer = coolDownTime;
+            return true;
+
+        }
+    }
+
+    private void ApplyCooldown()
+    {
+        coolDownTimer -= Time.deltaTime;
+        if(coolDownTimer < 0.0f)
+        {
+            isInCoolDown= false;
+            specialAttackRegenTimerImage.fillAmount = 0.0f;
+        }
+        else
+        {
+            specialAttackRegenTimerImage.fillAmount = coolDownTimer / coolDownTime;
+        }
+    }
+
 
     private void OnMove(InputValue playerInput)
     {
@@ -126,5 +218,11 @@ public class PlayerMovement : MonoBehaviour
     {
         Time.timeScale = 0;
         walkSound.Pause();
+    }
+
+    private int getNoOfHeartsFromHealth(float hearts)
+    {
+        hearts = (int)(health * no_of_hearts) / maxHealth;
+        return (int)hearts;
     }
 }

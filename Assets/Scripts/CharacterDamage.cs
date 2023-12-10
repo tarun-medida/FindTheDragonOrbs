@@ -47,10 +47,12 @@ public class CharacterDamage : MonoBehaviour, IDamageable
     // Update is called once per frame
     void Update()
     {
+        /*
         if(gameObject.tag == "Boss")
         {
             Debug.Log(health);
         }
+        */
     }
     public void Defeated()
     {

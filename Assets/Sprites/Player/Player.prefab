@@ -141,6 +141,7 @@ MonoBehaviour:
   idleFriction: 0.9
   inventory: {fileID: 0}
   deathHUD: {fileID: 0}
+  walkSound: {fileID: 0}
 --- !u!114 &8982870483688355226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,7 +227,7 @@ Animator:
   m_GameObject: {fileID: 2664209976693478659}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 09a91a075475feb47aae113959f4c50a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 52640c983092a124b8b3a9d672f0b2d9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -251,6 +252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 0}
   deadMenuUI: {fileID: 0}
+  LevelbackgroundScore: {fileID: 0}
 --- !u!114 &3883049427020322078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,6 +270,7 @@ MonoBehaviour:
   coins: {fileID: 6201843436008572030, guid: ea5ee8c545beb024793e11ca8d179eda, type: 3}
   playerMovement: {fileID: 3787394740917709967}
   winScreen: 0
+  PlayerHurtSound: {fileID: 0}
 --- !u!1 &7138262848497482945
 GameObject:
   m_ObjectHideFlags: 0

@@ -36,7 +36,6 @@ public class HealthBarUI : MonoBehaviour
         maxHealth = player.maxHealth;
         health = (int)(player.health * player.no_of_hearts) / maxHealth;
         maxHealthHearts = player.no_of_hearts;
-
         for (int i = 0; i < hearts.Length; i++)
         {
             // mention what sprite image has to be added based on health
@@ -62,5 +61,6 @@ public class HealthBarUI : MonoBehaviour
                 hearts[i].enabled = false;
             }
         }
+
     }
 }
