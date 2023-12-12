@@ -12,10 +12,16 @@ public class HealthBarUI : MonoBehaviour
     public float maxHealth;
     // Sprite of the heart
     public Sprite Heart;
+    public Sprite ThreeQuarterHeart;
+    public Sprite HalfHeart;
+    public Sprite QuarterHeart;
     public Sprite EmptyHeart;
+    private Sprite HeartBasedOnHealth;
     public Image[] hearts;
     private int maxHealthHearts;
     public PlayerMovement player;
+    // to decide which quarter
+    private int heartquarter;
     void Start()
     {
         // intialize on start
@@ -43,6 +49,7 @@ public class HealthBarUI : MonoBehaviour
             {
                 hearts[i].sprite = Heart;
             }
+
             else
             {
                 hearts[i].sprite = EmptyHeart;
@@ -60,6 +67,19 @@ public class HealthBarUI : MonoBehaviour
             {
                 hearts[i].enabled = false;
             }
+        }
+
+        if(health%Mathf.Floor(health) == 0.75)
+        {
+            hearts[(int)Mathf.Ceil(health) - 1].sprite = ThreeQuarterHeart;
+        }
+        else if(health% Mathf.Floor(health) == 0.5)
+        {
+            hearts[(int)Mathf.Ceil(health) - 1].sprite = HalfHeart;
+        }
+        else if(health% Mathf.Floor(health) == 0.25)
+        {
+            hearts[(int)Mathf.Ceil(health) - 1].sprite = QuarterHeart;
         }
 
     }

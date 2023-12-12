@@ -223,6 +223,7 @@ public class PlayerMovement : MonoBehaviour
     private int getNoOfHeartsFromHealth(float hearts)
     {
         hearts = (int)(health * no_of_hearts) / maxHealth;
-        return (int)hearts;
+        // using ceil to ensure that portion can only be used if one heart is totally gone.
+        return (int)Mathf.Ceil(hearts);
     }
 }

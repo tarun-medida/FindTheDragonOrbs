@@ -313,6 +313,7 @@ MonoBehaviour:
   coins: {fileID: 6201843436008572030, guid: ea5ee8c545beb024793e11ca8d179eda, type: 3}
   playerMovement: {fileID: 3787394740917709967, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
   winScreen: 0
+  PlayerHurtSound: {fileID: 0}
 --- !u!212 &2976309671951494
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -406,7 +407,7 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 8
-  attackDamage: 10
+  attackDamage: 5
   winHud: {fileID: 0}
 --- !u!50 &6549869990418249319
 Rigidbody2D:
@@ -795,7 +796,7 @@ Transform:
   m_GameObject: {fileID: 8617991196988682157}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 0}
+  m_LocalScale: {x: 15, y: 15, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8768922491316705557}

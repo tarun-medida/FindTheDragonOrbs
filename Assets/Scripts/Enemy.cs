@@ -94,7 +94,6 @@ public class Enemy : MonoBehaviour
             IDamageable damageableObject = collision.GetComponent<IDamageable>();
             if (damageableObject != null)
             {
-
                 damageableObject.Hit(attackDamage);
             }
         }
