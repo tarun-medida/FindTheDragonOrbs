@@ -91,6 +91,8 @@ public class EnemySpawner : MonoBehaviour
         {
             if(state != SpawnState.Spawning)
             {
+                // play audio
+                this.GetComponent<AudioSource>().Play();
                 StartCoroutine(SpawnWave());
                 GetComponent<Collider2D>().enabled = false;
             }
@@ -108,8 +110,6 @@ public class EnemySpawner : MonoBehaviour
         for (int i = 0;i < count ;i++)
         {
             int randSpawnPoint = Random.Range(0, spawnPoints.Length);
-            // play audio
-            spawnPoints[randSpawnPoint].GetComponent<AudioSource>().Play();
             Instantiate(minion, spawnPoints[randSpawnPoint].position, Quaternion.identity);
             if (i == count)
             {

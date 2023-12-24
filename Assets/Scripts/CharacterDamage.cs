@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Serialization;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class CharacterDamage : MonoBehaviour, IDamageable
@@ -57,7 +58,6 @@ public class CharacterDamage : MonoBehaviour, IDamageable
     public void Defeated()
     {
         
-
         animator.SetTrigger("Defeated");
         
         if (gameObject.tag != "Player")
@@ -72,6 +72,13 @@ public class CharacterDamage : MonoBehaviour, IDamageable
             {
                 Destroy(gameObject);
             }
+        }
+        else
+        {
+            // to stop player movement
+            playerMovement.GetComponent<PlayerInput>().enabled = false;
+            // to ensure enemies stop attack on player death
+            playerMovement.GetComponent<BoxCollider2D>().enabled = false;
         }
     }
     public void Hit(float damage)

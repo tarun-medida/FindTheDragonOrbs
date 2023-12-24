@@ -31,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
     public AudioSource walkSound;
 
+    //portion drink variables
     public int noOfHealthPortions;
     public GameObject HealthRegenObject;
     public TMP_Text healthRegenText;
