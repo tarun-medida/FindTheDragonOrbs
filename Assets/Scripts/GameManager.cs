@@ -3,6 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// Keep track of player attributes and stats
+// In game
+/* Player hearts
+ 
+- health portions purchased
+- item equipped
+- special attack info of the item equipped
+- enemy counter
+- Enemy spawn limiter per level that will be taken by enemy spanwer script
+- Game win and lose condition
+- Coins collected
+// Main menu
+- Items purchased
+- updating player stats and attributes on purchase
+- Coins held
+*/
 public class GameManager : MonoBehaviour
 {
     public GameObject pauseMenuUI;
