@@ -13,6 +13,7 @@ public class StartSpawningEnemies : MonoBehaviour
         {
             Debug.Log("Entered");
             spawner.SpawnEnemies();
+            Destroy(gameObject);
         }
     }
 }
