@@ -45,6 +45,20 @@ public class CharacterDamage : MonoBehaviour, IDamageable
         healthBar = GetComponentInChildren<BossHealthBar>();
     }
 
+    private void FixedUpdate()
+    {
+        if (playerMovement.moveInput.x > 0)
+        {
+            playerMovement.spriteRenderer.flipX = false;
+            playerMovement.gameObject.BroadcastMessage("FacingRight", true);
+        }
+        else if (playerMovement.moveInput.x < 0)
+        {
+            playerMovement.spriteRenderer.flipX = true;
+            playerMovement.gameObject.BroadcastMessage("FacingRight", false);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -84,7 +98,9 @@ public class CharacterDamage : MonoBehaviour, IDamageable
     public void Hit(float damage)
     {
         Health = health - damage;
+        animator.SetTrigger("hurt");
         PlayerHurtSound.Play();
+        
     }
 
     public void Hit(float damage,Vector2 push)

@@ -2,14 +2,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MainMenuBehaviour : MonoBehaviour
 {
     // Start is called before the first frame update
 
     public Animator pageFlipAnimator;
-    private bool mainMenuFlag = false,inventoryFlag = false,shopFlag = false;
-    public GameObject mainMenuPage, inventoryPage, shopPage, startScreen;
+    private bool mainMenuFlag = false, inventoryFlag = false, shopFlag = false, weaponsFlag = false, portionsFlag = false;
+    public GameObject mainMenuPage, inventoryPage, shopPage, startScreen, weaponsPage, portionsPage;
     public AudioSource pageFlip;
     void Start()
     {
@@ -53,45 +54,111 @@ public class MainMenuBehaviour : MonoBehaviour
             shopPage.SetActive(true);
             
         }
+        else if(weaponsFlag == true)
+        {
+            shopPage.SetActive(false);
+            weaponsPage.SetActive(true);
+        }
+        else if(portionsFlag == true)
+        {
+            shopPage.SetActive(false);
+            portionsPage.SetActive(true);
+        }
     }
 
 
     public void ShowMainPage()
     {
-        pageFlipAnimator.SetTrigger("Select");
-        pageFlip.Play();
-        mainMenuFlag = true;
-        inventoryFlag = false;
-        shopFlag = false;
-        inventoryPage.SetActive(false);
-        shopPage.SetActive(false);
-        StartCoroutine(Delay(1.5f, true));
+        if (mainMenuPage.activeSelf == false)
+        {
+            pageFlipAnimator.SetTrigger("Select");
+            pageFlip.Play();
+            mainMenuFlag = true;
+            inventoryFlag = false;
+            shopFlag = false;
+            weaponsFlag = false;
+            portionsFlag = false;
+            inventoryPage.SetActive(false);
+            shopPage.SetActive(false);
+            weaponsPage.SetActive(false);
+            portionsPage.SetActive(false);
+            StartCoroutine(Delay(1.5f, true));
+        }
     }
 
     public void ShowInventoryPage()
     {
-        pageFlipAnimator.SetTrigger("Select");
-        pageFlip.Play();
-        inventoryFlag = true;
-        mainMenuFlag = false;
-        shopFlag= false;
-        mainMenuPage.SetActive(false);
-        shopPage.SetActive(false);
-        StartCoroutine(Delay(1.5f, true));
+        if (inventoryPage.activeSelf == false)
+        {
+            pageFlipAnimator.SetTrigger("Select");
+            pageFlip.Play();
+            inventoryFlag = true;
+            mainMenuFlag = false;
+            shopFlag = false;
+            weaponsFlag = false;
+            portionsFlag = false;
+            mainMenuPage.SetActive(false);
+            shopPage.SetActive(false);
+            weaponsPage.SetActive(false);
+            portionsPage.SetActive(false);
+            StartCoroutine(Delay(1.5f, true));
+        }
         
 
     }
 
     public void ShowShopPage()
     {
-        pageFlipAnimator.SetTrigger("Select");
-        pageFlip.Play();
-        shopFlag = true;
-        mainMenuFlag = false;
-        inventoryFlag= false;
-        mainMenuPage.SetActive(false);
-        inventoryPage.SetActive(false);
-        StartCoroutine(Delay(1.5f, true));
+        if (shopPage.activeSelf == false)
+        {
+            pageFlipAnimator.SetTrigger("Select");
+            pageFlip.Play();
+            shopFlag = true;
+            mainMenuFlag = false;
+            inventoryFlag = false;
+            weaponsFlag = false;
+            portionsFlag = false;
+            mainMenuPage.SetActive(false);
+            inventoryPage.SetActive(false);
+            weaponsPage.SetActive(false);
+            portionsPage.SetActive(false);
+            StartCoroutine(Delay(1.5f, true));
+        }
+    }
+
+    public void ShowWeaponsPage()
+    {
+        if (weaponsPage.activeSelf == false)
+        {
+            pageFlipAnimator.SetTrigger("Select");
+            pageFlip.Play();
+            weaponsFlag = true;
+            shopFlag = false;
+            mainMenuFlag = false;
+            inventoryFlag = false;
+            mainMenuPage.SetActive(false);
+            inventoryPage.SetActive(false);
+            portionsPage.SetActive(false);
+            StartCoroutine(Delay(1.5f, true));
+        }
+    }
+
+    public void ShowPortionsPage()
+    {
+        if (portionsPage.activeSelf == false)
+        {
+            pageFlipAnimator.SetTrigger("Select");
+            pageFlip.Play();
+            portionsFlag = true;
+            shopFlag = false;
+            weaponsFlag = false;
+            mainMenuFlag = false;
+            inventoryFlag = false;
+            mainMenuPage.SetActive(false);
+            inventoryPage.SetActive(false);
+            weaponsPage.SetActive(false);
+            StartCoroutine(Delay(1.5f, true));
+        }
     }
 
 

@@ -16,10 +16,10 @@ public class PlayerMovement : MonoBehaviour
     public int no_of_hearts = 3;
     public int maxNoOfHeartsAllowed = 15;
 
-    Vector2 moveInput;
+    public Vector2 moveInput;
     public float moveSpeed = 1000f;
     Rigidbody2D rb;
-    SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer;
     bool move = true;
     public float maxSpeed = 5;
     private Animator animator;
@@ -182,6 +182,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            // perform special attack
             // not in cool down
             isInCoolDown = true;
             // setting the timer with the cooldown value
