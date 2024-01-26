@@ -7,7 +7,9 @@ public class TutorialPopUps : MonoBehaviour
 {
     public GameObject[] popUps;
     private int popUpIndex;
+    //variable used for blocking player from entering play area
 
+    public bool enterPlayArea = false;
     private void Update()
     {
         for(int i = 0; i < popUps.Length-1; i++)
@@ -42,6 +44,7 @@ public class TutorialPopUps : MonoBehaviour
             if (Input.GetKey(KeyCode.K))
             {
                 popUpIndex++;
+                enterPlayArea = true;
             }
             
         }

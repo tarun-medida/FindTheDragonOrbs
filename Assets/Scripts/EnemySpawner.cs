@@ -26,12 +26,14 @@ public class EnemySpawner : MonoBehaviour
     public SpawnState state = SpawnState.Counting;
 
     private float searchCountdown = 1f;
-    [SerializeField] public GameObject areaBlocker;
+    //[SerializeField] public GameObject areaBlocker;
 
 
-    private void Start()
+    public void SpawnEnemies()
     {
         //waveCountDown = timeBetweenWaves;
+        StartCoroutine(SpawnWave());
+        this.GetComponent<AudioSource>().Play();
     }
 
     private void Update()
@@ -42,7 +44,7 @@ public class EnemySpawner : MonoBehaviour
             {
                 Debug.Log("Spawning is completed.");
                 Destroy(gameObject);
-                Destroy(areaBlocker);
+                //Destroy(areaBlocker);
                 //state = SpawnState.Counting;
                 //waveCountDown = timeBetweenWaves;
                 //if(nextWave+1 > waves.Length - 1)
