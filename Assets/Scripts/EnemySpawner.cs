@@ -109,8 +109,9 @@ public class EnemySpawner : MonoBehaviour
     {
         state = SpawnState.Spawning;
         
-        for (int i = 0;i < count ;i++)
-        {
+        //for (int i = 0;i < count ;i++)
+        for (int i = 0;i < GameManager.instance.numberOfMinionsToSpawn ;i++)
+            {
             int randSpawnPoint = Random.Range(0, spawnPoints.Length);
             Instantiate(minion, spawnPoints[randSpawnPoint].position, Quaternion.identity);
             if (i == count)

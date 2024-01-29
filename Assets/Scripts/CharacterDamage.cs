@@ -15,7 +15,6 @@ public class CharacterDamage : MonoBehaviour, IDamageable
     private int no_of_coins;
     BossHealthBar healthBar;
     public PlayerMovement playerMovement;
-    public bool winScreen = false;
     public AudioSource PlayerHurtSound;
     public float Health
     {
@@ -62,19 +61,14 @@ public class CharacterDamage : MonoBehaviour, IDamageable
     // Update is called once per frame
     void Update()
     {
-        /*
-        if(gameObject.tag == "Boss")
-        {
-            Debug.Log(health);
-        }
-        */
+
     }
     public void Defeated()
     {
         
         animator.SetTrigger("Defeated");
         
-        if (gameObject.tag != "Player")
+        if (gameObject.tag != "Player" || gameObject.tag != "Boss")
         {
             
             no_of_coins = Random.Range(1, 4);
@@ -84,6 +78,7 @@ public class CharacterDamage : MonoBehaviour, IDamageable
             }
             if(gameObject.tag == "Minion")
             {
+                GameManager.instance.UpdateEnemyCounter();
                 Destroy(gameObject);
             }
         }
@@ -95,6 +90,8 @@ public class CharacterDamage : MonoBehaviour, IDamageable
             playerMovement.GetComponent<BoxCollider2D>().enabled = false;
         }
     }
+
+    // Enemy's Hit Function/ Player getting hurt
     public void Hit(float damage)
     {
         Health = health - damage;
@@ -103,6 +100,7 @@ public class CharacterDamage : MonoBehaviour, IDamageable
         
     }
 
+    // Player's Hit Function which adds force/ Enemies getting hurt
     public void Hit(float damage,Vector2 push)
     {
         Health = health - damage;

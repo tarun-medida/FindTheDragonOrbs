@@ -16,7 +16,6 @@ public class HealthBarUI : MonoBehaviour
     public Sprite HalfHeart;
     public Sprite QuarterHeart;
     public Sprite EmptyHeart;
-    private Sprite HeartBasedOnHealth;
     public Image[] hearts;
     private int maxHealthHearts;
     public PlayerMovement player;

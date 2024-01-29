@@ -354,7 +354,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1911549674}
+      - m_Target: {fileID: 1021644226}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: OnClickTryAgain
         m_Mode: 1
@@ -1428,9 +1428,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1911549674}
+      - m_Target: {fileID: 1021644226}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: OnClickTryAgain
+        m_MethodName: OnClickPlay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8102,7 +8102,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1911549674}
+      - m_Target: {fileID: 1021644226}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: OnExit
         m_Mode: 1
@@ -9484,33 +9484,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1021644225}
-  - component: {fileID: 1021644224}
+  - component: {fileID: 1021644226}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1021644224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1021644223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfb70abe13ff7d247baca5e50f0dd4ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 0}
-  deadMenuUI: {fileID: 0}
-  LevelbackgroundScore: {fileID: 0}
-  equippedItemTitleText: {fileID: 0}
-  equippedItemDescriptionText: {fileID: 0}
-  equippedPortionsCountText: {fileID: 0}
-  portionsLimitCountText: {fileID: 0}
+  m_IsActive: 1
 --- !u!4 &1021644225
 Transform:
   m_ObjectHideFlags: 0
@@ -9526,6 +9507,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1021644226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021644223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfb70abe13ff7d247baca5e50f0dd4ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 1595537647}
+  deadMenuUI: {fileID: 1162049820}
+  winMenuUI: {fileID: 797262802}
+  LevelbackgroundScore: {fileID: 0}
+  equippedItemTitleText: {fileID: 0}
+  equippedItemDescriptionText: {fileID: 0}
+  equippedPortionsCountText: {fileID: 0}
+  portionsLimitCountText: {fileID: 0}
+  HealthRegenObject: {fileID: 977079425}
+  healthRegenText: {fileID: 1002874948}
+  player: {fileID: 1911549667}
+  boss: {fileID: 2199941372347920905, guid: 2f97a2eb25178214fbaff2db66be0cb9, type: 3}
+  numberOfMinionsToSpawn: 5
+  minionsToKillCount: 3
+  randomBossSpawnLocations:
+  - {fileID: 1626270288}
 --- !u!1 &1030484577
 GameObject:
   m_ObjectHideFlags: 0
@@ -10453,7 +10462,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1911549674}
+      - m_Target: {fileID: 1021644226}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: OnExit
         m_Mode: 1
@@ -11564,7 +11573,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1911549674}
+      - m_Target: {fileID: 1021644226}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: OnExit
         m_Mode: 1
@@ -12260,6 +12269,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1602051591}
   m_CullTransparentMesh: 1
+--- !u!1 &1626270287
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1626270288}
+  m_Layer: 0
+  m_Name: BossSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1626270288
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626270287}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 52.5, y: -192.1, z: -0.056446295}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1674735716
 GameObject:
   m_ObjectHideFlags: 0
@@ -12436,7 +12476,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1911549674}
+      - m_Target: {fileID: 1021644226}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: OnResume
         m_Mode: 1
@@ -13639,17 +13679,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7869efe1bfe1f640a0616a2e955efed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1911549674 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 156971607981768440, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
-  m_PrefabInstance: {fileID: 148949387174649928}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1148236206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfb70abe13ff7d247baca5e50f0dd4ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &1911549681
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14462,17 +14491,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 2199941372347920905, guid: 10e7f01850fef254ea2e5a4d6d21a0fa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3682924954426300161, guid: 10e7f01850fef254ea2e5a4d6d21a0fa, type: 3}
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3682924954426300161, guid: 10e7f01850fef254ea2e5a4d6d21a0fa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.4
+      value: 58.3
       objectReference: {fileID: 0}
     - target: {fileID: 3682924954426300161, guid: 10e7f01850fef254ea2e5a4d6d21a0fa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9
+      value: -126.8
       objectReference: {fileID: 0}
     - target: {fileID: 3682924954426300161, guid: 10e7f01850fef254ea2e5a4d6d21a0fa, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14508,11 +14541,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3762650175409248905, guid: 10e7f01850fef254ea2e5a4d6d21a0fa, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3762650175409248905, guid: 10e7f01850fef254ea2e5a4d6d21a0fa, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4326933890160533931, guid: 10e7f01850fef254ea2e5a4d6d21a0fa, type: 3}
       propertyPath: m_AnchorMax.x
@@ -15197,6 +15230,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 156971607981768440, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
+      propertyPath: boss
+      value: 
+      objectReference: {fileID: 6468776081103477292, guid: a7680c72baebbea45a65c92e75aa22ab, type: 3}
+    - target: {fileID: 156971607981768440, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 156971607981768440, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
       propertyPath: deadMenuUI
       value: 
       objectReference: {fileID: 1162049820}
@@ -15204,6 +15245,14 @@ PrefabInstance:
       propertyPath: pauseMenuUI
       value: 
       objectReference: {fileID: 1595537647}
+    - target: {fileID: 156971607981768440, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
+      propertyPath: bossSpawnpoint
+      value: 
+      objectReference: {fileID: 1626270287}
+    - target: {fileID: 156971607981768440, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 1911549667}
     - target: {fileID: 1239371848528378718, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
       propertyPath: m_BodyType
       value: 0
@@ -15285,6 +15334,10 @@ PrefabInstance:
       value: -0.16033936
       objectReference: {fileID: 0}
     - target: {fileID: 2059209345291817946, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2059209345291817946, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 3.375
       objectReference: {fileID: 0}
@@ -15312,6 +15365,10 @@ PrefabInstance:
       propertyPath: walkSound
       value: 
       objectReference: {fileID: 1911549681}
+    - target: {fileID: 3787394740917709967, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3787394740917709967, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
       propertyPath: healthRegenText
       value: 
@@ -15372,7 +15429,8 @@ PrefabInstance:
       propertyPath: m_Offset.x
       value: 0.14422226
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 156971607981768440, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
     m_RemovedGameObjects:
     - {fileID: 7486964379489302509, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
     m_AddedGameObjects:

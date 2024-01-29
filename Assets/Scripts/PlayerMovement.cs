@@ -9,7 +9,6 @@ using static CoinPick;
 public class PlayerMovement : MonoBehaviour 
 {
     CharacterDamage characterDamage;
-
     public float health=200;
     public float maxHealth = 200;
     private float heartsTracker;
@@ -18,25 +17,19 @@ public class PlayerMovement : MonoBehaviour
 
     public Vector2 moveInput;
     public float moveSpeed = 1000f;
-    Rigidbody2D rb;
+    Rigidbody2D playerRB;
     public SpriteRenderer spriteRenderer;
     bool move = true;
     public float maxSpeed = 5;
     private Animator animator;
     public float idleFriction = 0.9f;
     [SerializeField]
-    private GameObject inventory;
+    //private GameObject inventory;
 
-    public GameObject deathHUD;
+    //public GameObject deathHUD;
 
     public AudioSource walkSound;
-
-    //portion drink variables
-    public int noOfHealthPortions;
-    public GameObject HealthRegenObject;
-    public TMP_Text healthRegenText;
-    private Animator healtRegenAnimator;
-
+    
     //special attack delay and time variables
     private float coolDownTime = 5f;
     private float coolDownTimer = 0.0f;
@@ -45,16 +38,15 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        spriteRenderer = rb.GetComponent<SpriteRenderer>();
+        // getting player object's rigid body component.
+        playerRB = GetComponent<Rigidbody2D>();
+        spriteRenderer = playerRB.GetComponent<SpriteRenderer>();
+        // getting player's animator component trigger animations based on key press.
         animator = GetComponent<Animator>();
+        // getting damage script where damage actions are computed and updated
         characterDamage = GetComponent<CharacterDamage>();
+        //
         health = characterDamage.Health;
-        healthRegenText.text = noOfHealthPortions.ToString();
-        healtRegenAnimator = HealthRegenObject.GetComponent<Animator>();
-        // at start what was the maximum number of hearts the player started with
-        // later on when player purchases new health in inventory then the no_of_hearts will be changed
-        heartsTracker = no_of_hearts;
         // initially player can use special attack with no cooldown
         specialAttackRegenTimerImage.fillAmount = 0.0f;
     }
@@ -64,13 +56,13 @@ public class PlayerMovement : MonoBehaviour
         //if(move && moveInput != Vector2.zero)
         if(moveInput != Vector2.zero)
             {
-            rb.AddForce(moveInput * moveSpeed * Time.deltaTime);
+            playerRB.AddForce(moveInput * moveSpeed * Time.deltaTime);
             //GetComponent<AudioSource>().UnPause();
             walkSound.UnPause();
-            if (rb.velocity.magnitude > maxSpeed)
+            if (playerRB.velocity.magnitude > maxSpeed)
             {
-                float speed = Mathf.Lerp(rb.velocity.magnitude,maxSpeed,idleFriction);
-                rb.velocity = rb.velocity.normalized * speed;
+                float speed = Mathf.Lerp(playerRB.velocity.magnitude,maxSpeed,idleFriction);
+                playerRB.velocity = playerRB.velocity.normalized * speed;
 
             }
             if (moveInput.x > 0)
@@ -87,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            rb.velocity = Vector2.Lerp(rb.velocity,Vector2.zero,idleFriction);
+            playerRB.velocity = Vector2.Lerp(playerRB.velocity,Vector2.zero,idleFriction);
             animator.SetBool("isMoving", false);
             walkSound.Pause();
         }
@@ -99,6 +91,7 @@ public class PlayerMovement : MonoBehaviour
         // keep track
         
         // debug function
+        /*
         if (Input.GetKeyDown(KeyCode.M))
         {
             inventory.SetActive(true);
@@ -113,6 +106,7 @@ public class PlayerMovement : MonoBehaviour
             no_of_hearts--;
            
         }
+        */
 
         if (Input.GetKey(KeyCode.K))
         {
@@ -120,33 +114,15 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // drink portion
-        if(noOfHealthPortions <= 0)
-        {
-            healtRegenAnimator.SetBool("NoPortions", true);
-        }
         if (Input.GetKeyDown(KeyCode.X))
         {
-            if (noOfHealthPortions > 0)
-            {
-                healtRegenAnimator.SetBool("NoPortions", false);
-                // decrease the no of health portions
-                if (getNoOfHeartsFromHealth(health) < heartsTracker)
-                {
-                    healtRegenAnimator.SetTrigger("Regen");
-                    noOfHealthPortions -= 1;
-                    healthRegenText.text = noOfHealthPortions.ToString();
-                    characterDamage.Health += 20f;
-                }
-                else
-                {
-                    Debug.Log("Already full health");
-                }
-            }
+            GameManager.instance.drinkPortion();
         }
 
         //do special attack
         if (Input.GetKeyDown(KeyCode.F))
         {
+            DoSpecialAttackAnim();
             DoSpecialAttack();
         }
 
@@ -155,10 +131,13 @@ public class PlayerMovement : MonoBehaviour
 
         health = characterDamage.Health;
 
+        /*
         if(health <= 0) 
         {
             deathHUD.SetActive(true);
         }
+        */
+        
         // sprint/walk faster condition
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -173,7 +152,7 @@ public class PlayerMovement : MonoBehaviour
        
     }
 
-    private bool DoSpecialAttack()
+    private bool DoSpecialAttackAnim()
     {
         if(isInCoolDown == true)
         {
@@ -190,6 +169,11 @@ public class PlayerMovement : MonoBehaviour
             return true;
 
         }
+    }
+
+    private void DoSpecialAttack()
+    {
+        return;
     }
 
     private void ApplyCooldown()
@@ -221,11 +205,9 @@ public class PlayerMovement : MonoBehaviour
         Time.timeScale = 0;
         walkSound.Pause();
     }
-
-    private int getNoOfHeartsFromHealth(float hearts)
+    
+    public void UpdateHealth()
     {
-        hearts = (int)(health * no_of_hearts) / maxHealth;
-        // using ceil to ensure that portion can only be used if one heart is totally gone.
-        return (int)Mathf.Ceil(hearts);
+        characterDamage.Health += 20f;
     }
 }

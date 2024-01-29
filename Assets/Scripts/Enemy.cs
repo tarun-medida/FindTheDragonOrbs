@@ -62,6 +62,7 @@ public class Enemy : MonoBehaviour
                 sprite.flipX = false;
             }
         }
+        /*
         if(characterDamage.health <= 0)
         {
             Debug.Log("dead");
@@ -69,6 +70,7 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
             Time.timeScale = 0;
         }
+        */
 
     }
     private void FixedUpdate()
@@ -83,15 +85,20 @@ public class Enemy : MonoBehaviour
         }
     }
 
+
     private void MoveCharacter(Vector2 dir)
     {
         rb.MovePosition((Vector2) transform.position + (dir * speed * Time.deltaTime));
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    //private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.tag == "Player"){
-            IDamageable damageableObject = collision.GetComponent<IDamageable>();
+        if(collision.gameObject.tag == "Player")
+        //if(collision.tag == "Player")
+         {
+                IDamageable damageableObject = collision.collider.GetComponent<IDamageable>();
+                //IDamageable damageableObject = collision.GetComponent<IDamageable>();
             if (damageableObject != null)
             {
                 damageableObject.Hit(attackDamage);
