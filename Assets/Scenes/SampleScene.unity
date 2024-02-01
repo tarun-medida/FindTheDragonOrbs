@@ -11076,7 +11076,7 @@ MonoBehaviour:
   attackCollider: {fileID: 1367702221}
   right: {x: 0, y: 0, z: 0}
   left: {x: 0, y: 0, z: 0}
-  knockbackForce: 500
+  knockbackForce: 1000
 --- !u!61 &1367702221
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13871,6 +13871,41 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!58 &1911549689
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148236206}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.87330616
 --- !u!1 &1913076869
 GameObject:
   m_ObjectHideFlags: 0
@@ -14487,6 +14522,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1497293128087848532, guid: 10e7f01850fef254ea2e5a4d6d21a0fa, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1497293128087848532, guid: 10e7f01850fef254ea2e5a4d6d21a0fa, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2199941372347920905, guid: 10e7f01850fef254ea2e5a4d6d21a0fa, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -14505,7 +14548,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3682924954426300161, guid: 10e7f01850fef254ea2e5a4d6d21a0fa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -126.8
+      value: -192.2
       objectReference: {fileID: 0}
     - target: {fileID: 3682924954426300161, guid: 10e7f01850fef254ea2e5a4d6d21a0fa, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14563,6 +14606,18 @@ PrefabInstance:
       propertyPath: winHud
       value: 
       objectReference: {fileID: 797262802}
+    - target: {fileID: 6239152544832812302, guid: 10e7f01850fef254ea2e5a4d6d21a0fa, type: 3}
+      propertyPath: checkRadius
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7245476080887987004, guid: 10e7f01850fef254ea2e5a4d6d21a0fa, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7245476080887987004, guid: 10e7f01850fef254ea2e5a4d6d21a0fa, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14617,7 +14672,7 @@ MonoBehaviour:
   attackCollider: {fileID: 2020946073}
   right: {x: 0, y: 0, z: 0}
   left: {x: 0, y: 0, z: 0}
-  knockbackForce: 500
+  knockbackForce: 1000
 --- !u!61 &2020946073
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15319,19 +15374,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2059209345291817946, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
       propertyPath: m_Size.x
-      value: 1.8736343
+      value: 1.174881
       objectReference: {fileID: 0}
     - target: {fileID: 2059209345291817946, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
       propertyPath: m_Size.y
-      value: 2.628418
+      value: 1.5445862
+      objectReference: {fileID: 0}
+    - target: {fileID: 2059209345291817946, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2059209345291817946, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
       propertyPath: m_Offset.x
-      value: -0.3973732
+      value: 0.0233078
       objectReference: {fileID: 0}
     - target: {fileID: 2059209345291817946, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
       propertyPath: m_Offset.y
-      value: -0.16033936
+      value: -0.5738678
       objectReference: {fileID: 0}
     - target: {fileID: 2059209345291817946, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
       propertyPath: m_IsTrigger
@@ -15398,6 +15457,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1030484579}
     - target: {fileID: 3883049427020322078, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3883049427020322078, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
       propertyPath: PlayerHurtSound
       value: 
       objectReference: {fileID: 1911549688}
@@ -15408,6 +15471,10 @@ PrefabInstance:
     - target: {fileID: 4809445052441674620, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
       propertyPath: m_SortingOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5660855335691868544, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
+      propertyPath: knockbackForce
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 5890990215459691689, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
       propertyPath: waves.Array.data[0].area
@@ -15428,6 +15495,10 @@ PrefabInstance:
     - target: {fileID: 6816762286748277952, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
       propertyPath: m_Offset.x
       value: 0.14422226
+      objectReference: {fileID: 0}
+    - target: {fileID: 7138262848497482945, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 156971607981768440, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
@@ -15456,6 +15527,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2664209976693478659, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1911549688}
+    - targetCorrespondingSourceObject: {fileID: 2664209976693478659, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1911549689}
   m_SourcePrefab: {fileID: 100100000, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
 --- !u!1001 &5491051013678336576
 PrefabInstance:

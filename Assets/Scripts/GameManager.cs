@@ -121,9 +121,8 @@ public class GameManager : MonoBehaviour
             if (bossInstanceRef.GetComponent<CharacterDamage>().Health <= 0)
             {
                 winMenuUI.SetActive(true);
-                Destroy(boss.gameObject);
+                Destroy(bossInstanceRef);
                 // testing!! upon win the walk sound kept playing and when scene loaded the game was bugged
-                //player.walkSound.Pause();
                 Time.timeScale = 0;
             }
         }

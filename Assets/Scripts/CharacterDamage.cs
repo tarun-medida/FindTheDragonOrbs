@@ -67,22 +67,18 @@ public class CharacterDamage : MonoBehaviour, IDamageable
     {
         
         animator.SetTrigger("Defeated");
-        
-        if (gameObject.tag != "Player" || gameObject.tag != "Boss")
+       
+        if(gameObject.tag == "Minion")
         {
-            
             no_of_coins = Random.Range(1, 4);
             for (int i = 0; i < no_of_coins; i++)
             {
                 Instantiate(coins, transform.position, Quaternion.identity);
             }
-            if(gameObject.tag == "Minion")
-            {
-                GameManager.instance.UpdateEnemyCounter();
-                Destroy(gameObject);
-            }
+            GameManager.instance.UpdateEnemyCounter();
+            Destroy(gameObject);
         }
-        else
+        else if(gameObject.tag == "Player")
         {
             // to stop player movement
             playerMovement.GetComponent<PlayerInput>().enabled = false;

@@ -133,7 +133,6 @@ MonoBehaviour:
   maxHealth: 50
   coins: {fileID: 6201843436008572030, guid: ea5ee8c545beb024793e11ca8d179eda, type: 3}
   playerMovement: {fileID: 3787394740917709967, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
-  winScreen: 0
   PlayerHurtSound: {fileID: 0}
 --- !u!212 &3855809021679708226
 SpriteRenderer:
@@ -222,7 +221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   checkRadius: 100
-  attackRadius: 3
+  attackRadius: 1
   characterDamage: {fileID: 5753780177004029881}
   shouldRotate: 1
   mask:
@@ -243,7 +242,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 10
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -289,7 +288,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.01557219, y: -0.6540978}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -300,7 +299,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.375, y: 7.25}
+  m_Size: {x: 1.7864797, y: 4.135245}
   m_EdgeRadius: 0
 --- !u!114 &4367610947830694020
 MonoBehaviour:
@@ -347,9 +346,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.26690164, y: -0.40035883}
+  m_Offset: {x: 0.029850006, y: -0.26028472}
   serializedVersion: 2
-  m_Radius: 3.3255002
+  m_Radius: 1.6338078
 --- !u!1 &3162018139261848064
 GameObject:
   m_ObjectHideFlags: 0
