@@ -35,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
     private float coolDownTimer = 0.0f;
     private bool isInCoolDown = false;
     public Image specialAttackRegenTimerImage;
+    public SpecialAttack attack;
 
     private void Start()
     {
@@ -173,6 +174,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void DoSpecialAttack()
     {
+        attack.SpecialBeamAttack(moveInput.x, moveInput.y);
         return;
     }
 

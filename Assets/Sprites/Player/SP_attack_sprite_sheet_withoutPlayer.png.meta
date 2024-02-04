@@ -1,0 +1,758 @@
+fileFormatVersion: 2
+guid: ff7f57542f5bc5b4d92778343e2b832b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 8
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SP_attack_sprite_sheet_withoutPlayer_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 186
+        width: 25
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8c00da50821f2d45b0bcdeab366429c
+      internalID: 1405896517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_attack_sprite_sheet_withoutPlayer_1
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 190
+        width: 25
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e628c6b581ef37b46adb7cf5baef7a8c
+      internalID: -1876080389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_attack_sprite_sheet_withoutPlayer_2
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 189
+        width: 25
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fce0acfeb1e34204e8610cab7973006f
+      internalID: -500940375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_attack_sprite_sheet_withoutPlayer_3
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 189
+        width: 25
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9773b716ce94ffd44b67d183bc6f71e1
+      internalID: -612330298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_attack_sprite_sheet_withoutPlayer_4
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 185
+        width: 25
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 516b330b48af8ce44b43ec66af9bca52
+      internalID: -415186789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_attack_sprite_sheet_withoutPlayer_5
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 189
+        width: 27
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7af17eca92aec254c83f3b5aed2eb093
+      internalID: 241986352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_attack_sprite_sheet_withoutPlayer_6
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 189
+        width: 15
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89df75f596f305b44bcd8cc2985ba44c
+      internalID: 541879452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_attack_sprite_sheet_withoutPlayer_7
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 190
+        width: 10
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d225beed3ea41e7468830e659f479040
+      internalID: -1127045971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_attack_sprite_sheet_withoutPlayer_9
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 192
+        width: 15
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48e6f28d8739a2140b1e231f2cc45838
+      internalID: -1254364866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_attack_sprite_sheet_withoutPlayer_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 116
+        width: 71
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb32f3bc867d70c4db8940a1a8d61bc3
+      internalID: 1431157168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_attack_sprite_sheet_withoutPlayer_11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 121
+        width: 66
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b8667934878191469dc1e6f4517e021
+      internalID: -658731362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_attack_sprite_sheet_withoutPlayer_12
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 122
+        width: 67
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd43ec6ea91891844bd6102f596f47f1
+      internalID: 802866754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_attack_sprite_sheet_withoutPlayer_13
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 121
+        width: 68
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba0249b76d5e7de41b84d6680a3c6251
+      internalID: -1346453468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_attack_sprite_sheet_withoutPlayer_14
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 124
+        width: 71
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e915c4523f29004f88eda224fb8d8e9
+      internalID: 1620683285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_attack_sprite_sheet_withoutPlayer_15
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 121
+        width: 67
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e7edfcab4746264ea48029dc0de3e5c
+      internalID: 1845717072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_attack_sprite_sheet_withoutPlayer_16
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 127
+        width: 67
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6157885ee9b3f9d4d95ebd8f9a2b63d5
+      internalID: -791942832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_attack_sprite_sheet_withoutPlayer_17
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 132
+        width: 52
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 895c61b89b42ae346a1e30beacb3b979
+      internalID: -1955409563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_attack_sprite_sheet_withoutPlayer_18
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 132
+        width: 35
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c4beb4d7b1edf542b4341a0623d6585
+      internalID: 1331189751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_attack_sprite_sheet_withoutPlayer_20
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 0
+        width: 25
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c43de5c2a046e74a8f01d66cd3898a2
+      internalID: 27485749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_attack_sprite_sheet_withoutPlayer_21
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 0
+        width: 25
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43f8ba16031d5a149be35de086aa5fdd
+      internalID: -1554136591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_attack_sprite_sheet_withoutPlayer_22
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 0
+        width: 25
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cb4aa70ccd146842bea5a1e05d5a7b0
+      internalID: 418620184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_attack_sprite_sheet_withoutPlayer_23
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 0
+        width: 25
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b56ee21b450efa45843fc3d364242cf
+      internalID: 505723143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_attack_sprite_sheet_withoutPlayer_24
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 0
+        width: 25
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ace071305ce1964488534e0a05ff08a
+      internalID: 698749619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_attack_sprite_sheet_withoutPlayer_25
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 0
+        width: 27
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2284b746f2aedb4ca2ad446e4878bb0
+      internalID: 823347291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_attack_sprite_sheet_withoutPlayer_26
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 0
+        width: 15
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5c2b958736cdb04ead412617525f523
+      internalID: -769681964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_attack_sprite_sheet_withoutPlayer_27
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 14
+        width: 10
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa9c8225d92818f46ac45490b34ff469
+      internalID: -1353901142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_attack_sprite_sheet_withoutPlayer_29
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 30
+        width: 13
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8468390250a2c6b44ad1c0dc43f94f37
+      internalID: -1834447171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SP_attack_sprite_sheet_withoutPlayer_8
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 190
+        width: 33
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b3571cb82e8bd6438af74b428233f03
+      internalID: -1473994535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      SP_attack_sprite_sheet_withoutPlayer_0: 1405896517
+      SP_attack_sprite_sheet_withoutPlayer_1: -1876080389
+      SP_attack_sprite_sheet_withoutPlayer_10: 1431157168
+      SP_attack_sprite_sheet_withoutPlayer_11: -658731362
+      SP_attack_sprite_sheet_withoutPlayer_12: 802866754
+      SP_attack_sprite_sheet_withoutPlayer_13: -1346453468
+      SP_attack_sprite_sheet_withoutPlayer_14: 1620683285
+      SP_attack_sprite_sheet_withoutPlayer_15: 1845717072
+      SP_attack_sprite_sheet_withoutPlayer_16: -791942832
+      SP_attack_sprite_sheet_withoutPlayer_17: -1955409563
+      SP_attack_sprite_sheet_withoutPlayer_18: 1331189751
+      SP_attack_sprite_sheet_withoutPlayer_19: 1150371552
+      SP_attack_sprite_sheet_withoutPlayer_2: -500940375
+      SP_attack_sprite_sheet_withoutPlayer_20: 27485749
+      SP_attack_sprite_sheet_withoutPlayer_21: -1554136591
+      SP_attack_sprite_sheet_withoutPlayer_22: 418620184
+      SP_attack_sprite_sheet_withoutPlayer_23: 505723143
+      SP_attack_sprite_sheet_withoutPlayer_24: 698749619
+      SP_attack_sprite_sheet_withoutPlayer_25: 823347291
+      SP_attack_sprite_sheet_withoutPlayer_26: -769681964
+      SP_attack_sprite_sheet_withoutPlayer_27: -1353901142
+      SP_attack_sprite_sheet_withoutPlayer_28: -1004526044
+      SP_attack_sprite_sheet_withoutPlayer_29: -1834447171
+      SP_attack_sprite_sheet_withoutPlayer_3: -612330298
+      SP_attack_sprite_sheet_withoutPlayer_4: -415186789
+      SP_attack_sprite_sheet_withoutPlayer_5: 241986352
+      SP_attack_sprite_sheet_withoutPlayer_6: 541879452
+      SP_attack_sprite_sheet_withoutPlayer_7: -1127045971
+      SP_attack_sprite_sheet_withoutPlayer_8: -1473994535
+      SP_attack_sprite_sheet_withoutPlayer_9: -1254364866
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
