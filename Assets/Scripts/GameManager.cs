@@ -149,8 +149,9 @@ public class GameManager : MonoBehaviour
 
     public void OnClickTryAgain()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        
     }
     public void OnResume()
     {

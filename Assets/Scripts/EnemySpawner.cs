@@ -114,10 +114,11 @@ public class EnemySpawner : MonoBehaviour
             {
             int randSpawnPoint = Random.Range(0, spawnPoints.Length);
             Instantiate(minion, spawnPoints[randSpawnPoint].position, Quaternion.identity);
-            if (i == count)
+            if (i == GameManager.instance.numberOfMinionsToSpawn - 1)
             {
+                GameManager.instance.numberOfMinionsToSpawn *= 2;
                 Debug.Log("All enemies spawned");
-                Destroy(gameObject);
+                //Destroy(gameObject);
             }
             yield return new WaitForSeconds(1f/ spawnRate);
            
