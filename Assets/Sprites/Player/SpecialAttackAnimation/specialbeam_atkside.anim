@@ -68,7 +68,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Enabled
-    path: SpecialAttackSide
+    path: SpecialAttackRight
     classID: 61
     script: {fileID: 0}
     flags: 0
@@ -106,7 +106,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 4123473502
+      path: 2210662601
       attribute: 3305885265
       script: {fileID: 0}
       typeID: 61
@@ -147,7 +147,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.9
+    m_StopTime: 0.90000004
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -279,7 +279,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Enabled
-    path: SpecialAttackSide
+    path: SpecialAttackRight
     classID: 61
     script: {fileID: 0}
     flags: 0

@@ -2150,9 +2150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ce84dfce1cff2d429e78f4d7dca9acc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackup: {fileID: 1828445016}
-  attackdown: {fileID: 1324470026}
-  attackside: {fileID: 1778325166}
+  player: {fileID: 1911549667}
 --- !u!212 &358692835
 SpriteRenderer:
   m_ObjectHideFlags: 0

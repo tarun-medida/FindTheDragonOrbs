@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         //if(move && moveInput != Vector2.zero)
-        if(moveInput != Vector2.zero)
+        if(moveInput != Vector2.zero )
             {
             playerRB.AddForce(moveInput * moveSpeed * Time.deltaTime);
             //GetComponent<AudioSource>().UnPause();
@@ -84,7 +84,24 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isMoving", false);
             walkSound.Pause();
         }
-        
+        //for updating the direction in special attack
+        if(moveInput.x > 0)
+        {
+            attack.GetMoveInput(1f, 0f);
+        }
+        if(moveInput.y > 0)
+        {
+            attack.GetMoveInput(0f, 1f);
+        }
+        if (moveInput.x < 0)
+        {
+            attack.GetMoveInput(-1f, 0f);
+        }
+        if (moveInput.y < 0)
+        {
+            attack.GetMoveInput(0f, -1f);
+        }
+
     }
 
     private void Update()
@@ -124,7 +141,6 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F))
         {
             DoSpecialAttackAnim();
-            DoSpecialAttack();
         }
 
         if (isInCoolDown)
@@ -164,6 +180,7 @@ public class PlayerMovement : MonoBehaviour
         {
             // perform special attack
             // not in cool down
+            DoSpecialAttack();
             isInCoolDown = true;
             // setting the timer with the cooldown value
             coolDownTimer = coolDownTime;
@@ -174,7 +191,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void DoSpecialAttack()
     {
-        attack.SpecialBeamAttack(moveInput.x, moveInput.y);
+        attack.SpecialBeamAttack();
         return;
     }
 
