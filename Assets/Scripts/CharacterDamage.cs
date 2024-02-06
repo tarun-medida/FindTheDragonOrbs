@@ -78,6 +78,10 @@ public class CharacterDamage : MonoBehaviour, IDamageable
             GameManager.instance.UpdateEnemyCounter();
             Destroy(gameObject);
         }
+        if(gameObject.tag == "Dummy")
+        {
+            Destroy(gameObject);
+        }
         else if(gameObject.tag == "Player")
         {
             // to stop player movement
@@ -99,8 +103,10 @@ public class CharacterDamage : MonoBehaviour, IDamageable
     // Player's Hit Function which adds force/ Enemies getting hurt
     public void Hit(float damage,Vector2 push)
     {
+        animator.SetTrigger("hurt");
         Health = health - damage;
         rb.AddForce(push);
         healthBar.UpdateHealth(health,maxHealth);
+        animator.SetTrigger("unhurt");
     }
 }
