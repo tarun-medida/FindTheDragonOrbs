@@ -3844,11 +3844,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 0}
   deadMenuUI: {fileID: 0}
+  winMenuUI: {fileID: 0}
   LevelbackgroundScore: {fileID: 0}
   equippedItemTitleText: {fileID: 0}
   equippedItemDescriptionText: {fileID: 0}
   equippedPortionsCountText: {fileID: 0}
   portionsLimitCountText: {fileID: 0}
+  HealthRegenObject: {fileID: 0}
+  healthRegenText: {fileID: 0}
+  player: {fileID: 0}
+  boss: {fileID: 0}
+  numberOfMinionsToSpawn: 0
+  minionsToKillCount: 0
+  randomBossSpawnLocations: []
 --- !u!1 &819649376
 GameObject:
   m_ObjectHideFlags: 0
@@ -7440,6 +7448,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1672913712}
   - component: {fileID: 1672913713}
+  - component: {fileID: 1672913714}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -7476,11 +7485,115 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 0}
   deadMenuUI: {fileID: 0}
-  LevelbackgroundScore: {fileID: 0}
+  winMenuUI: {fileID: 0}
+  LevelbackgroundScore: {fileID: 1672913714}
   equippedItemTitleText: {fileID: 1333082487}
   equippedItemDescriptionText: {fileID: 1385966714}
   equippedPortionsCountText: {fileID: 1969403619}
   portionsLimitCountText: {fileID: 1834327065}
+  HealthRegenObject: {fileID: 0}
+  healthRegenText: {fileID: 0}
+  player: {fileID: 0}
+  boss: {fileID: 0}
+  numberOfMinionsToSpawn: 0
+  minionsToKillCount: 0
+  randomBossSpawnLocations: []
+--- !u!82 &1672913714
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672913711}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2b7d5feade425ba4bba64d23c51de1c8, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.485
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1685146363
 GameObject:
   m_ObjectHideFlags: 0

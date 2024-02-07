@@ -20,7 +20,11 @@ public class TutorialBlocker : MonoBehaviour
         if(popUps.enterPlayArea == true && dummyDead)
         {
             Destroy(gameObject);
+            // Earlier on activation since IsTrigger was false the player could not go ahead, to solve this enabled IsTrigger for the Play Area Collider
+            // Check this script  checkIfPlayerHasPassedCollider.cs
             enterPlayAreaBlocker.SetActive(true);
+            
         }
     }
+
 }

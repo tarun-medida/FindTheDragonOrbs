@@ -82,13 +82,6 @@ public class CharacterDamage : MonoBehaviour, IDamageable
         {
             Destroy(gameObject);
         }
-        else if(gameObject.tag == "Player")
-        {
-            // to stop player movement
-            playerMovement.GetComponent<PlayerInput>().enabled = false;
-            // to ensure enemies stop attack on player death
-            playerMovement.GetComponent<BoxCollider2D>().enabled = false;
-        }
     }
 
     // Enemy's Hit Function/ Player getting hurt

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 
@@ -66,8 +67,7 @@ public class GameManager : MonoBehaviour
     public void Start()
     {
         //rb = GetComponent<Rigidbody2D>();
-        //LevelbackgroundScore.Play();
-
+        LevelbackgroundScore.Play();
         // *** PLAYER HEALTH INITIALIZATION ***
         // setting player number of hearts at start
         noOfHealthPortions = 5;
@@ -112,6 +112,10 @@ public class GameManager : MonoBehaviour
         if (player.health <= 0)
         {
             deadMenuUI.SetActive(true);
+            // to stop player movement
+            player.GetComponent<PlayerInput>().enabled = false;
+            // to ensure enemies stop attack on player death
+            player.GetComponent<BoxCollider2D>().enabled = false;
         }
 
         // *** WIN CONDITION ***
@@ -151,6 +155,7 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        player.walkSound.Pause();
         
     }
     public void OnResume()
