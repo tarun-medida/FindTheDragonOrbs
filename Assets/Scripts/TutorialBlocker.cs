@@ -9,6 +9,7 @@ public class TutorialBlocker : MonoBehaviour
     public GameObject enterPlayAreaBlocker;
     private bool dummyDead;
     private GameObject getDummy;
+    public GameObject objectivePopUp;
 
     private void Update()
     {
@@ -23,7 +24,7 @@ public class TutorialBlocker : MonoBehaviour
             // Earlier on activation since IsTrigger was false the player could not go ahead, to solve this enabled IsTrigger for the Play Area Collider
             // Check this script  checkIfPlayerHasPassedCollider.cs
             enterPlayAreaBlocker.SetActive(true);
-            
+            objectivePopUp.SetActive(true);
         }
     }
 

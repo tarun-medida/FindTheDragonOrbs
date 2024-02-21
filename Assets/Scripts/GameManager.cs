@@ -55,12 +55,12 @@ public class GameManager : MonoBehaviour
     //In Game Characters to access
     public PlayerMovement player;
     public GameObject boss;
-    private GameObject bossInstanceRef;
+    public GameObject bossInstanceRef;
     // Level Parameters
     public int numberOfMinionsToSpawn;
     public int minionsToKillCount;
     public Transform[] randomBossSpawnLocations;
-    private int enemyCounter = 0;
+    public int enemyCounter = 0;
     private bool canSpawnBoss = false;
 
 
