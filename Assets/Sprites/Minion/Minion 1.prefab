@@ -272,6 +272,8 @@ GameObject:
   - component: {fileID: 8117253180089591326}
   - component: {fileID: 2467497541433678520}
   - component: {fileID: 5074864156667005810}
+  - component: {fileID: 2046619839945093919}
+  - component: {fileID: 7976983578922304699}
   m_Layer: 0
   m_Name: Minion 1
   m_TagString: Minion
@@ -353,7 +355,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 15
   m_Sprite: {fileID: -1380723168, guid: f45435c0b4398cf47acb9af0b632dee7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -528,6 +530,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 5343200368474561761}
+--- !u!195 &2046619839945093919
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2624753239672429036}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.26
+  m_Speed: 5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 500
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2.55
+  m_BaseOffset: 2.6666667
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &7976983578922304699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2624753239672429036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f5967a73d07f74c9d7bd73a49f8eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1870396013751257188, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
 --- !u!1 &2993687492496979729
 GameObject:
   m_ObjectHideFlags: 0
