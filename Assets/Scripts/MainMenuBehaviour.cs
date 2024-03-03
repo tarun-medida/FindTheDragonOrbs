@@ -10,7 +10,7 @@ public class MainMenuBehaviour : MonoBehaviour
 
     public Animator pageFlipAnimator;
     private bool mainMenuFlag = false, inventoryFlag = false, shopFlag = false, weaponsFlag = false, portionsFlag = false;
-    public GameObject mainMenuPage, inventoryPage, shopPage, startScreen, weaponsPage, portionsPage;
+    public GameObject mainMenuPage, inventoryPage, shopPage, startScreen, weaponsPage, portionsPage, startText;
     public AudioSource pageFlip;
     void Start()
     {
@@ -170,8 +170,14 @@ public class MainMenuBehaviour : MonoBehaviour
             ShowPage();
         else
         {
+            // hiding the start text to open book
+            startText.SetActive(false);
             this.gameObject.SetActive(false);
             startScreen.SetActive(true);
+            // to open the book and show the main menu rather than plain background!
+            mainMenuFlag= true;
+            ShowPage();
+            ShowMainPage();
         }
             
     }

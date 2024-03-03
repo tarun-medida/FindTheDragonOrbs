@@ -73,12 +73,15 @@ public class GameManager : MonoBehaviour
         noOfHealthPortions = 5;
         // at start what was the maximum number of hearts the player started with
         // later on when player purchases new health in inventory then the no_of_hearts will be changed
-        heartsTracker = player.no_of_hearts;
-        // setting the In Game UI Elements.
-        healthRegenText.text = noOfHealthPortions.ToString();
-        healtRegenAnimator = HealthRegenObject.GetComponent<Animator>();
+        if (player != null)
+        {
+            heartsTracker = player.no_of_hearts;
+            // setting the In Game UI Elements.
+            healthRegenText.text = noOfHealthPortions.ToString();
+            healtRegenAnimator = HealthRegenObject.GetComponent<Animator>();
+        }
         //*****************************************
-        coinsCollected = 40;
+        coinsCollected = 0;
         equippedItemTitle = "DrogFire";
         equippedItemDescription = "DMG: 10\r\nSpecial: Fire DMG\r\n\r\nCreated from the scales of the atlantic dragon DrogBorne";
         //UpdateEquppedItemContentInInventory();
@@ -89,7 +92,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         // *** BOSS SPAWN CONDITION ***
-        if (enemyCounter == minionsToKillCount)
+        if (enemyCounter == minionsToKillCount && player != null)
         {
             Debug.Log("Spawn");
                 int randSpawnPoint = UnityEngine.Random.Range(0, randomBossSpawnLocations.Length);
@@ -109,7 +112,7 @@ public class GameManager : MonoBehaviour
         }
         // *** LOSE CONDITION ***
         // checking player health to activate Game Over Menu
-        if (player.health <= 0)
+        if (player != null && player.health <= 0)
         {
             deadMenuUI.SetActive(true);
             // to stop player movement
@@ -131,7 +134,7 @@ public class GameManager : MonoBehaviour
             }
         }
         // *** UPDATE HEALTH PORTION UI if all portions are consumed ***
-        if (noOfHealthPortions <= 0)
+        if (player != null && noOfHealthPortions <= 0)
         {
             healtRegenAnimator.SetBool("NoPortions", true);
         }
@@ -161,6 +164,12 @@ public class GameManager : MonoBehaviour
     public void OnResume()
     {
         pauseMenuUI.SetActive(false);
+        Time.timeScale = 1;
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(0);
         Time.timeScale = 1;
     }
 
@@ -232,5 +241,11 @@ public class GameManager : MonoBehaviour
     public void UpdateCoinsCollected()
     {
         coinsCollected++;
+        GameInstance.instance.updateCoinsCollected(coinsCollected);
+    }
+
+    public int getCoinsCollected()
+    {
+        return coinsCollected;
     }
 }
