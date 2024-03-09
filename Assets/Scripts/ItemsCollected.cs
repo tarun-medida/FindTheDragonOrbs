@@ -5,22 +5,26 @@ using UnityEngine;
 
 public class ItemsCollected : MonoBehaviour
 {
-    public TMP_Text weaponTitle,weaponDesc;
     public ItemData[] ItemDataObject;
+    public WeaponDatabase weaponDatabase;
+    
+
+
     // Start is called before the first frame update
     void Start()
     {
+        weaponDatabase = new WeaponDatabase();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     public void ViewItemDescription(ItemData item)
     {
-        weaponTitle.text = item.title;
-        weaponDesc.text = item.itemDesc;
+        weaponDatabase.FindWeaponByTitle(item.title);
     }
+
+
 }

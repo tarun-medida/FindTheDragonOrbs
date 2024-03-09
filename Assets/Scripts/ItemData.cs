@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ItemData : MonoBehaviour
 {
-    public string title, itemDesc;
+    public string title,itemDesc;
 
     private void Start()
     {

@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class InventoryPickUp : MonoBehaviour
 {
+    public string weaponName;
     public GameObject imageAxe;
     public bool canPickUp;
+    public WeaponDatabase weaponDatabase;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -13,6 +15,7 @@ public class InventoryPickUp : MonoBehaviour
         {
             Debug.Log("Press P to pick up the weapon");
             canPickUp = true;
+            weaponDatabase.CollectWeapons(weaponName);
         }
     }
 

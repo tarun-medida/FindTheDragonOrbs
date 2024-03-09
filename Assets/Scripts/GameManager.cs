@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
@@ -81,7 +82,7 @@ public class GameManager : MonoBehaviour
             healtRegenAnimator = HealthRegenObject.GetComponent<Animator>();
         }
         //*****************************************
-        coinsCollected = 0;
+        coinsCollected = 100;
         equippedItemTitle = "DrogFire";
         equippedItemDescription = "DMG: 10\r\nSpecial: Fire DMG\r\n\r\nCreated from the scales of the atlantic dragon DrogBorne";
         //UpdateEquppedItemContentInInventory();
@@ -240,12 +241,29 @@ public class GameManager : MonoBehaviour
     // *** KEEPING TRACK OF THE COINS COLLECTED SO FAR ***
     public void UpdateCoinsCollected()
     {
-        coinsCollected++;
+        //coinsCollected++;
         GameInstance.instance.updateCoinsCollected(coinsCollected);
+    }
+
+    public void UpdateCoinsAfterPurchase(int totalPrice,int noOfPortions)
+    {
+        if (coinsCollected >= totalPrice)
+        {
+            coinsCollected = coinsCollected - totalPrice;
+            Debug.Log("You have " + coinsCollected + " coins");
+            noOfHealthPortions = noOfHealthPortions + noOfPortions;
+            Debug.Log("Now you have " + noOfHealthPortions + " portions");
+            UpdateCoinsCollected();
+        }
+        if(coinsCollected < totalPrice) 
+        {
+            Debug.Log("You Dont have enuf coins.");
+        }
     }
 
     public int getCoinsCollected()
     {
         return coinsCollected;
     }
+
 }

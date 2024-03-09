@@ -6,6 +6,7 @@ using UnityEngine;
 public class GameInstance : MonoBehaviour
 {
     public static GameInstance instance;
+    public WeaponDatabase weaponDatabase;
 
     private void Awake()
     {
@@ -24,6 +25,10 @@ public class GameInstance : MonoBehaviour
     public void updateCoinsCollected(int coins)
     {
         coinsCollected = coins;
+    }
+    public void GetWeaponsCollected()
+    {
+        weaponDatabase.ShowWeaponsCollected();
     }
 
 }
