@@ -14,6 +14,8 @@ public class SetData : MonoBehaviour
 
     private void SetCoinsText()
     {
-        text.SetText("Coins: " + GameInstance.instance.coinsCollected.ToString());
+        //text.SetText("Coins: " + GameInstance.instance.getGameData().coinsCollected.ToString());
+        // coins collected will be updated by loaded data in start() of Gamemanager and will fetch the value from there!
+        text.SetText("Coins: " + GameManager.instance.getCoinsCollected().ToString());
     }
 }

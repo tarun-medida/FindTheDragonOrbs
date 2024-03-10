@@ -207,7 +207,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 816553215}
+      - m_Target: {fileID: 1672913713}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: OnExit
         m_Mode: 1
@@ -993,7 +993,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponDatabase: {fileID: 0}
-  coinsCollected: 0
 --- !u!1 &163073110
 GameObject:
   m_ObjectHideFlags: 0
@@ -1492,7 +1491,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &215459333
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4305,7 +4304,6 @@ GameObject:
   m_Component:
   - component: {fileID: 816553212}
   - component: {fileID: 816553214}
-  - component: {fileID: 816553215}
   m_Layer: 5
   m_Name: HomePage
   m_TagString: Untagged
@@ -4344,35 +4342,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 816553211}
   m_CullTransparentMesh: 1
---- !u!114 &816553215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 816553211}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfb70abe13ff7d247baca5e50f0dd4ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 0}
-  deadMenuUI: {fileID: 0}
-  winMenuUI: {fileID: 0}
-  LevelbackgroundScore: {fileID: 0}
-  equippedItemTitleText: {fileID: 0}
-  equippedItemDescriptionText: {fileID: 0}
-  equippedPortionsCountText: {fileID: 0}
-  portionsLimitCountText: {fileID: 0}
-  HealthRegenObject: {fileID: 0}
-  healthRegenText: {fileID: 0}
-  player: {fileID: 0}
-  boss: {fileID: 0}
-  bossInstanceRef: {fileID: 0}
-  numberOfMinionsToSpawn: 0
-  minionsToKillCount: 0
-  randomBossSpawnLocations: []
-  enemyCounter: 0
 --- !u!1 &819649376
 GameObject:
   m_ObjectHideFlags: 0
@@ -6261,7 +6230,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1099998941
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8064,7 +8033,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 816553215}
+      - m_Target: {fileID: 1672913713}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: OnClickPlay
         m_Mode: 1

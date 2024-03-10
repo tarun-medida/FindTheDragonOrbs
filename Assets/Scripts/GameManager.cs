@@ -63,15 +63,21 @@ public class GameManager : MonoBehaviour
     public Transform[] randomBossSpawnLocations;
     public int enemyCounter = 0;
     private bool canSpawnBoss = false;
+    private GameData loadedGameData;
 
 
     public void Start()
     {
         //rb = GetComponent<Rigidbody2D>();
         LevelbackgroundScore.Play();
+        // Loading Game Data
+        loadedGameData = GameInstance.instance.getGameData();
         // *** PLAYER HEALTH INITIALIZATION ***
         // setting player number of hearts at start
-        noOfHealthPortions = 5;
+        if(loadedGameData.portionsEquipped == 0)
+            noOfHealthPortions = 5;
+        else
+            noOfHealthPortions = loadedGameData.portionsEquipped;
         // at start what was the maximum number of hearts the player started with
         // later on when player purchases new health in inventory then the no_of_hearts will be changed
         if (player != null)
@@ -82,7 +88,7 @@ public class GameManager : MonoBehaviour
             healtRegenAnimator = HealthRegenObject.GetComponent<Animator>();
         }
         //*****************************************
-        coinsCollected = 100;
+        coinsCollected = loadedGameData.coinsCollected;
         equippedItemTitle = "DrogFire";
         equippedItemDescription = "DMG: 10\r\nSpecial: Fire DMG\r\n\r\nCreated from the scales of the atlantic dragon DrogBorne";
         //UpdateEquppedItemContentInInventory();
@@ -113,6 +119,7 @@ public class GameManager : MonoBehaviour
         }
         // *** LOSE CONDITION ***
         // checking player health to activate Game Over Menu
+        // update game data as well,such as coins collected, portions left
         if (player != null && player.health <= 0)
         {
             deadMenuUI.SetActive(true);
@@ -120,10 +127,12 @@ public class GameManager : MonoBehaviour
             player.GetComponent<PlayerInput>().enabled = false;
             // to ensure enemies stop attack on player death
             player.GetComponent<BoxCollider2D>().enabled = false;
+            // saving the game upon lose which will update game data, because you will have collected some coins and used some portions
         }
 
         // *** WIN CONDITION ***
         // checking boss health and object to activate Game Win Screen
+        // update game data as well, such as coins collected, portions left
         if (bossInstanceRef != null)
         {
             if (bossInstanceRef.GetComponent<CharacterDamage>().Health <= 0)
@@ -131,6 +140,7 @@ public class GameManager : MonoBehaviour
                 winMenuUI.SetActive(true);
                 Destroy(bossInstanceRef);
                 // testing!! upon win the walk sound kept playing and when scene loaded the game was bugged
+                // saving the game upon win which will update game data
                 Time.timeScale = 0;
             }
         }
@@ -139,6 +149,20 @@ public class GameManager : MonoBehaviour
         {
             healtRegenAnimator.SetBool("NoPortions", true);
         }
+
+    }
+
+    private void UpdateGameDataOnWin()
+    {
+        GameInstance.instance.updateCoinsCollected(coinsCollected);
+        GameInstance.instance.updatePortionsUsed(noOfHealthPortions);
+        GameInstance.instance.updateLevelsCompleted(1);
+    }
+
+    private void UpdateGameDataOnLose()
+    {
+        GameInstance.instance.updateCoinsCollected(coinsCollected);
+        GameInstance.instance.updatePortionsUsed(noOfHealthPortions);
 
     }
 
@@ -170,12 +194,23 @@ public class GameManager : MonoBehaviour
 
     public void MainMenu()
     {
+        if(winMenuUI.activeInHierarchy)
+        {
+            UpdateGameDataOnWin();
+            GameInstance.instance.SaveGame();
+        }
+        else if(deadMenuUI.activeInHierarchy)
+        {
+            UpdateGameDataOnLose();
+            GameInstance.instance.SaveGame();
+        }
         SceneManager.LoadScene(0);
         Time.timeScale = 1;
     }
 
     public void OnExit()
     {
+        GameInstance.instance.SaveGame();
         Application.Quit();
     }
 
@@ -241,8 +276,10 @@ public class GameManager : MonoBehaviour
     // *** KEEPING TRACK OF THE COINS COLLECTED SO FAR ***
     public void UpdateCoinsCollected()
     {
-        //coinsCollected++;
-        GameInstance.instance.updateCoinsCollected(coinsCollected);
+        // this is updating the coins collected when in-game which will start from zero during every level
+        coinsCollected++;
+        // remvoing the line below and updating the coins collected after a play session
+        //GameInstance.instance.updateCoinsCollected(coinsCollected);
     }
 
     public void UpdateCoinsAfterPurchase(int totalPrice,int noOfPortions)
@@ -257,7 +294,7 @@ public class GameManager : MonoBehaviour
         }
         if(coinsCollected < totalPrice) 
         {
-            Debug.Log("You Dont have enuf coins.");
+            Debug.Log("You don't have enough coins.");
         }
     }
 
