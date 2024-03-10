@@ -282,7 +282,7 @@ public class GameManager : MonoBehaviour
         //GameInstance.instance.updateCoinsCollected(coinsCollected);
     }
 
-    public void UpdateCoinsAfterPurchase(int totalPrice,int noOfPortions)
+    public void UpdateCoinsAfterPurchasePortion(int totalPrice,int noOfPortions)
     {
         if (coinsCollected >= totalPrice)
         {
@@ -296,6 +296,23 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("You don't have enough coins.");
         }
+    }
+    public bool UpdateCoinsAfterPurchaseWeapon(int totalPrice)
+    {
+        if (coinsCollected >= totalPrice)
+        {
+            coinsCollected = coinsCollected - totalPrice;
+            Debug.Log(totalPrice);
+            UpdateCoinsCollected();
+            Debug.Log("Congratulations you bought the weapon");
+            return true;
+        }
+        if (coinsCollected < totalPrice)
+        {
+            Debug.Log("You don't have enough coins.");
+            return false;
+        }
+        return false;
     }
 
     public int getCoinsCollected()

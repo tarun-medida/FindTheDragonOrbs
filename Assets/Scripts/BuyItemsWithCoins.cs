@@ -13,13 +13,19 @@ public class BuyItemsWithCoins : MonoBehaviour
     public int qty;
     public int amount;
 
-    public void CalculateTotalPrice()
+    public void CalculatePortionTotalPrice()
     {
         qty = int.Parse(quantity.text);
         amount = int.Parse(price.text);
 
         totalPrice = qty * amount;
-        gameManager.UpdateCoinsAfterPurchase(totalPrice,qty);
+        gameManager.UpdateCoinsAfterPurchasePortion(totalPrice,qty);
+    }
+    public void CalculateWeaponTotalPrice()
+    {
+        amount = int.Parse(price.text);
 
+        totalPrice = qty * amount;
+        gameManager.UpdateCoinsAfterPurchaseWeapon(totalPrice);
     }
 }

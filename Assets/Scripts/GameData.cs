@@ -14,7 +14,7 @@ public class GameData
 
     public GameData()
     {
-        this.coinsCollected = 0;
+        this.coinsCollected = 100;
         this.levelsCompleted = 0;
         this.weaponsBought = null;
         this.portionsEquipped = 0;

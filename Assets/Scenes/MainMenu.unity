@@ -592,14 +592,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 77955424}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 259928822}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -625,7 +625,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Next
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1491,7 +1491,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &215459333
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1725,7 +1725,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &229292538
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1986,7 +1986,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 259928824}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1099175054}
+        m_TargetAssemblyTypeName: WeaponDatabase, Assembly-CSharp
+        m_MethodName: ShowWeaponData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &259928824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2431,7 +2443,7 @@ GameObject:
   - component: {fileID: 396124016}
   - component: {fileID: 396124015}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: WeaponPrice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2477,7 +2489,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0
+  m_text: 50
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2f574ce561c9c82469c41bf0fa5b2a05, type: 2}
   m_sharedMaterial: {fileID: -2638161542488965141, guid: 2f574ce561c9c82469c41bf0fa5b2a05, type: 2}
@@ -3350,6 +3362,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponTitle: {fileID: 174252482}
   weaponDesc: {fileID: 819649378}
+  weaponPrice: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!1 &618064341
 GameObject:
   m_ObjectHideFlags: 0
@@ -4310,7 +4324,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &816553212
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6167,7 +6181,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1099175052
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6210,8 +6224,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be84b6073ad53f84f9092c508293ddd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponTitle: {fileID: 0}
-  weaponDesc: {fileID: 0}
+  weaponTitle: {fileID: 344236217}
+  weaponDesc: {fileID: 1619513470}
+  weaponPrice: {fileID: 396124015}
+  gameManager: {fileID: 1672913713}
 --- !u!1 &1099998940
 GameObject:
   m_ObjectHideFlags: 0
@@ -6230,7 +6246,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1099998941
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7478,7 +7494,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1379499834
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7698,7 +7714,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1381047263}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1099175054}
+        m_TargetAssemblyTypeName: WeaponDatabase, Assembly-CSharp
+        m_MethodName: CalculateWeaponTotalPrice
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1381047263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8860,9 +8888,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1786207013}
-        m_TargetAssemblyTypeName: BuyItemsWithCoins, Assembly-CSharp
-        m_MethodName: CalculateTotalPrice
+      - m_Target: {fileID: 1099175054}
+        m_TargetAssemblyTypeName: WeaponDatabase, Assembly-CSharp
+        m_MethodName: CalculateWeaponTotalPrice
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9725,7 +9753,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1950070283
 RectTransform:
   m_ObjectHideFlags: 0
