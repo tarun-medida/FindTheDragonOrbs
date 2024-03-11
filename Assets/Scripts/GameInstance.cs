@@ -36,10 +36,12 @@ public class GameInstance : MonoBehaviour
     {
         // existing count + new coins collected after a play session
         // as we have gameData intialized here, we shall update the values of game data
-        //coinsCollected+= coins;
-        
         this.gameData.coinsCollected = this.gameData.coinsCollected  +  coins;
-        Debug.Log("Coins : " + this.gameData.coinsCollected.ToString());
+    }
+
+    public void updateCoinsCollectedAfterPurchase(int coins)
+    {
+        this.gameData.coinsCollected = this.gameData.coinsCollected - coins;
     }
 
     public void updatePortionsUsed(int portionsLeft)
@@ -56,6 +58,18 @@ public class GameInstance : MonoBehaviour
             this.gameData.levelsCompleted += levelCount;
         }
     }
+
+    // should be called when player equips a weapon in inventory
+    public void updateWeaponEquipped(string weaponTitle)
+    {
+       this.gameData.weaponEquipped = weaponTitle;
+    }
+
+    public void updateWeaponsPurchased()
+    {
+
+    }
+
 
     public void GetWeaponsCollected()
     {
@@ -93,7 +107,7 @@ public class GameInstance : MonoBehaviour
         else
         {
             Debug.Log("Save Data Found...");
-            Debug.Log("Coins:" + gameData.coinsCollected + " Portions:" + gameData.portionsEquipped);
+            Debug.Log("Coins:" + gameData.coinsCollected + " Portions:" + gameData.portionsEquipped + "Weapon:" + gameData.weaponEquipped);
         }
     }
 

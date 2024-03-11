@@ -14,10 +14,10 @@ public class GameData
 
     public GameData()
     {
-        this.coinsCollected = 100;
+        this.coinsCollected = 0;
         this.levelsCompleted = 0;
         this.weaponsBought = null;
         this.portionsEquipped = 0;
-        this.weaponEquipped= null;
+        this.weaponEquipped= "DrogFire";
     }
 }

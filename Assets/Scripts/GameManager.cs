@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.Assertions.Must;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using static WeaponDatabase;
 
 
 
@@ -64,6 +65,8 @@ public class GameManager : MonoBehaviour
     public int enemyCounter = 0;
     private bool canSpawnBoss = false;
     private GameData loadedGameData;
+    private List<Weapons> collectedWeapons;
+    public WeaponDatabase weaponDatabase;
 
 
     public void Start()
@@ -73,7 +76,6 @@ public class GameManager : MonoBehaviour
         // Loading Game Data
         loadedGameData = GameInstance.instance.getGameData();
         // *** PLAYER HEALTH INITIALIZATION ***
-        // setting player number of hearts at start
         if(loadedGameData.portionsEquipped == 0)
             noOfHealthPortions = 5;
         else
@@ -89,10 +91,8 @@ public class GameManager : MonoBehaviour
         }
         //*****************************************
         coinsCollected = loadedGameData.coinsCollected;
-        equippedItemTitle = "DrogFire";
-        equippedItemDescription = "DMG: 10\r\nSpecial: Fire DMG\r\n\r\nCreated from the scales of the atlantic dragon DrogBorne";
-        //UpdateEquppedItemContentInInventory();
-        //UpdateEquippedPortionsCount();
+        UpdateEquppedItemContentInInventory(loadedGameData.weaponEquipped);
+        UpdateEquippedPortionsCount();
 
     }
 
@@ -166,6 +166,13 @@ public class GameManager : MonoBehaviour
 
     }
 
+    private void UpdateCoinsAndPortionsAfterPurchase()
+    {
+        GameInstance.instance.updateCoinsCollectedAfterPurchase(coinsCollected);
+        GameInstance.instance.updatePortionsUsed(noOfHealthPortions);
+    }
+
+
     public void OnClickPlay()
     {
         SceneManager.LoadScene(1);
@@ -215,17 +222,34 @@ public class GameManager : MonoBehaviour
     }
 
     // Update Player's Current Weapon
-    public void UpdateEquppedItemContentInInventory()
+    public void UpdateEquppedItemContentInInventory(string loadedWeaponTitle)
     {
-        equippedItemTitleText.text = equippedItemTitle;
-        equippedItemDescriptionText.text = equippedItemDescription;
+        if (weaponDatabase != null)
+        {
+            Weapons weapon = weaponDatabase.GetWeaponDetailsByTitle(loadedWeaponTitle);
+            if (weapon != null)
+            {
+                equippedItemTitle = weapon.title;
+                equippedItemDescription = weapon.description;
+                equippedItemTitleText.text = equippedItemTitle;
+                equippedItemDescriptionText.text = equippedItemDescription;
+            }
+            else
+            {
+                Debug.Log("Weapon not Found!");
+            }
+        }
+        
     }
 
-    // Update Player's Portions
+    // Update Player's Portions in inventory
     public void UpdateEquippedPortionsCount()
     {
-        equippedPortionsCountText.text = noOfHealthPortions.ToString();
-        portionsLimitCountText.text = 30.ToString();
+        if (equippedPortionsCountText != null)
+        {
+            equippedPortionsCountText.text = noOfHealthPortions.ToString();
+            portionsLimitCountText.text = 30.ToString();
+        }
     }
 
     // Update Player's Health when drinking portion
@@ -253,6 +277,27 @@ public class GameManager : MonoBehaviour
             Debug.Log("No More Portions");
         }
     }
+
+    //Equip Item From Inventory
+    public void EquipItem()
+    {
+        Weapons weapon = weaponDatabase.GetWeaponDetailsByTitle(weaponDatabase.weaponTitle.text.ToString());
+        if (weapon != null)
+        {
+            equippedItemTitle = weapon.title;
+            equippedItemDescription = weapon.description;
+            equippedItemTitleText.text = equippedItemTitle;
+            equippedItemDescriptionText.text = equippedItemDescription;
+            GameInstance.instance.updateWeaponEquipped(equippedItemTitle);
+            GameInstance.instance.SaveGame();
+        }
+        else
+        {
+            Debug.Log("Weapon not Found!");
+        }
+    }
+
+
     private int getNoOfHeartsFromHealth(float hearts)
     {
         hearts = (int)(player.health * player.no_of_hearts) / player.maxHealth;
@@ -278,8 +323,11 @@ public class GameManager : MonoBehaviour
     {
         // this is updating the coins collected when in-game which will start from zero during every level
         coinsCollected++;
-        // remvoing the line below and updating the coins collected after a play session
-        //GameInstance.instance.updateCoinsCollected(coinsCollected);
+    }
+
+    public int getCoinsCollected()
+    {
+        return coinsCollected;
     }
 
     public void UpdateCoinsAfterPurchasePortion(int totalPrice,int noOfPortions)
@@ -290,9 +338,12 @@ public class GameManager : MonoBehaviour
             Debug.Log("You have " + coinsCollected + " coins");
             noOfHealthPortions = noOfHealthPortions + noOfPortions;
             Debug.Log("Now you have " + noOfHealthPortions + " portions");
-            UpdateCoinsCollected();
+            //UpdateCoinsCollected();
+            UpdateCoinsAndPortionsAfterPurchase();
+            UpdateEquippedPortionsCount();
+            GameInstance.instance.SaveGame();
         }
-        if(coinsCollected < totalPrice) 
+        else if (coinsCollected < totalPrice) 
         {
             Debug.Log("You don't have enough coins.");
         }
@@ -307,17 +358,12 @@ public class GameManager : MonoBehaviour
             Debug.Log("Congratulations you bought the weapon");
             return true;
         }
-        if (coinsCollected < totalPrice)
+        else if (coinsCollected < totalPrice)
         {
             Debug.Log("You don't have enough coins.");
             return false;
         }
         return false;
-    }
-
-    public int getCoinsCollected()
-    {
-        return coinsCollected;
     }
 
 }

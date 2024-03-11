@@ -17,24 +17,31 @@ public class WeaponDatabase : MonoBehaviour
         public string title;
         public string description;
         public int price;
+        public int damage;
     }
 
     public List<Weapons> availableWeapons = new List<Weapons>();
     public List<Weapons> collectedWeapons = new List<Weapons>();
 
-    void Start()
+    public WeaponDatabase() 
     {
+        // moved weapon intialization to constructor
+        // when switchin between scense the weapon database game object was loading later than game manager causing the data to not be loaded in time
+        // the data loads before game manager only on game start
+        // moving it here removes the issue
         Weapons electraCut = new Weapons
         {
             title = "ElectraCut",
             description = "DMG: 20\r\nSpecial: Lightining DMG\r\n\r\nCreated from the scales of the atlantic dragon LitBorne",
+            damage = 20,
             price = 50
-            
+
         };
         Weapons drogFire = new Weapons
         {
             title = "DrogFire",
             description = "DMG: 10\r\nSpecial: Fire DMG\r\n\r\nCreated from the scales of the atlantic dragon DrogBorne",
+            damage = 10,
             price = 65
 
         };
@@ -42,11 +49,18 @@ public class WeaponDatabase : MonoBehaviour
         {
             title = "Hammer",
             description = "DMG: 25\r\nSpecial: Power DMG\r\n\r\nCreated from the teeth of the dragon SolidBorne",
+            damage = 25,
             price = 70
         };
-        availableWeapons.Add(electraCut);
-        availableWeapons.Add(drogFire);
-        availableWeapons.Add(hammer);
+        this.availableWeapons.Add(electraCut);
+        this.availableWeapons.Add(drogFire);
+        this.availableWeapons.Add(hammer);
+    }
+
+
+    void Start()
+    {
+
     }
     public void FindWeaponByTitle(string title)
     {
@@ -56,10 +70,26 @@ public class WeaponDatabase : MonoBehaviour
             {
                 weaponTitle.text = weapon.title;
                 weaponDesc.text = weapon.description;
-                weaponPrice.text = weapon.price.ToString();
+                // not needed for inventory
+                //weaponPrice.text = weapon.price.ToString();
+                
             }
         }
     }
+
+    // for game manager to set the current equipped weapon along with its description
+    public Weapons GetWeaponDetailsByTitle(string title)
+    {
+        foreach (var weapon in this.availableWeapons)
+        {
+            if (title == weapon.title)
+            {
+                return weapon;
+            }
+        }
+        return null;
+    }
+
     public void CollectWeapons(string weaponName)
     {
         Weapons weapon = availableWeapons.Find(w => w.title == weaponName);
@@ -80,6 +110,7 @@ public class WeaponDatabase : MonoBehaviour
         }
     }
 
+    // function to show weapon details in weapons store
     public void ShowWeaponData()
     {
         Debug.Log("In show weapon data");
@@ -112,5 +143,6 @@ public class WeaponDatabase : MonoBehaviour
         }
         availableWeapons.RemoveAll(item => item.price == amount);
     }
+
 }
 

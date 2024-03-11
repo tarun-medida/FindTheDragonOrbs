@@ -13,7 +13,7 @@ public class ItemsCollected : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        weaponDatabase = new WeaponDatabase();
+        
     }
 
     // Update is called once per frame
@@ -23,6 +23,7 @@ public class ItemsCollected : MonoBehaviour
 
     public void ViewItemDescription(ItemData item)
     {
+        
         weaponDatabase.FindWeaponByTitle(item.title);
     }
 
