@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WeaponDatabase : MonoBehaviour
 {
     public TMP_Text weaponTitle, weaponDesc, weaponPrice;
     int weaponCounter = 0;
+    public string[] names;
+    public Image[] images;
     public GameManager gameManager;
 
     int amount;
@@ -22,6 +25,7 @@ public class WeaponDatabase : MonoBehaviour
 
     public List<Weapons> availableWeapons = new List<Weapons>();
     public List<Weapons> collectedWeapons = new List<Weapons>();
+    
 
     public WeaponDatabase() 
     {
@@ -55,13 +59,16 @@ public class WeaponDatabase : MonoBehaviour
         this.availableWeapons.Add(electraCut);
         this.availableWeapons.Add(drogFire);
         this.availableWeapons.Add(hammer);
+        this.collectedWeapons.Add(electraCut);
     }
 
 
     void Start()
     {
-
+        ShowWeaponData();
+        ShowWeaponsCollected();
     }
+    
     public void FindWeaponByTitle(string title)
     {
        foreach (var weapon in availableWeapons)
@@ -95,7 +102,7 @@ public class WeaponDatabase : MonoBehaviour
         Weapons weapon = availableWeapons.Find(w => w.title == weaponName);
         if(weapon != null)
         {
-            collectedWeapons.Add(weapon);
+            this.collectedWeapons.Add(weapon);
         }
         else
         {
@@ -104,9 +111,16 @@ public class WeaponDatabase : MonoBehaviour
     }
     public void ShowWeaponsCollected()
     {
-        foreach(var weapon in collectedWeapons) 
+        foreach (var weapon in this.collectedWeapons)
         {
             Debug.Log(weapon.title);
+            for (int i = 0; i < names.Length; i++)
+            {
+                if (weapon.title == names[i])
+                {
+                    images[i].gameObject.SetActive(true);
+                }
+            }
         }
     }
 
@@ -114,7 +128,7 @@ public class WeaponDatabase : MonoBehaviour
     public void ShowWeaponData()
     {
         Debug.Log("In show weapon data");
-        if(weaponCounter <= availableWeapons.Count)
+        if(weaponCounter < availableWeapons.Count)
         {
             weaponTitle.text = availableWeapons[weaponCounter].title;
             weaponDesc.text = availableWeapons[weaponCounter].description;
@@ -125,6 +139,7 @@ public class WeaponDatabase : MonoBehaviour
                 weaponCounter = 0;
             }
         }
+
     }
     public void CalculateWeaponTotalPrice()
     {
@@ -136,13 +151,14 @@ public class WeaponDatabase : MonoBehaviour
             {
                 if (weapon.price == amount)
                 {
-                    collectedWeapons.Add(weapon);
-                    ShowWeaponData();
+                    this.collectedWeapons.Add(weapon);
+                    ShowWeaponsCollected();
                 }
             }
         }
         availableWeapons.RemoveAll(item => item.price == amount);
     }
+
 
 }
 

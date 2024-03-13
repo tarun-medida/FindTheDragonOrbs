@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.Assertions.Must;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using static WeaponDatabase;
 
 
@@ -68,6 +69,9 @@ public class GameManager : MonoBehaviour
     private List<Weapons> collectedWeapons;
     public WeaponDatabase weaponDatabase;
 
+    //for displaying equipped sword in inventory
+    public Image[] swords;
+    public string[] swordName;
 
     public void Start()
     {
@@ -90,10 +94,10 @@ public class GameManager : MonoBehaviour
             healtRegenAnimator = HealthRegenObject.GetComponent<Animator>();
         }
         //*****************************************
-        coinsCollected = loadedGameData.coinsCollected;
+        //coinsCollected = loadedGameData.coinsCollected;
+        coinsCollected = 100;
         UpdateEquppedItemContentInInventory(loadedGameData.weaponEquipped);
         UpdateEquippedPortionsCount();
-
     }
 
     void Update()
@@ -290,6 +294,18 @@ public class GameManager : MonoBehaviour
             equippedItemDescriptionText.text = equippedItemDescription;
             GameInstance.instance.updateWeaponEquipped(equippedItemTitle);
             GameInstance.instance.SaveGame();
+
+            for(int i = 0; i < swordName.Length; i++)
+            {
+                if (weapon.title == swordName[i])
+                {
+                    swords[i].gameObject.SetActive(true);
+                }
+                else
+                {
+                    swords[i].gameObject.SetActive(false);
+                }
+            }
         }
         else
         {
