@@ -11,7 +11,6 @@ public class PlayerMovement : MonoBehaviour
     CharacterDamage characterDamage;
     public float health=200;
     public float maxHealth = 200;
-    private float heartsTracker;
     public int no_of_hearts = 3;
     public int maxNoOfHeartsAllowed = 15;
 
@@ -19,19 +18,13 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 1000f;
     Rigidbody2D playerRB;
     public SpriteRenderer spriteRenderer;
-    bool move = true;
     public float maxSpeed = 5;
     private Animator animator;
     public float idleFriction = 0.9f;
-    [SerializeField]
-    //private GameObject inventory;
-
-    //public GameObject deathHUD;
-
     public AudioSource walkSound;
     
     //special attack delay and time variables
-    private float coolDownTime = 5f;
+    private readonly float coolDownTime = 5f;
     private float coolDownTimer = 0.0f;
     private bool isInCoolDown = false;
     public Image specialAttackRegenTimerImage;
@@ -57,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
         //if(move && moveInput != Vector2.zero)
         if(moveInput != Vector2.zero )
             {
-            playerRB.AddForce(moveInput * moveSpeed * Time.deltaTime);
+            playerRB.AddForce(Time.deltaTime * moveInput * moveSpeed);
             //GetComponent<AudioSource>().UnPause();
             walkSound.UnPause();
             if (playerRB.velocity.magnitude > maxSpeed)
@@ -134,7 +127,7 @@ public class PlayerMovement : MonoBehaviour
         // drink portion
         if (Input.GetKeyDown(KeyCode.X))
         {
-            GameManager.instance.drinkPortion();
+            GameManager.instance.DrinkPortion();
         }
 
         //do special attack

@@ -8,7 +8,7 @@ using UnityEngine;
 public class GameInstance : MonoBehaviour
 {
     public static GameInstance instance;
-    public WeaponDatabase weaponDatabase;
+    //public WeaponDatabase weaponDatabase;
     private FileHandler fileHandler;
 
     private void Awake()
@@ -32,54 +32,50 @@ public class GameInstance : MonoBehaviour
         LoadGame();
     }
 
-    public void updateCoinsCollected(int coins)
+    public void UpdateCoinsCollected(int coins)
     {
         // existing count + new coins collected after a play session
         // as we have gameData intialized here, we shall update the values of game data
-        this.gameData.coinsCollected = this.gameData.coinsCollected  +  coins;
+        gameData.coinsCollected = gameData.coinsCollected  +  coins;
     }
 
-    public void updateCoinsCollectedAfterPurchase(int coins)
+    public void UpdateCoinsCollectedAfterPurchase(int coins)
     {
-        this.gameData.coinsCollected = this.gameData.coinsCollected - coins;
+        gameData.coinsCollected = coins;
     }
 
-    public void updatePortionsUsed(int portionsLeft)
+    public void UpdatePortionsUsed(int portionsLeft)
     {
         // updating the current portions equipped with the portions used in-game
-        this.gameData.portionsEquipped = portionsLeft;
+        gameData.portionsEquipped = portionsLeft;
     }
 
-    public void updateLevelsCompleted(int levelCount)
+    public void UpdateLevelsCompleted(int levelCount)
     {
         // as there is only one level as of now and to ensure that levels completed doesn't increase everytime we play the same level
-        if (this.gameData.levelsCompleted == 0)
+        if (gameData.levelsCompleted == 0)
         {
-            this.gameData.levelsCompleted += levelCount;
+            gameData.levelsCompleted += levelCount;
         }
     }
 
     // should be called when player equips a weapon in inventory
-    public void updateWeaponEquipped(string weaponTitle)
+    public void UpdateWeaponEquipped(string weaponTitle)
     {
-       this.gameData.weaponEquipped = weaponTitle;
+       gameData.weaponEquipped = weaponTitle;
     }
 
-    public void updateWeaponsPurchased()
+    public void updateWeaponsPurchased(List<string> weaponsCollected)
     {
-
-    }
-
-
-    public void GetWeaponsCollected()
-    {
-        weaponDatabase.ShowWeaponsCollected();
+      gameData.weaponsCollected = weaponsCollected;
+        
     }
 
     // new game data object with every data reset to default
     public void NewGame()
     {
-        this.gameData = new GameData();
+        Debug.Log("Creating new save data...");
+        gameData = new GameData();
     }
 
     // this will be called as soon as the player in-game presses exit and goes to main menu
@@ -87,7 +83,8 @@ public class GameInstance : MonoBehaviour
     {
         // save game which will write contents to a file passing in updated game object
         // FileHandler.SaveGameData(this.gameData)
-        fileHandler.SaveData(this.gameData);
+        Debug.Log("Saving game...");
+        fileHandler.SaveData(gameData);
 
     }
 
@@ -97,9 +94,9 @@ public class GameInstance : MonoBehaviour
         GameData loadedGameData = fileHandler.LoadData();
         Debug.Log("Loading data...." + loadedGameData);
         // setting game data with loaded data from the save file
-        this.gameData = loadedGameData;
+        gameData = loadedGameData;
         // if no save data exists, start from default state which is new game
-        if (this.gameData == null)
+        if (gameData == null)
         {
             Debug.Log("No Save Data Found. Loading with Default values...");
             NewGame();
@@ -107,13 +104,21 @@ public class GameInstance : MonoBehaviour
         else
         {
             Debug.Log("Save Data Found...");
-            Debug.Log("Coins:" + gameData.coinsCollected + " Portions:" + gameData.portionsEquipped + "Weapon:" + gameData.weaponEquipped);
+
         }
     }
 
     public GameData getGameData()
     {
-        return this.gameData;
+        return gameData;
     }
 
 }
+
+/* 
+Debug.Log("Coins:" + gameData.coinsCollected + " Portions:" + gameData.portionsEquipped + "Weapon:" + gameData.weaponEquipped);
+foreach(var weapon in gameData.weaponsCollected)
+{
+Debug.Log("Weapon:" + weapon);
+}
+*/

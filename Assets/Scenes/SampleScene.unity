@@ -10386,6 +10386,10 @@ MonoBehaviour:
   equippedItemDescriptionText: {fileID: 0}
   equippedPortionsCountText: {fileID: 0}
   portionsLimitCountText: {fileID: 0}
+  coinsCollectedInventoryText: {fileID: 0}
+  coinsCollectedWeaponsStoreText: {fileID: 0}
+  coinsCollectedPortionsStoreText: {fileID: 0}
+  equippedWeaponSprite: {fileID: 0}
   HealthRegenObject: {fileID: 977079425}
   healthRegenText: {fileID: 1002874948}
   player: {fileID: 1911549667}
@@ -10400,6 +10404,8 @@ MonoBehaviour:
   - {fileID: 921234760}
   - {fileID: 167751414}
   enemyCounter: 0
+  weaponDatabase: {fileID: 0}
+  itemsCollected: {fileID: 0}
 --- !u!82 &1021644227
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13632,7 +13638,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1668342228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13647,6 +13653,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponTitle: {fileID: 0}
   weaponDesc: {fileID: 0}
+  weaponPrice: {fileID: 0}
 --- !u!4 &1668342229
 Transform:
   m_ObjectHideFlags: 0

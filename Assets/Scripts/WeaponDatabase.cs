@@ -2,16 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.U2D;
 using UnityEngine.UI;
 
 public class WeaponDatabase : MonoBehaviour
 {
     public TMP_Text weaponTitle, weaponDesc, weaponPrice;
+    public Image weaponStoreSprite;
     int weaponCounter = 0;
-    public string[] names;
-    public Image[] images;
-    public GameManager gameManager;
-
     int amount;
     bool weaponBought = false;
 
@@ -21,11 +19,21 @@ public class WeaponDatabase : MonoBehaviour
         public string description;
         public int price;
         public int damage;
+        public Sprite weaponSprite;
+
+        public Weapons(string title,string description, int price, int damage)
+        {
+            this.title = title;
+            this.description = description;
+            this.price = price;
+            this.damage = damage;
+        }
     }
 
     public List<Weapons> availableWeapons = new List<Weapons>();
     public List<Weapons> collectedWeapons = new List<Weapons>();
-    
+
+    private Weapons electraCut, drogFire, hammer;
 
     public WeaponDatabase() 
     {
@@ -33,61 +41,59 @@ public class WeaponDatabase : MonoBehaviour
         // when switchin between scense the weapon database game object was loading later than game manager causing the data to not be loaded in time
         // the data loads before game manager only on game start
         // moving it here removes the issue
-        Weapons electraCut = new Weapons
-        {
-            title = "ElectraCut",
-            description = "DMG: 20\r\nSpecial: Lightining DMG\r\n\r\nCreated from the scales of the atlantic dragon LitBorne",
-            damage = 20,
-            price = 50
-
-        };
-        Weapons drogFire = new Weapons
-        {
-            title = "DrogFire",
-            description = "DMG: 10\r\nSpecial: Fire DMG\r\n\r\nCreated from the scales of the atlantic dragon DrogBorne",
-            damage = 10,
-            price = 65
-
-        };
-        Weapons hammer = new Weapons
-        {
-            title = "Hammer",
-            description = "DMG: 25\r\nSpecial: Power DMG\r\n\r\nCreated from the teeth of the dragon SolidBorne",
-            damage = 25,
-            price = 70
-        };
-        this.availableWeapons.Add(electraCut);
-        this.availableWeapons.Add(drogFire);
-        this.availableWeapons.Add(hammer);
-        this.collectedWeapons.Add(electraCut);
+        electraCut = new("ElectraCut", "DMG: 20\r\nSpecial: Lightining DMG\r\n\r\nCreated from the scales of the atlantic dragon LitBorne", 50, 20);
+        drogFire = new("DrogFire", "DMG: 10\r\nSpecial: Fire DMG\r\n\r\nCreated from the scales of the atlantic dragon DrogBorne", 65, 10);
+        hammer = new("Hammer", "DMG: 25\r\nSpecial: Power DMG\r\n\r\nCreated from the teeth of the dragon SolidBorne", 70, 25);
+        availableWeapons.Add(electraCut);
+        availableWeapons.Add(drogFire);
+        availableWeapons.Add(hammer);
     }
 
 
     void Start()
     {
         ShowWeaponData();
-        ShowWeaponsCollected();
     }
-    
-    public void FindWeaponByTitle(string title)
+
+
+
+    public void LoadWeaponSprites()
     {
-       foreach (var weapon in availableWeapons)
+        LoadWeaponSprite(drogFire);
+        LoadWeaponSprite(electraCut);
+    }
+
+    // loads the png file from resources folder and adds the sprite to the appropriate weapon object
+    private void LoadWeaponSprite(Weapons weapon)
+    {
+      if(weapon != null)
         {
-            if (weapon.title == title)
+            if(weapon.title == "DrogFire")
             {
-                weaponTitle.text = weapon.title;
-                weaponDesc.text = weapon.description;
-                // not needed for inventory
-                //weaponPrice.text = weapon.price.ToString();
-                
+                var sprite = Resources.Load<Sprite>("sword_1");
+                weapon.weaponSprite= sprite;
             }
+            else if(weapon.title == "ElectraCut")
+            {
+                var sprite = Resources.Load<Sprite>("sword_2");
+                weapon.weaponSprite = sprite;
+            }
+            
+            else if(weapon.title == "Hammer")
+            {
+                var sprite = Resources.Load<Sprite>("AXE1_7");
+                weapon.weaponSprite = sprite;
+            }
+            
         }
+      
+
     }
 
     // for game manager to set the current equipped weapon along with its description
     public Weapons GetWeaponDetailsByTitle(string title)
     {
-        foreach (var weapon in this.availableWeapons)
+        foreach (var weapon in availableWeapons)
         {
             if (title == weapon.title)
             {
@@ -97,46 +103,57 @@ public class WeaponDatabase : MonoBehaviour
         return null;
     }
 
+    // currently unused. Will work when pick-up mechanic exists
     public void CollectWeapons(string weaponName)
     {
         Weapons weapon = availableWeapons.Find(w => w.title == weaponName);
         if(weapon != null)
         {
-            this.collectedWeapons.Add(weapon);
+            collectedWeapons.Add(weapon);
         }
-        else
-        {
+    }
 
-        }
-    }
-    public void ShowWeaponsCollected()
-    {
-        foreach (var weapon in this.collectedWeapons)
-        {
-            Debug.Log(weapon.title);
-            for (int i = 0; i < names.Length; i++)
-            {
-                if (weapon.title == names[i])
-                {
-                    images[i].gameObject.SetActive(true);
-                }
-            }
-        }
-    }
 
     // function to show weapon details in weapons store
     public void ShowWeaponData()
     {
-        Debug.Log("In show weapon data");
-        if(weaponCounter < availableWeapons.Count)
+        if (availableWeapons.Count-1  == 0 || collectedWeapons.Count == 3)
         {
-            weaponTitle.text = availableWeapons[weaponCounter].title;
-            weaponDesc.text = availableWeapons[weaponCounter].description;
-            weaponPrice.text = availableWeapons[weaponCounter].price.ToString();
-            weaponCounter++;
-            if(weaponCounter == availableWeapons.Count)
+            weaponTitle.text = "Not Available";
+            weaponDesc.text = "Not Available";
+            weaponPrice.text = 0.ToString();
+            weaponStoreSprite.sprite = null;
+        }
+        else if(weaponCounter < availableWeapons.Count)
+        {
+            Weapons weapon = collectedWeapons.Find(weapon => weapon.title == availableWeapons[weaponCounter].title);
+            // to only show weapons not yet collected in the store
+            if (weapon == null) 
             {
-                weaponCounter = 0;
+
+                weaponTitle.text = availableWeapons[weaponCounter].title;
+                weaponDesc.text = availableWeapons[weaponCounter].description;
+                weaponPrice.text = availableWeapons[weaponCounter].price.ToString();
+                weaponStoreSprite.sprite = availableWeapons[weaponCounter].weaponSprite;
+                weaponCounter++;
+                if (weaponCounter == availableWeapons.Count)
+                {
+                    weaponCounter = 0;
+                }
+            }
+            else
+            {
+                // skipping the next weapon as it is alreay in collected weapons in the next iteration
+                weaponCounter++;
+                weaponTitle.text = availableWeapons[weaponCounter].title;
+                weaponDesc.text = availableWeapons[weaponCounter].description;
+                weaponPrice.text = availableWeapons[weaponCounter].price.ToString();
+                weaponStoreSprite.sprite = availableWeapons[weaponCounter].weaponSprite;
+                weaponCounter++;
+                if (weaponCounter == availableWeapons.Count)
+                {
+                    weaponCounter = 0;
+                }
             }
         }
 
@@ -144,19 +161,22 @@ public class WeaponDatabase : MonoBehaviour
     public void CalculateWeaponTotalPrice()
     {
         amount = int.Parse(weaponPrice.text);
-        weaponBought = gameManager.UpdateCoinsAfterPurchaseWeapon(amount);
+        weaponBought = GameManager.instance.UpdateCoinsAfterPurchaseWeapon(amount);
         if (weaponBought)
         {
             foreach (var weapon in availableWeapons)
             {
                 if (weapon.price == amount)
                 {
-                    this.collectedWeapons.Add(weapon);
-                    ShowWeaponsCollected();
+                    collectedWeapons.Add(weapon);
+                    // update the shop screen
+                    ShowWeaponData();
                 }
             }
         }
         availableWeapons.RemoveAll(item => item.price == amount);
+        GameManager.instance.UpdateCoinsAndCollectedWeaponsAfterPurchase();
+        GameInstance.instance.SaveGame();
     }
 
 

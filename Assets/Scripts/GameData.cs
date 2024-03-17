@@ -8,16 +8,20 @@ public class GameData
 {
     public int coinsCollected;
     public int levelsCompleted;
-    public string[] weaponsBought;
+    public List<string> weaponsCollected;
     public int portionsEquipped;
     public string weaponEquipped;
 
     public GameData()
     {
-        this.coinsCollected = 0;
-        this.levelsCompleted = 0;
-        this.weaponsBought = null;
-        this.portionsEquipped = 0;
-        this.weaponEquipped= "DrogFire";
+        coinsCollected = 0;
+        levelsCompleted = 0;
+        // DrogFire is the default weapon
+        weaponsCollected = new List<string>
+        {
+            "DrogFire"
+        };
+        portionsEquipped = 0;
+        weaponEquipped = "DrogFire";
     }
 }

@@ -7,25 +7,4 @@ public class ItemData : MonoBehaviour
 {
     public string title,itemDesc;
 
-    private void Start()
-    {
-        
-    }
-
-    private void Update()
-    {
-        
-    }
-
-
-    void LoadData()
-    {
-
-    }
-
-    void StoreDataInInventory(string purchasedItemTitle,string purchasedItemDesc)
-    {
-        title= purchasedItemTitle;
-        itemDesc= purchasedItemDesc;
-    }
 }
