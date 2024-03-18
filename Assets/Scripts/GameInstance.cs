@@ -28,7 +28,9 @@ public class GameInstance : MonoBehaviour
 
     private void Start()
     {
-        fileHandler= new FileHandler("E:\\Abhay\\Game Design\\G2M_FTDO\\FindTheDragonOrbs", "SAVE.sv");
+        //fileHandler= new FileHandler("E:\\Abhay\\Game Design\\G2M_FTDO\\FindTheDragonOrbs", "SAVE.sv");
+        Debug.Log(Application.persistentDataPath);
+        fileHandler = new FileHandler(Application.persistentDataPath, "SAVE.sv");
         LoadGame();
     }
 

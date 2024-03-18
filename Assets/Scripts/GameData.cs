@@ -19,9 +19,9 @@ public class GameData
         // DrogFire is the default weapon
         weaponsCollected = new List<string>
         {
-            "DrogFire"
+            "Sword Of Helios"
         };
         portionsEquipped = 0;
-        weaponEquipped = "DrogFire";
+        weaponEquipped = "Sword Of Helios";
     }
 }

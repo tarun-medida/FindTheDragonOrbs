@@ -42,7 +42,7 @@ public class WeaponDatabase : MonoBehaviour
         // the data loads before game manager only on game start
         // moving it here removes the issue
         electraCut = new("ElectraCut", "DMG: 20\r\nSpecial: Lightining DMG\r\n\r\nCreated from the scales of the atlantic dragon LitBorne", 50, 20);
-        drogFire = new("DrogFire", "DMG: 10\r\nSpecial: Fire DMG\r\n\r\nCreated from the scales of the atlantic dragon DrogBorne", 65, 10);
+        drogFire = new("Sword Of Helios", "DMG: 10\r\nSpecial: Fire DMG\r\n\r\nThe sword made by Hephastus from the fragments of Helios (god of sun and light).", 65, 10);
         hammer = new("Hammer", "DMG: 25\r\nSpecial: Power DMG\r\n\r\nCreated from the teeth of the dragon SolidBorne", 70, 25);
         availableWeapons.Add(electraCut);
         availableWeapons.Add(drogFire);
@@ -68,7 +68,7 @@ public class WeaponDatabase : MonoBehaviour
     {
       if(weapon != null)
         {
-            if(weapon.title == "DrogFire")
+            if(weapon.title == "Sword Of Helios")
             {
                 var sprite = Resources.Load<Sprite>("sword_1");
                 weapon.weaponSprite= sprite;
