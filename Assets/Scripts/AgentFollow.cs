@@ -37,6 +37,7 @@ public class AgentFollow : MonoBehaviour
                 SetDestination(target.position);
             }
         }
+
     }
 
     void SetDestination(Vector3 destination)

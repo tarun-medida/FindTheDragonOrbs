@@ -78,10 +78,7 @@ public class GameManager : MonoBehaviour
         // Loading Game Data
         loadedGameData = GameInstance.instance.getGameData();
         // *** PLAYER HEALTH INITIALIZATION ***
-        if(loadedGameData.portionsEquipped == 0)
-            noOfHealthPortions = 5;
-        else
-            noOfHealthPortions = loadedGameData.portionsEquipped;
+        noOfHealthPortions = loadedGameData.portionsEquipped;
         // at start what was the maximum number of hearts the player started with
         // later on when player purchases new health in inventory then the no_of_hearts will be changed
         if (player != null)

@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Enemy : MonoBehaviour
 {
@@ -26,6 +28,12 @@ public class Enemy : MonoBehaviour
     public float attackDamage = 1.0f;
     public GameObject winHud;
 
+    public float fireRate;
+    private float timeToFire = 0f;
+    public Transform firePoint;
+    public float bulletForce;
+    public GameObject bulletPrefab;
+
 
     private void Start()
     {
@@ -49,6 +57,8 @@ public class Enemy : MonoBehaviour
         direction.Normalize();
         movement = direction;
 
+        
+
         if (shouldRotate)
         {
             animator.SetFloat("X", direction.x);
@@ -62,15 +72,7 @@ public class Enemy : MonoBehaviour
                 sprite.flipX = false;
             }
         }
-        /*
-        if(characterDamage.health <= 0)
-        {
-            Debug.Log("dead");
-            winHud.SetActive(true);
-            Destroy(gameObject);
-            Time.timeScale = 0;
-        }
-        */
+        
 
     }
     private void FixedUpdate()
@@ -82,6 +84,29 @@ public class Enemy : MonoBehaviour
         if (isInAttackRange)
         {
             animator.SetTrigger("Attack");
+            if (Vector2.Distance(target.position, transform.position) <= attackRadius)
+            {
+                Shoot();
+            }
+        }
+    }
+
+
+
+    private void Shoot()
+    {
+        firePoint.transform.localRotation = Quaternion.identity;
+        if (timeToFire <= 0f)
+        {
+            timeToFire = fireRate;
+            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            rb.AddForce(direction * bulletForce, ForceMode2D.Impulse);
+            //audioSource.Play()
+        }
+        else
+        {
+            timeToFire -= Time.deltaTime;
         }
     }
 

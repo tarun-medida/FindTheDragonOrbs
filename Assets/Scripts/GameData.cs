@@ -21,7 +21,7 @@ public class GameData
         {
             "Sword Of Helios"
         };
-        portionsEquipped = 0;
+        portionsEquipped = 5;
         weaponEquipped = "Sword Of Helios";
     }
 }

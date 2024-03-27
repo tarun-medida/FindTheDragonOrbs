@@ -13,7 +13,6 @@ public class ObjectiveScript : MonoBehaviour
     public string[] popUps;
     public TMP_Text objectiveText;
     private int popUpIndex = 0;
-    public GameManager gameManager;
 
     public checkIfPlayerHasPassedCollider checkIfPlayerHasPassed;
     // Start is called before the first frame update
@@ -26,12 +25,12 @@ public class ObjectiveScript : MonoBehaviour
     void Update()
     {
         ObjectivePopUps(popUpIndex);
-        if (checkIfPlayerHasPassed.passed == true && gameManager.enemyCounter ==1)
+        if (checkIfPlayerHasPassed.passed == true && GameManager.instance.enemyCounter == GameManager.instance.minionsToKillCount)
         {
             popUpIndex++;
             checkIfPlayerHasPassed.passed = false;
         }
-        if(gameManager.bossInstanceRef != null)
+        if(GameManager.instance.bossInstanceRef != null)
         {
             ObjectivePopUps(popUpIndex);
         }
