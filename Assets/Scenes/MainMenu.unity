@@ -1050,7 +1050,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Coins:'
+  m_text: 'Atheleons:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2f574ce561c9c82469c41bf0fa5b2a05, type: 2}
   m_sharedMaterial: {fileID: -2638161542488965141, guid: 2f574ce561c9c82469c41bf0fa5b2a05, type: 2}
@@ -4652,7 +4652,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Coins:'
+  m_text: 'Atheleons:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2f574ce561c9c82469c41bf0fa5b2a05, type: 2}
   m_sharedMaterial: {fileID: -2638161542488965141, guid: 2f574ce561c9c82469c41bf0fa5b2a05, type: 2}
@@ -5672,7 +5672,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Coins:'
+  m_text: 'Atheleons:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2f574ce561c9c82469c41bf0fa5b2a05, type: 2}
   m_sharedMaterial: {fileID: -2638161542488965141, guid: 2f574ce561c9c82469c41bf0fa5b2a05, type: 2}

@@ -42,7 +42,7 @@ public class TutorialPopUps : MonoBehaviour
         else if(popUpIndex == 2)
         {
             TutorialPopUp(popUpIndex);
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.LeftShift))
             {
                 popUpIndex++;
             }

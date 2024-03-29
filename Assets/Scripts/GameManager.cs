@@ -172,9 +172,9 @@ public class GameManager : MonoBehaviour
 
     private void SetCoinsTextAcrossMainMenu()
     {
-        coinsCollectedInventoryText.SetText("Coins: " + GetCoinsCollected().ToString());
-        coinsCollectedWeaponsStoreText.SetText("Coins: " + GetCoinsCollected().ToString());
-        coinsCollectedPortionsStoreText.SetText("Coins: " + GetCoinsCollected().ToString());
+        coinsCollectedInventoryText.SetText("Atheleons: " + GetCoinsCollected().ToString());
+        coinsCollectedWeaponsStoreText.SetText("Atheleons: " + GetCoinsCollected().ToString());
+        coinsCollectedPortionsStoreText.SetText("Atheleons: " + GetCoinsCollected().ToString());
     }
 
     private void UpdateGameDataOnWin()

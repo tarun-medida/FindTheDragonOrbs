@@ -149,12 +149,12 @@ public class PlayerMovement : MonoBehaviour
         */
         
         // sprint/walk faster condition
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             moveSpeed = 2500f;
            
         }
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             moveSpeed = 1000f;
            
