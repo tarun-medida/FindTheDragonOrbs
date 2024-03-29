@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
-    public float attackDamage = 5f;
+    private float attackDamage;
     public Collider2D attackCollider;
     public Vector3 right = new Vector3(1.86f, 0f, 0f);
     public Vector3 left = new Vector3(-1.86f, 0f, 0f);
@@ -18,8 +18,11 @@ public class Attack : MonoBehaviour
         {
             Debug.Log("Attack Collider not set");
         }
+
+        attackDamage = GameInstance.instance.getEquippedWeaponDamage();
         
     }
+
 
     void OnTriggerEnter2D(Collider2D col)
     {

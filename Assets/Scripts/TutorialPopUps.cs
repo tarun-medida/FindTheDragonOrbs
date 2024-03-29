@@ -14,12 +14,19 @@ public class TutorialPopUps : MonoBehaviour
     public TMP_Text tutorialText;
     private int popUpIndex=0;
     public float wordSpeed;
+    public GameObject Dummy;
     //variable used for blocking player from entering play area
 
     public bool enterPlayArea = false;
     private void Start()
     {
-        tutorialPanel.SetActive(true);
+        if(GameInstance.instance.getGameData().tutorialCompleted == false)
+            tutorialPanel.SetActive(true);
+        else
+        {
+            Destroy(Dummy);
+            enterPlayArea = true;
+        }
     }
     private void Update()
     {
@@ -64,10 +71,12 @@ public class TutorialPopUps : MonoBehaviour
             }
         }
         else if (popUpIndex == 5)
-        {
+        {       
             TutorialPopUp(popUpIndex);
             if (Input.GetKey(KeyCode.K))
             {
+                Dummy.GetComponent<CircleCollider2D>().enabled = true;
+                Dummy.GetComponent<BoxCollider2D>().enabled = true;
                 popUpIndex++;
                 enterPlayArea = true;
             }
@@ -75,6 +84,8 @@ public class TutorialPopUps : MonoBehaviour
         else if (popUpIndex == popUps.Length)
         {
             Destroy(tutorialPanel);
+            GameInstance.instance.getGameData().tutorialCompleted = true;
+            GameInstance.instance.SaveGame();
         }
     }
 

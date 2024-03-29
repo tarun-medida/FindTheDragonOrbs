@@ -11,6 +11,7 @@ public class GameData
     public List<string> weaponsCollected;
     public int portionsEquipped;
     public string weaponEquipped;
+    public bool tutorialCompleted;
 
     public GameData()
     {
@@ -23,5 +24,6 @@ public class GameData
         };
         portionsEquipped = 5;
         weaponEquipped = "Sword Of Helios";
+        tutorialCompleted = false;
     }
 }

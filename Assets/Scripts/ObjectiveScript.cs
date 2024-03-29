@@ -25,7 +25,7 @@ public class ObjectiveScript : MonoBehaviour
     void Update()
     {
         ObjectivePopUps(popUpIndex);
-        if (checkIfPlayerHasPassed.passed == true && GameManager.instance.enemyCounter == GameManager.instance.minionsToKillCount)
+        if (checkIfPlayerHasPassed.passed == true && (GameManager.instance.enemyCounter >= GameManager.instance.minionsToKillCount))
         {
             popUpIndex++;
             checkIfPlayerHasPassed.passed = false;

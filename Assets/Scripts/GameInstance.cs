@@ -24,7 +24,7 @@ public class GameInstance : MonoBehaviour
 
     // game data object to save and load data
     private GameData gameData;
-
+    private float weaponDamage;
 
     private void Start()
     {
@@ -113,6 +113,16 @@ public class GameInstance : MonoBehaviour
     public GameData getGameData()
     {
         return gameData;
+    }
+
+    public void setWeaponDamage(float damage)
+    {
+        weaponDamage= damage;
+    }
+
+    public float getEquippedWeaponDamage()
+    {
+        return weaponDamage;
     }
 
 }

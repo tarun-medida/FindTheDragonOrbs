@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static WeaponDatabase;
 
 public class ItemsCollected : MonoBehaviour
 {
@@ -11,19 +12,25 @@ public class ItemsCollected : MonoBehaviour
 
     public TMP_Text weaponTitle, WeaponDesc;
 
+    private int collectedWeaponsCounter = 0;
+
     // Start is called before the first frame update
 
     // loading the collected weapons
-    void Start()
+
+    private void Start()
     {
-        int i = 0;
-        foreach(var weapon in weaponDatabase.collectedWeapons)
+        collectedWeaponsCounter = weaponDatabase.collectedWeapons.Count;
+        UpdateCollectedWeapons();
+        
+    }
+
+    void FixedUpdate()
+    {
+        if(collectedWeaponsCounter != weaponDatabase.collectedWeapons.Count)
         {
-            ItemDataObject[i].gameObject.SetActive(true);
-            ItemDataObject[i].GetComponent<ItemData>().title= weapon.title;
-            ItemDataObject[i].GetComponent<ItemData>().itemDesc = weapon.description;
-            ItemDataObject[i].GetComponent<Image>().sprite = weapon.weaponSprite;
-            i++;
+            UpdateCollectedWeapons();
+            collectedWeaponsCounter = weaponDatabase.collectedWeapons.Count;
         }
     }
 
@@ -34,6 +41,20 @@ public class ItemsCollected : MonoBehaviour
         weaponTitle.text = item.title;
         WeaponDesc.text = item.itemDesc;
 
+    }
+
+    private void UpdateCollectedWeapons()
+    {
+        int i = 0;
+        foreach (var weapon in weaponDatabase.collectedWeapons)
+        {
+
+            ItemDataObject[i].gameObject.SetActive(true);
+            ItemDataObject[i].GetComponent<ItemData>().title = weapon.title;
+            ItemDataObject[i].GetComponent<ItemData>().itemDesc = weapon.description;
+            ItemDataObject[i].GetComponent<Image>().sprite = weapon.weaponSprite;
+            i++;
+        }
     }
 
 

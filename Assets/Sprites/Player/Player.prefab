@@ -90,11 +90,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 211fb6461b1e8e94c87ac2889f28cccd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 20
   attackCollider: {fileID: 3987915902605586865}
   right: {x: 1.86, y: 0, z: 0}
   left: {x: -1.86, y: 0, z: 0}
-  knockbackForce: 5
+  knockbackForce: 500
 --- !u!1 &2664209976693478659
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,7 +138,7 @@ Transform:
   - {fileID: 1489339550180031304}
   - {fileID: 5497142921129296556}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4809445052441674620
 SpriteRenderer:
@@ -797,11 +796,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 211fb6461b1e8e94c87ac2889f28cccd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 20
   attackCollider: {fileID: 8634731768739544736}
   right: {x: 1.86, y: 0, z: 0}
   left: {x: -1.86, y: 0, z: 0}
-  knockbackForce: 5
+  knockbackForce: 500
 --- !u!1 &4214207569565696592
 GameObject:
   m_ObjectHideFlags: 0
@@ -892,11 +890,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 211fb6461b1e8e94c87ac2889f28cccd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 20
   attackCollider: {fileID: 8207142476392777655}
   right: {x: 1.86, y: 0, z: 0}
   left: {x: -1.86, y: 0, z: 0}
-  knockbackForce: 5
+  knockbackForce: 500
 --- !u!1 &4436487198397619581
 GameObject:
   m_ObjectHideFlags: 0
@@ -987,7 +984,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 211fb6461b1e8e94c87ac2889f28cccd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 5
   attackCollider: {fileID: 4970428840940554853}
   right: {x: 0, y: 0, z: 0}
   left: {x: 0, y: 0, z: 0}
@@ -1082,7 +1078,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 211fb6461b1e8e94c87ac2889f28cccd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 5
   attackCollider: {fileID: 3673015608659889880}
   right: {x: 0, y: 0, z: 0}
   left: {x: 0, y: 0, z: 0}
@@ -1177,11 +1172,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 211fb6461b1e8e94c87ac2889f28cccd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 20
   attackCollider: {fileID: 8875475789566692395}
   right: {x: 1.86, y: 0, z: 0}
   left: {x: -1.86, y: 0, z: 0}
-  knockbackForce: 5
+  knockbackForce: 500
 --- !u!1 &7138262848497482945
 GameObject:
   m_ObjectHideFlags: 0
@@ -1272,7 +1266,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 211fb6461b1e8e94c87ac2889f28cccd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 5
   attackCollider: {fileID: 6816762286748277952}
   right: {x: 1.86, y: 0, z: 0}
   left: {x: -1.86, y: 0, z: 0}

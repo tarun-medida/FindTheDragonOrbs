@@ -101,6 +101,8 @@ public class GameManager : MonoBehaviour
         UpdateEquippedPortionsCount();
         // Loading the collected weapons from save file and loading in inventory
         LoadCollectedWeaponsAndUpdateAvailableWeaponsForPurchase(loadedGameData);
+        // setting the weapon damage in game instance, only once
+        
     }
 
 
@@ -110,8 +112,12 @@ public class GameManager : MonoBehaviour
         {
             SetCoinsTextAcrossMainMenu();
         }
-        
-        
+        if (weaponDatabase != null)
+        {
+            GameInstance.instance.setWeaponDamage(weaponDatabase.GetWeaponDetailsByTitle(GameInstance.instance.getGameData().weaponEquipped).damage);
+        }
+
+
     }
 
     void Update()
@@ -206,7 +212,6 @@ public class GameManager : MonoBehaviour
             updatedCollectedWeapons.Add(weapons.title);
         }
         GameInstance.instance.updateWeaponsPurchased(updatedCollectedWeapons);
-        
     }
 
 
@@ -355,6 +360,12 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Weapon not Found or Weapon Already Equipped");
         }
+    }
+
+    public float GetEquippedWeaponDamage()
+    {
+        Weapons weapon = weaponDatabase.GetWeaponDetailsByTitle(loadedGameData.weaponEquipped);
+        return weapon.damage;
     }
 
 

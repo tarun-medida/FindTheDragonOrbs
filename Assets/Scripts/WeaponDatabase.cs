@@ -61,6 +61,7 @@ public class WeaponDatabase : MonoBehaviour
     {
         LoadWeaponSprite(drogFire);
         LoadWeaponSprite(electraCut);
+        LoadWeaponSprite(hammer);
     }
 
     // loads the png file from resources folder and adds the sprite to the appropriate weapon object
@@ -81,7 +82,7 @@ public class WeaponDatabase : MonoBehaviour
             
             else if(weapon.title == "Hammer")
             {
-                var sprite = Resources.Load<Sprite>("AXE1_7");
+                var sprite = Resources.Load<Sprite>("hammer");
                 weapon.weaponSprite = sprite;
             }
             
