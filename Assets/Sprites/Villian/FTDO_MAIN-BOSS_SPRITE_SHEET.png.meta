@@ -1,0 +1,690 @@
+fileFormatVersion: 2
+guid: 27745c0fa89ebd84ab7376a5c63e279d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 8
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FTDO_MAIN-BOSS_SPRITE_SHEET_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 376
+        width: 31
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cea9acd0ba69e1a4ca65870e958bc1bb
+      internalID: -164827326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FTDO_MAIN-BOSS_SPRITE_SHEET_1
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 376
+        width: 32
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d2c7a70972279b43ac9cbec45dd74a3
+      internalID: 296987511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FTDO_MAIN-BOSS_SPRITE_SHEET_2
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 376
+        width: 31
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2fadf4da2c6023468f83e219a571f03
+      internalID: -875596821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FTDO_MAIN-BOSS_SPRITE_SHEET_3
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 376
+        width: 33
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e26bd66cf0b9b3d4180f3302c0eeeafe
+      internalID: -1374764360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FTDO_MAIN-BOSS_SPRITE_SHEET_4
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 312
+        width: 31
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82dd46580366ea04682b5d21e3d662cc
+      internalID: 871298040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FTDO_MAIN-BOSS_SPRITE_SHEET_5
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 312
+        width: 33
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1f4734a45f46804a97ecb87c395e86d
+      internalID: 1605116920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FTDO_MAIN-BOSS_SPRITE_SHEET_6
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 311
+        width: 31
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03a24e02a8c6bb946bf5d580dc2b43fd
+      internalID: 329482489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FTDO_MAIN-BOSS_SPRITE_SHEET_7
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 312
+        width: 33
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d3b18015b4f2684daff915f6f31068c
+      internalID: 1722436285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FTDO_MAIN-BOSS_SPRITE_SHEET_8
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 243
+        width: 34
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fff206a63d2b6249be96f5f7b88d806
+      internalID: -1620807949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FTDO_MAIN-BOSS_SPRITE_SHEET_9
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 243
+        width: 27
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17eac094b50d04f43b9851dda925317a
+      internalID: -1246759965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FTDO_MAIN-BOSS_SPRITE_SHEET_10
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 243
+        width: 34
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb736c14650da264192d06e8cc73be4b
+      internalID: -287117124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FTDO_MAIN-BOSS_SPRITE_SHEET_11
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 243
+        width: 26
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37e2b7631670e864ebd747cd90bb1d74
+      internalID: 47567881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FTDO_MAIN-BOSS_SPRITE_SHEET_12
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 163
+        width: 37
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c28fd6eaaac96e3469531e2eaa78cba3
+      internalID: 1642562242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FTDO_MAIN-BOSS_SPRITE_SHEET_13
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 163
+        width: 39
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf5b6327cd6468c4db616459c62a0517
+      internalID: -1787704290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FTDO_MAIN-BOSS_SPRITE_SHEET_14
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 163
+        width: 42
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c7bf21fcba5028469d5243f47580da2
+      internalID: -1938577512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FTDO_MAIN-BOSS_SPRITE_SHEET_15
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 163
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90362acce171d494b9b39d0880b3653e
+      internalID: -1304217236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FTDO_MAIN-BOSS_SPRITE_SHEET_16
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 83
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 002313f531dc94340bbe79c7d71bf337
+      internalID: 1088281318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FTDO_MAIN-BOSS_SPRITE_SHEET_17
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 83
+        width: 41
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a80e88960dd9554186dd4bebb946a35
+      internalID: -749410546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FTDO_MAIN-BOSS_SPRITE_SHEET_18
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 83
+        width: 45
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65897895adf6bab49ad7c86728b9f049
+      internalID: 804069499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FTDO_MAIN-BOSS_SPRITE_SHEET_19
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 83
+        width: 26
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bb5f655387c97b42af521fe11c6f9ac
+      internalID: -2035349010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FTDO_MAIN-BOSS_SPRITE_SHEET_20
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 6
+        width: 45
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3be373a2a41e6ce46b361c7c1846563b
+      internalID: 797983426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FTDO_MAIN-BOSS_SPRITE_SHEET_21
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 13
+        width: 46
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28ed3297130f6ca4ca26f97ae5ec03bf
+      internalID: -257908871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FTDO_MAIN-BOSS_SPRITE_SHEET_22
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 12
+        width: 24
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a1a502f1be016f40bb69dcbe2e4fdb7
+      internalID: 368048541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FTDO_MAIN-BOSS_SPRITE_SHEET_23
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 8
+        width: 44
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e51b029b338ce5d4cb3c87fe09a17fa9
+      internalID: 537076729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FTDO_MAIN-BOSS_SPRITE_SHEET_24
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 8
+        width: 34
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6470eac392aa8f042993703b8c00e9a9
+      internalID: -838816739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      FTDO_MAIN-BOSS_SPRITE_SHEET_0: -164827326
+      FTDO_MAIN-BOSS_SPRITE_SHEET_1: 296987511
+      FTDO_MAIN-BOSS_SPRITE_SHEET_10: -287117124
+      FTDO_MAIN-BOSS_SPRITE_SHEET_11: 47567881
+      FTDO_MAIN-BOSS_SPRITE_SHEET_12: 1642562242
+      FTDO_MAIN-BOSS_SPRITE_SHEET_13: -1787704290
+      FTDO_MAIN-BOSS_SPRITE_SHEET_14: -1938577512
+      FTDO_MAIN-BOSS_SPRITE_SHEET_15: -1304217236
+      FTDO_MAIN-BOSS_SPRITE_SHEET_16: 1088281318
+      FTDO_MAIN-BOSS_SPRITE_SHEET_17: -749410546
+      FTDO_MAIN-BOSS_SPRITE_SHEET_18: 804069499
+      FTDO_MAIN-BOSS_SPRITE_SHEET_19: -2035349010
+      FTDO_MAIN-BOSS_SPRITE_SHEET_2: -875596821
+      FTDO_MAIN-BOSS_SPRITE_SHEET_20: 797983426
+      FTDO_MAIN-BOSS_SPRITE_SHEET_21: -257908871
+      FTDO_MAIN-BOSS_SPRITE_SHEET_22: 368048541
+      FTDO_MAIN-BOSS_SPRITE_SHEET_23: 537076729
+      FTDO_MAIN-BOSS_SPRITE_SHEET_24: -838816739
+      FTDO_MAIN-BOSS_SPRITE_SHEET_3: -1374764360
+      FTDO_MAIN-BOSS_SPRITE_SHEET_4: 871298040
+      FTDO_MAIN-BOSS_SPRITE_SHEET_5: 1605116920
+      FTDO_MAIN-BOSS_SPRITE_SHEET_6: 329482489
+      FTDO_MAIN-BOSS_SPRITE_SHEET_7: 1722436285
+      FTDO_MAIN-BOSS_SPRITE_SHEET_8: -1620807949
+      FTDO_MAIN-BOSS_SPRITE_SHEET_9: -1246759965
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
