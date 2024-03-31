@@ -93,6 +93,8 @@ GameObject:
   - component: {fileID: 7245476080887987004}
   - component: {fileID: 4367610947830694020}
   - component: {fileID: 1497293128087848532}
+  - component: {fileID: 7275188775543183868}
+  - component: {fileID: 784065196821931839}
   m_Layer: 0
   m_Name: Enemy 1
   m_TagString: Boss
@@ -129,8 +131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7cf977d614ad474394c5b0e65de9cdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 300
-  maxHealth: 300
+  health: 1000
+  maxHealth: 1000
   coins: {fileID: 6201843436008572030, guid: ea5ee8c545beb024793e11ca8d179eda, type: 3}
   playerMovement: {fileID: 3787394740917709967, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
   PlayerHurtSound: {fileID: 0}
@@ -229,6 +231,10 @@ MonoBehaviour:
     m_Bits: 8
   attackDamage: 10
   winHud: {fileID: 0}
+  fireRate: 0
+  firePoint: {fileID: 0}
+  bulletForce: 0
+  bulletPrefab: {fileID: 0}
 --- !u!50 &3440256854121006334
 Rigidbody2D:
   serializedVersion: 4
@@ -349,6 +355,41 @@ CircleCollider2D:
   m_Offset: {x: 0.029850006, y: -0.26028472}
   serializedVersion: 2
   m_Radius: 1.6338078
+--- !u!195 &7275188775543183868
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2199941372347920905}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.26
+  m_Speed: 5
+  m_Acceleration: 140
+  avoidancePriority: 50
+  m_AngularSpeed: 10
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2.55
+  m_BaseOffset: 0.1666667
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &784065196821931839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2199941372347920905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f5967a73d07f74c9d7bd73a49f8eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1870396013751257188, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
 --- !u!1 &3162018139261848064
 GameObject:
   m_ObjectHideFlags: 0

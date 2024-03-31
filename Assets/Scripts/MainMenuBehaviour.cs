@@ -10,7 +10,7 @@ public class MainMenuBehaviour : MonoBehaviour
 
     public Animator pageFlipAnimator;
     private bool mainMenuFlag = false, inventoryFlag = false, shopFlag = false, weaponsFlag = false, portionsFlag = false;
-    public GameObject mainMenuPage, inventoryPage, shopPage, startScreen, weaponsPage, portionsPage, startText;
+    public GameObject mainMenuPage, inventoryPage, shopPage, startScreen, weaponsPage, potionsPage, startText;
     public AudioSource pageFlip;
     void Start()
     {
@@ -62,7 +62,7 @@ public class MainMenuBehaviour : MonoBehaviour
         else if(portionsFlag == true)
         {
             shopPage.SetActive(false);
-            portionsPage.SetActive(true);
+            potionsPage.SetActive(true);
         }
     }
 
@@ -81,7 +81,7 @@ public class MainMenuBehaviour : MonoBehaviour
             inventoryPage.SetActive(false);
             shopPage.SetActive(false);
             weaponsPage.SetActive(false);
-            portionsPage.SetActive(false);
+            potionsPage.SetActive(false);
             StartCoroutine(Delay(1.5f, true));
         }
     }
@@ -100,7 +100,7 @@ public class MainMenuBehaviour : MonoBehaviour
             mainMenuPage.SetActive(false);
             shopPage.SetActive(false);
             weaponsPage.SetActive(false);
-            portionsPage.SetActive(false);
+            potionsPage.SetActive(false);
             StartCoroutine(Delay(1.5f, true));
         }
         
@@ -121,7 +121,7 @@ public class MainMenuBehaviour : MonoBehaviour
             mainMenuPage.SetActive(false);
             inventoryPage.SetActive(false);
             weaponsPage.SetActive(false);
-            portionsPage.SetActive(false);
+            potionsPage.SetActive(false);
             StartCoroutine(Delay(1.5f, true));
         }
     }
@@ -138,14 +138,14 @@ public class MainMenuBehaviour : MonoBehaviour
             inventoryFlag = false;
             mainMenuPage.SetActive(false);
             inventoryPage.SetActive(false);
-            portionsPage.SetActive(false);
+            potionsPage.SetActive(false);
             StartCoroutine(Delay(1.5f, true));
         }
     }
 
     public void ShowPortionsPage()
     {
-        if (portionsPage.activeSelf == false)
+        if (potionsPage.activeSelf == false)
         {
             pageFlipAnimator.SetTrigger("Select");
             pageFlip.Play();

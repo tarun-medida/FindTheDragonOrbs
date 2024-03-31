@@ -1,3 +1,4 @@
+using Cinemachine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -44,7 +45,7 @@ public class GameManager : MonoBehaviour
     // In Game Event UIs
     public GameObject pauseMenuUI, deadMenuUI, winMenuUI;
     // In Game Level Music
-    public AudioSource LevelbackgroundScore;
+    public AudioSource LevelbackgroundScore, BossMusic;
     // In Game UI Elements
     int noOfHealthPortions;
     int coinsCollected = 0;
@@ -62,6 +63,7 @@ public class GameManager : MonoBehaviour
     public PlayerMovement player;
     public GameObject boss;
     public GameObject bossInstanceRef;
+    private bool spawnBoss = true;
     // Level Parameters
     public int numberOfMinionsToSpawn;
     public int minionsToKillCount;
@@ -70,6 +72,11 @@ public class GameManager : MonoBehaviour
     private GameData loadedGameData;
     public WeaponDatabase weaponDatabase;
     public ItemsCollected itemsCollected;
+    // Camera Shake Flag
+    public bool shakeCamera = false;
+    //Level Specific Orb TODO
+
+
 
     public void Start()
     {
@@ -102,7 +109,6 @@ public class GameManager : MonoBehaviour
         // Loading the collected weapons from save file and loading in inventory
         LoadCollectedWeaponsAndUpdateAvailableWeaponsForPurchase(loadedGameData);
         // setting the weapon damage in game instance, only once
-        
     }
 
 
@@ -118,22 +124,30 @@ public class GameManager : MonoBehaviour
         }
 
 
+
     }
 
     void Update()
     {
         // *** BOSS SPAWN CONDITION ***
-        if (enemyCounter == minionsToKillCount && player != null)
+        if (enemyCounter >= minionsToKillCount && player != null && spawnBoss)
         {
             Debug.Log("Spawn");
-                int randSpawnPoint = UnityEngine.Random.Range(0, randomBossSpawnLocations.Length);
-                // as there going to be only one boss, getting the instantiated boss game object for reference
-                bossInstanceRef = Instantiate(boss, randomBossSpawnLocations[randSpawnPoint].position, Quaternion.identity);
-                // no a cool thing to do, but won't make that much difference, this to ensure that only one instance of the boss will be spawned
-                enemyCounter++;
+            int randSpawnPoint = UnityEngine.Random.Range(0, randomBossSpawnLocations.Length);
+            // as there going to be only one boss, getting the instantiated boss game object for reference
+            bossInstanceRef = Instantiate(boss, randomBossSpawnLocations[randSpawnPoint].position, Quaternion.identity);
+            // no a cool thing to do, but won't make that much difference, this to ensure that only one instance of the boss will be spawned
+            //enemyCounter++;
+            spawnBoss = false;
+            // pause level music
+            LevelbackgroundScore.Pause();
+            // play boss music
+            BossMusic.Play();
+            // Trigger Camera Shake
+            shakeCamera = true;
         }
 
-        
+
         // *** PAUSE GAME ***
         // activate Pause Menu
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -144,28 +158,31 @@ public class GameManager : MonoBehaviour
         // *** LOSE CONDITION ***
         // checking player health to activate Game Over Menu
         // update game data as well,such as coins collected, portions left
+        // saving the game upon lose which will update game data, because you will have collected some coins and used some portions
         if (player != null && player.health <= 0)
         {
+            BossMusic.Pause();
             deadMenuUI.SetActive(true);
             // to stop player movement
             player.GetComponent<PlayerInput>().enabled = false;
             // to ensure enemies stop attack on player death
-            player.GetComponent<BoxCollider2D>().enabled = false;
-            // saving the game upon lose which will update game data, because you will have collected some coins and used some portions
+            player.GetComponent<CircleCollider2D>().enabled = false;            
         }
 
         // *** WIN CONDITION ***
         // checking boss health and object to activate Game Win Screen
         // update game data as well, such as coins collected, portions left
+        // saving the game upon win which will update game data
         if (bossInstanceRef != null)
         {
             if (bossInstanceRef.GetComponent<CharacterDamage>().Health <= 0)
             {
+                BossMusic.Pause();
                 winMenuUI.SetActive(true);
                 Destroy(bossInstanceRef);
-                // testing!! upon win the walk sound kept playing and when scene loaded the game was bugged
-                // saving the game upon win which will update game data
+                player.walkSound.Pause();
                 Time.timeScale = 0;
+                
             }
         }
         // *** UPDATE HEALTH PORTION UI if all portions are consumed ***
@@ -336,7 +353,6 @@ public class GameManager : MonoBehaviour
 
         }
         
-
     }
 
 

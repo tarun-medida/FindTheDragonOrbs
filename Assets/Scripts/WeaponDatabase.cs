@@ -123,7 +123,7 @@ public class WeaponDatabase : MonoBehaviour
             weaponTitle.text = "Not Available";
             weaponDesc.text = "Not Available";
             weaponPrice.text = 0.ToString();
-            weaponStoreSprite.sprite = null;
+            //weaponStoreSprite.sprite = null;
         }
         else if(weaponCounter < availableWeapons.Count)
         {
@@ -162,22 +162,29 @@ public class WeaponDatabase : MonoBehaviour
     public void CalculateWeaponTotalPrice()
     {
         amount = int.Parse(weaponPrice.text);
-        weaponBought = GameManager.instance.UpdateCoinsAfterPurchaseWeapon(amount);
-        if (weaponBought)
+        if (amount > 0)
         {
-            foreach (var weapon in availableWeapons)
+            weaponBought = GameManager.instance.UpdateCoinsAfterPurchaseWeapon(amount);
+            if (weaponBought)
             {
-                if (weapon.price == amount)
+                foreach (var weapon in availableWeapons)
                 {
-                    collectedWeapons.Add(weapon);
-                    // update the shop screen
-                    ShowWeaponData();
+                    if (weapon.price == amount)
+                    {
+                        collectedWeapons.Add(weapon);
+                        // update the shop screen
+                        ShowWeaponData();
+                    }
                 }
             }
+            availableWeapons.RemoveAll(item => item.price == amount);
+            GameManager.instance.UpdateCoinsAndCollectedWeaponsAfterPurchase();
+            GameInstance.instance.SaveGame();
         }
-        availableWeapons.RemoveAll(item => item.price == amount);
-        GameManager.instance.UpdateCoinsAndCollectedWeaponsAfterPurchase();
-        GameInstance.instance.SaveGame();
+        else
+        {
+            Debug.Log("No Weapons Available to Purchase");
+        }
     }
 
 

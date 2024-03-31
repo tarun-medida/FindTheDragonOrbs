@@ -625,7 +625,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Next
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1844,7 +1844,7 @@ MonoBehaviour:
   shopPage: {fileID: 406775017}
   startScreen: {fileID: 0}
   weaponsPage: {fileID: 1099175051}
-  portionsPage: {fileID: 1047377073}
+  potionsPage: {fileID: 1047377073}
   startText: {fileID: 0}
   pageFlip: {fileID: 1099998944}
 --- !u!1 &253435335
@@ -1950,8 +1950,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 1}
+    m_PressedColor: {r: 0.4716981, g: 0.46947312, b: 0.46947312, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -2201,7 +2201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Not Available
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2f574ce561c9c82469c41bf0fa5b2a05, type: 2}
   m_sharedMaterial: {fileID: -2638161542488965141, guid: 2f574ce561c9c82469c41bf0fa5b2a05, type: 2}
@@ -2210,7 +2210,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278248959
+    rgba: 4294929920
   m_fontColor: {r: 0, g: 0.43137255, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -2616,7 +2616,7 @@ MonoBehaviour:
   shopPage: {fileID: 406775017}
   startScreen: {fileID: 0}
   weaponsPage: {fileID: 1099175051}
-  portionsPage: {fileID: 1047377073}
+  potionsPage: {fileID: 1047377073}
   startText: {fileID: 0}
   pageFlip: {fileID: 1099998944}
 --- !u!1 &505220487
@@ -3162,7 +3162,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 119.44931, y: -144.09406}
+  m_AnchoredPosition: {x: 101.9, y: -144.09406}
   m_SizeDelta: {x: 40.2649, y: 48.1883}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &604911611
@@ -3212,10 +3212,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 40.25
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -4922,7 +4922,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Portions
+  m_text: Potions
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2f574ce561c9c82469c41bf0fa5b2a05, type: 2}
   m_sharedMaterial: {fileID: -2638161542488965141, guid: 2f574ce561c9c82469c41bf0fa5b2a05, type: 2}
@@ -5222,14 +5222,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5188679, g: 0.51152545, b: 0.51152545, a: 0.34901962}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 2c75b370f6173c2418e663e99f0a33af, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5440,7 +5440,7 @@ MonoBehaviour:
   shopPage: {fileID: 0}
   startScreen: {fileID: 1099998940}
   weaponsPage: {fileID: 0}
-  portionsPage: {fileID: 0}
+  potionsPage: {fileID: 0}
   startText: {fileID: 1344790411}
   pageFlip: {fileID: 0}
 --- !u!1 &1032474475
@@ -5578,7 +5578,7 @@ GameObject:
   - component: {fileID: 1047377074}
   - component: {fileID: 1047377075}
   m_Layer: 5
-  m_Name: PortionsStorePage
+  m_Name: PotionsStorePage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5699,10 +5699,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28
+  m_fontSize: 33.8
   m_fontSizeBase: 28
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -7673,7 +7673,7 @@ MonoBehaviour:
   shopPage: {fileID: 406775017}
   startScreen: {fileID: 0}
   weaponsPage: {fileID: 1099175051}
-  portionsPage: {fileID: 1047377073}
+  potionsPage: {fileID: 1047377073}
   startText: {fileID: 0}
   pageFlip: {fileID: 1099998944}
 --- !u!1 &1381047260
@@ -8214,7 +8214,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Not Available
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2f574ce561c9c82469c41bf0fa5b2a05, type: 2}
   m_sharedMaterial: {fileID: -2638161542488965141, guid: 2f574ce561c9c82469c41bf0fa5b2a05, type: 2}
@@ -8223,7 +8223,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278974975
+    rgba: 4294929920
   m_fontColor: {r: 0, g: 0.43137255, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -8493,6 +8493,9 @@ MonoBehaviour:
   deadMenuUI: {fileID: 0}
   winMenuUI: {fileID: 0}
   LevelbackgroundScore: {fileID: 1672913714}
+  BossMusic: {fileID: 0}
+  WinSFX: {fileID: 0}
+  LoseSFX: {fileID: 0}
   equippedItemTitleText: {fileID: 1333082487}
   equippedItemDescriptionText: {fileID: 1385966714}
   equippedPortionsCountText: {fileID: 1969403619}
@@ -8512,6 +8515,7 @@ MonoBehaviour:
   enemyCounter: 0
   weaponDatabase: {fileID: 2082563863}
   itemsCollected: {fileID: 613945520}
+  shakeCamera: 0
 --- !u!82 &1672913714
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8523,7 +8527,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: be3c265a8f7c28a4eb8280092a43fdc4, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.485
   m_Pitch: 1
   Loop: 1
@@ -9018,7 +9022,7 @@ GameObject:
   - component: {fileID: 1817450591}
   - component: {fileID: 1817450590}
   m_Layer: 5
-  m_Name: Portions
+  m_Name: Potions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9121,7 +9125,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 231.29895, y: -144.09412}
+  m_AnchoredPosition: {x: 194.5, y: -144.09412}
   m_SizeDelta: {x: 144.3054, y: 48.188}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1834327065
@@ -9173,10 +9177,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 48.15
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -9664,7 +9668,7 @@ GameObject:
   - component: {fileID: 1925306983}
   - component: {fileID: 1925306982}
   m_Layer: 5
-  m_Name: Portions
+  m_Name: Potions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9938,7 +9942,7 @@ MonoBehaviour:
   shopPage: {fileID: 406775017}
   startScreen: {fileID: 0}
   weaponsPage: {fileID: 1099175051}
-  portionsPage: {fileID: 1047377073}
+  potionsPage: {fileID: 1047377073}
   startText: {fileID: 0}
   pageFlip: {fileID: 1099998944}
 --- !u!1 &1953830603
@@ -10030,7 +10034,7 @@ GameObject:
   - component: {fileID: 1969403620}
   - component: {fileID: 1969403619}
   m_Layer: 5
-  m_Name: PortionsEquippedCount
+  m_Name: PotionsEquippedCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10105,10 +10109,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 48.15
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -10272,7 +10276,7 @@ GameObject:
   - component: {fileID: 2017779530}
   - component: {fileID: 2017779529}
   m_Layer: 5
-  m_Name: PortionsText
+  m_Name: PotionsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

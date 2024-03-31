@@ -95,18 +95,21 @@ public class Enemy : MonoBehaviour
 
     private void Shoot()
     {
-        firePoint.transform.localRotation = Quaternion.identity;
-        if (timeToFire <= 0f)
+        if (firePoint != null)
         {
-            timeToFire = fireRate;
-            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-            rb.AddForce(direction * bulletForce, ForceMode2D.Impulse);
-            //audioSource.Play()
-        }
-        else
-        {
-            timeToFire -= Time.deltaTime;
+            firePoint.transform.localRotation = Quaternion.identity;
+            if (timeToFire <= 0f)
+            {
+                timeToFire = fireRate;
+                GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+                Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+                rb.AddForce(direction * bulletForce, ForceMode2D.Impulse);
+                //audioSource.Play()
+            }
+            else
+            {
+                timeToFire -= Time.deltaTime;
+            }
         }
     }
 

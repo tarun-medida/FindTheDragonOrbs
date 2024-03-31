@@ -15,13 +15,13 @@ public class PlayerMovement : MonoBehaviour
     public int maxNoOfHeartsAllowed = 15;
 
     public Vector2 moveInput;
-    public float moveSpeed = 1000f;
+    public float moveSpeed = 2500f;
     Rigidbody2D playerRB;
     public SpriteRenderer spriteRenderer;
     public float maxSpeed = 5;
     private Animator animator;
     public float idleFriction = 0.9f;
-    public AudioSource walkSound;
+    public AudioSource walkSound, specialAttackSFX;
     
     //special attack delay and time variables
     private readonly float coolDownTime = 5f;
@@ -100,7 +100,7 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         // keep track
-        
+
         // debug function
         /*
         if (Input.GetKeyDown(KeyCode.M))
@@ -141,23 +141,16 @@ public class PlayerMovement : MonoBehaviour
 
         health = characterDamage.Health;
 
-        /*
-        if(health <= 0) 
-        {
-            deathHUD.SetActive(true);
-        }
-        */
-        
         // sprint/walk faster condition
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            moveSpeed = 2500f;
-           
+            moveSpeed = 5000f;
+
         }
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
-            moveSpeed = 1000f;
-           
+            moveSpeed = 2500f;
+
         }
        
     }
@@ -184,6 +177,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void DoSpecialAttack()
     {
+        specialAttackSFX.Play();
         attack.SpecialBeamAttack();
         return;
     }
@@ -214,8 +208,8 @@ public class PlayerMovement : MonoBehaviour
     }
     public void Dead()
     {
-        Time.timeScale = 0;
         walkSound.Pause();
+        Time.timeScale = 0;   
     }
     
     public void UpdateHealth()

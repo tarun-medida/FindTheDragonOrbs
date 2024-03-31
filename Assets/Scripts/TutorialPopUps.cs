@@ -24,6 +24,7 @@ public class TutorialPopUps : MonoBehaviour
             tutorialPanel.SetActive(true);
         else
         {
+            popUpIndex = popUps.Length;
             Destroy(Dummy);
             enterPlayArea = true;
         }
@@ -83,7 +84,7 @@ public class TutorialPopUps : MonoBehaviour
         }
         else if (popUpIndex == popUps.Length)
         {
-            Destroy(tutorialPanel);
+            //Destroy(tutorialPanel);
             GameInstance.instance.getGameData().tutorialCompleted = true;
             GameInstance.instance.SaveGame();
         }
