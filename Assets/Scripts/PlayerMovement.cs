@@ -30,6 +30,9 @@ public class PlayerMovement : MonoBehaviour
     public Image specialAttackRegenTimerImage;
     public SpecialAttack attack;
 
+    //dash ability parameters
+
+
     private void Start()
     {
         // getting player object's rigid body component.
@@ -39,10 +42,11 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         // getting damage script where damage actions are computed and updated
         characterDamage = GetComponent<CharacterDamage>();
-        //
+        //setting player health for easier acces
         health = characterDamage.Health;
         // initially player can use special attack with no cooldown
         specialAttackRegenTimerImage.fillAmount = 0.0f;
+
     }
 
     private void FixedUpdate()
@@ -51,7 +55,6 @@ public class PlayerMovement : MonoBehaviour
         if(moveInput != Vector2.zero )
             {
             playerRB.AddForce(Time.deltaTime * moveInput * moveSpeed);
-            //GetComponent<AudioSource>().UnPause();
             walkSound.UnPause();
             if (playerRB.velocity.magnitude > maxSpeed)
             {
@@ -119,6 +122,7 @@ public class PlayerMovement : MonoBehaviour
         }
         */
 
+        // attack
         if (Input.GetKey(KeyCode.K))
         {
             animator.SetTrigger("punch");
@@ -152,6 +156,7 @@ public class PlayerMovement : MonoBehaviour
             moveSpeed = 2500f;
 
         }
+        
        
     }
 

@@ -73,6 +73,9 @@ public class Enemy : MonoBehaviour
             }
         }
         
+        
+        
+        
 
     }
     private void FixedUpdate()
@@ -95,13 +98,13 @@ public class Enemy : MonoBehaviour
 
     private void Shoot()
     {
+
         if (firePoint != null)
         {
-            firePoint.transform.localRotation = Quaternion.identity;
             if (timeToFire <= 0f)
             {
                 timeToFire = fireRate;
-                GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+                GameObject bullet = Instantiate(bulletPrefab, firePoint.transform.position, firePoint.transform.rotation);
                 Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
                 rb.AddForce(direction * bulletForce, ForceMode2D.Impulse);
                 //audioSource.Play()

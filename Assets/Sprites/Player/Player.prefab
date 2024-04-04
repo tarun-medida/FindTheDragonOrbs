@@ -246,6 +246,11 @@ MonoBehaviour:
   specialAttackSFX: {fileID: -694674993294072766}
   specialAttackRegenTimerImage: {fileID: 0}
   attack: {fileID: 1009117470324038640}
+  dashSpeed: 4000
+  dashLength: 1
+  dashCooldown: 2
+  dashCooldownCounter: 2
+  dashCounter: 2
 --- !u!114 &8982870483688355226
 MonoBehaviour:
   m_ObjectHideFlags: 0

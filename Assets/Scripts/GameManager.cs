@@ -140,9 +140,15 @@ public class GameManager : MonoBehaviour
             //enemyCounter++;
             spawnBoss = false;
             // pause level music
-            LevelbackgroundScore.Pause();
+            if (LevelbackgroundScore.isPlaying)
+            {
+                LevelbackgroundScore.Pause();
+            }
             // play boss music
-            BossMusic.Play();
+            if (!BossMusic.isPlaying)
+            {
+                BossMusic.Play();
+            }
             // Trigger Camera Shake
             shakeCamera = true;
         }
@@ -161,7 +167,16 @@ public class GameManager : MonoBehaviour
         // saving the game upon lose which will update game data, because you will have collected some coins and used some portions
         if (player != null && player.health <= 0)
         {
-            BossMusic.Pause();
+            if (BossMusic.isPlaying)
+            {
+                BossMusic.Pause();
+            }
+
+            else if(LevelbackgroundScore.isPlaying)
+            {
+                LevelbackgroundScore.Pause();
+            }
+
             deadMenuUI.SetActive(true);
             // to stop player movement
             player.GetComponent<PlayerInput>().enabled = false;
@@ -177,7 +192,10 @@ public class GameManager : MonoBehaviour
         {
             if (bossInstanceRef.GetComponent<CharacterDamage>().Health <= 0)
             {
-                BossMusic.Pause();
+                if (BossMusic.isPlaying)
+                {
+                    BossMusic.Pause();
+                }
                 winMenuUI.SetActive(true);
                 Destroy(bossInstanceRef);
                 player.walkSound.Pause();
