@@ -13088,7 +13088,7 @@ MonoBehaviour:
   popUps:
   - Press W to move up and S to move down.
   - 'Press A to move left and D to move right. '
-  - 'Hold Left shift & move buttons to go faster and avoid enemies. '
+  - Hold Left shift to use dash ability.
   - Press K button to attack.
   - Press F button to perform special attack and wait for the timer to perform again.
   - Kill the Dummy to enter the Play Area.
@@ -18139,6 +18139,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1754080349568946677, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 1870396013751257188, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -18188,82 +18192,23 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 3787394740917709967, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
+      propertyPath: tr
+      value: 
+      objectReference: {fileID: 148949387174649931}
+    - target: {fileID: 3787394740917709967, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
       propertyPath: specialAttackRegenTimerImage
       value: 
       objectReference: {fileID: 1030484579}
-    - target: {fileID: 3987915902605586865, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
-      propertyPath: m_Size.x
-      value: 3.656433
-      objectReference: {fileID: 0}
-    - target: {fileID: 3987915902605586865, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
-      propertyPath: m_Size.y
-      value: 9.469177
-      objectReference: {fileID: 0}
-    - target: {fileID: 3987915902605586865, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.3409729
-      objectReference: {fileID: 0}
-    - target: {fileID: 3987915902605586865, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.35958862
-      objectReference: {fileID: 0}
-    - target: {fileID: 4809445052441674620, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
-      propertyPath: m_SortingOrder
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 8207142476392777655, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
-      propertyPath: m_Size.x
-      value: 4.1099854
-      objectReference: {fileID: 0}
-    - target: {fileID: 8207142476392777655, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
-      propertyPath: m_Size.y
-      value: 9.389252
-      objectReference: {fileID: 0}
-    - target: {fileID: 8207142476392777655, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.34083557
-      objectReference: {fileID: 0}
-    - target: {fileID: 8207142476392777655, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.31962585
-      objectReference: {fileID: 0}
-    - target: {fileID: 8634731768739544736, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
-      propertyPath: m_Size.x
-      value: 9.254181
-      objectReference: {fileID: 0}
-    - target: {fileID: 8634731768739544736, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
-      propertyPath: m_Size.y
-      value: 3.8420105
-      objectReference: {fileID: 0}
-    - target: {fileID: 8634731768739544736, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.18959045
-      objectReference: {fileID: 0}
-    - target: {fileID: 8634731768739544736, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.1209259
-      objectReference: {fileID: 0}
-    - target: {fileID: 8875475789566692395, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
-      propertyPath: m_Size.x
-      value: 9.102509
-      objectReference: {fileID: 0}
-    - target: {fileID: 8875475789566692395, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
-      propertyPath: m_Size.y
-      value: 3.6835022
-      objectReference: {fileID: 0}
-    - target: {fileID: 8875475789566692395, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.11375427
-      objectReference: {fileID: 0}
-    - target: {fileID: 8875475789566692395, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.11985779
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
+--- !u!96 &148949387174649931 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 1754080349568946677, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
+  m_PrefabInstance: {fileID: 148949387174649928}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5491051013678336576
 PrefabInstance:
   m_ObjectHideFlags: 0

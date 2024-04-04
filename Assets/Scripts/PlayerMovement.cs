@@ -30,8 +30,14 @@ public class PlayerMovement : MonoBehaviour
     public Image specialAttackRegenTimerImage;
     public SpecialAttack attack;
 
-    //dash ability parameters
-
+    //Variables used for dash
+    public float dashSpeed = 1000f;
+    public float dashDuration = 0.2f;
+    public float dashCooldown = 3f;
+    private bool canDash = true;
+    private bool isDashing;
+    public Collider2D dashCollider;
+    [SerializeField] private TrailRenderer tr;
 
     private void Start()
     {
@@ -146,18 +152,12 @@ public class PlayerMovement : MonoBehaviour
         health = characterDamage.Health;
 
         // sprint/walk faster condition
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (canDash && Input.GetKeyDown(KeyCode.LeftShift))
         {
-            moveSpeed = 5000f;
-
+            StartCoroutine(Dash());
         }
-        if (Input.GetKeyUp(KeyCode.LeftShift))
-        {
-            moveSpeed = 2500f;
 
-        }
-        
-       
+
     }
 
     private bool DoSpecialAttackAnim()
@@ -220,5 +220,39 @@ public class PlayerMovement : MonoBehaviour
     public void UpdateHealth()
     {
         characterDamage.Health += 20f;
+    }
+    IEnumerator Dash()
+    {
+        canDash = false;
+        isDashing = true;
+        dashCollider.enabled = false;
+        tr.emitting = true;
+
+        if (moveInput.x > 0)
+        {
+            playerRB.velocity = new Vector2(transform.localScale.x * dashSpeed, 0);
+        }
+        if (moveInput.y > 0)
+        {
+            playerRB.velocity = new Vector2(0, transform.localScale.y * dashSpeed);
+        }
+        if (moveInput.x < 0)
+        {
+            playerRB.velocity = new Vector2(transform.localScale.x * -dashSpeed, 0);
+        }
+        if (moveInput.y < 0)
+        {
+            playerRB.velocity = new Vector2(0, transform.localScale.y * -dashSpeed);
+        }
+
+        yield return new WaitForSeconds(dashDuration);
+
+        isDashing = false;
+        dashCollider.enabled = true;
+        tr.emitting = false;
+
+        yield return new WaitForSeconds(dashCooldown);
+
+        canDash = true;
     }
 }
