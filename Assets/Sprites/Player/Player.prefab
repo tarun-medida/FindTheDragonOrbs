@@ -141,7 +141,7 @@ Transform:
   - {fileID: 1489339550180031304}
   - {fileID: 5497142921129296556}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4809445052441674620
 SpriteRenderer:
@@ -1207,7 +1207,7 @@ MonoBehaviour:
   attackCollider: {fileID: 4970428840940554853}
   right: {x: 0, y: 0, z: 0}
   left: {x: 0, y: 0, z: 0}
-  knockbackForce: 1000
+  knockbackForce: 250
   isSpecialAttack: 0
 --- !u!1 &6088409450649711735
 GameObject:
@@ -1302,7 +1302,7 @@ MonoBehaviour:
   attackCollider: {fileID: 3673015608659889880}
   right: {x: 0, y: 0, z: 0}
   left: {x: 0, y: 0, z: 0}
-  knockbackForce: 1000
+  knockbackForce: 250
   isSpecialAttack: 0
 --- !u!1 &6357921671830151306
 GameObject:
@@ -1492,7 +1492,7 @@ MonoBehaviour:
   attackCollider: {fileID: 6816762286748277952}
   right: {x: 1.86, y: 0, z: 0}
   left: {x: -1.86, y: 0, z: 0}
-  knockbackForce: 1000
+  knockbackForce: 250
   isSpecialAttack: 0
 --- !u!1 &9147489910964930882
 GameObject:
