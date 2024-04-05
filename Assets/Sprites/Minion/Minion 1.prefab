@@ -403,7 +403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   checkRadius: 200
-  attackRadius: 4
+  attackRadius: 2
   characterDamage: {fileID: 0}
   shouldRotate: 1
   mask:
@@ -411,7 +411,7 @@ MonoBehaviour:
     m_Bits: 8
   attackDamage: 5
   winHud: {fileID: 0}
-  fireRate: 0.5
+  fireRate: 2
   firePoint: {fileID: 5291786682465129237}
   bulletForce: 20
   bulletPrefab: {fileID: 8720065474340066794, guid: 3db01748e6266bc48b97b609ee3a0246, type: 3}
