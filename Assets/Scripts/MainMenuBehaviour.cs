@@ -11,7 +11,7 @@ public class MainMenuBehaviour : MonoBehaviour
     public Animator pageFlipAnimator;
     private bool mainMenuFlag = false, inventoryFlag = false, shopFlag = false, weaponsFlag = false, portionsFlag = false;
     public GameObject mainMenuPage, inventoryPage, shopPage, startScreen, weaponsPage, potionsPage, startText;
-    public AudioSource pageFlip;
+    //public AudioSource pageFlip;
     void Start()
     {
     }
@@ -72,7 +72,7 @@ public class MainMenuBehaviour : MonoBehaviour
         if (mainMenuPage.activeSelf == false)
         {
             pageFlipAnimator.SetTrigger("Select");
-            pageFlip.Play();
+            AudioManager.instance.PlaySFX("PageFlipSFX");
             mainMenuFlag = true;
             inventoryFlag = false;
             shopFlag = false;
@@ -91,7 +91,7 @@ public class MainMenuBehaviour : MonoBehaviour
         if (inventoryPage.activeSelf == false)
         {
             pageFlipAnimator.SetTrigger("Select");
-            pageFlip.Play();
+            AudioManager.instance.PlaySFX("PageFlipSFX");
             inventoryFlag = true;
             mainMenuFlag = false;
             shopFlag = false;
@@ -112,7 +112,7 @@ public class MainMenuBehaviour : MonoBehaviour
         if (shopPage.activeSelf == false)
         {
             pageFlipAnimator.SetTrigger("Select");
-            pageFlip.Play();
+            AudioManager.instance.PlaySFX("PageFlipSFX");
             shopFlag = true;
             mainMenuFlag = false;
             inventoryFlag = false;
@@ -131,7 +131,7 @@ public class MainMenuBehaviour : MonoBehaviour
         if (weaponsPage.activeSelf == false)
         {
             pageFlipAnimator.SetTrigger("Select");
-            pageFlip.Play();
+            AudioManager.instance.PlaySFX("PageFlipSFX");
             weaponsFlag = true;
             shopFlag = false;
             mainMenuFlag = false;
@@ -148,7 +148,7 @@ public class MainMenuBehaviour : MonoBehaviour
         if (potionsPage.activeSelf == false)
         {
             pageFlipAnimator.SetTrigger("Select");
-            pageFlip.Play();
+            AudioManager.instance.PlaySFX("PageFlipSFX");
             portionsFlag = true;
             shopFlag = false;
             weaponsFlag = false;

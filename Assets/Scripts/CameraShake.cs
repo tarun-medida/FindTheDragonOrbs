@@ -7,7 +7,7 @@ public class CameraShake : MonoBehaviour
 {
     // Camera Shake Parameters
     private CinemachineVirtualCamera virtualCamera;
-    private float shakeIntentity = 8f;
+    private float shakeIntentity = 4f;
     private float shakeTime = 3f;
     private float timer;
     private CinemachineBasicMultiChannelPerlin m_MultiChannelPerlin;

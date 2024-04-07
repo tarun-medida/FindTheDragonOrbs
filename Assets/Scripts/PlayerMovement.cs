@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     public float maxSpeed = 5;
     private Animator animator;
     public float idleFriction = 0.9f;
-    public AudioSource walkSound, specialAttackSFX;
+    public AudioSource walkSound;
     
     //special attack delay and time variables
     private readonly float coolDownTime = 5f;
@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     public float dashDuration = 0.2f;
     public float dashCooldown = 3f;
     private bool canDash = true;
-    private bool isDashing;
+    private bool isDashing = false;
     public Collider2D dashCollider;
     [SerializeField] private TrailRenderer tr;
 
@@ -182,7 +182,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void DoSpecialAttack()
     {
-        specialAttackSFX.Play();
+        //specialAttackSFX.Play();
+        AudioManager.instance.PlaySFX("SpecialAttackSFX");
         attack.SpecialBeamAttack();
         return;
     }

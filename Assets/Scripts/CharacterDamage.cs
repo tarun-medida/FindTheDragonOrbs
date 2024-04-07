@@ -15,7 +15,6 @@ public class CharacterDamage : MonoBehaviour, IDamageable
     private int no_of_coins;
     BossHealthBar healthBar;
     public PlayerMovement playerMovement;
-    public AudioSource PlayerHurtSound;
     public float Health
     {
         set
@@ -89,7 +88,8 @@ public class CharacterDamage : MonoBehaviour, IDamageable
     {
         Health = health - damage;
         animator.SetTrigger("hurt");
-        PlayerHurtSound.Play();
+        AudioManager.instance.PlaySFX("PlayerHurtSFX");
+        //PlayerHurtSound.Play();
         
     }
 

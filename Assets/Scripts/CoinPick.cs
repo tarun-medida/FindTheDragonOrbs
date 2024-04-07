@@ -11,7 +11,6 @@ public class CoinPick : MonoBehaviour
     public PickupObject type = PickupObject.COIN;
     private static int coins = 0;
     public int score=0;
-    public AudioClip coinPickup;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Player")
@@ -23,7 +22,7 @@ public class CoinPick : MonoBehaviour
                 score = coins;
                 //Debug.Log(score);
                 GameManager.instance.UpdateCoinsCollected();
-                AudioSource.PlayClipAtPoint(coinPickup,transform.position,1f);
+                AudioManager.instance.PlaySFX("CoinCollectedSFX");
                 Destroy(gameObject);
                 Score.instance.IncreaseScore();
             }

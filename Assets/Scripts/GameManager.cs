@@ -43,9 +43,9 @@ public class GameManager : MonoBehaviour
     }
 
     // In Game Event UIs
-    public GameObject pauseMenuUI, deadMenuUI, winMenuUI;
+    public GameObject pauseMenuUI, deadMenuUI, winMenuUI, optionsMenuUI, controlsMenuUI;
     // In Game Level Music
-    public AudioSource LevelbackgroundScore, BossMusic;
+    public string levelBackgroundAudioClip;
     // In Game UI Elements
     int noOfHealthPortions;
     int coinsCollected = 0;
@@ -81,7 +81,8 @@ public class GameManager : MonoBehaviour
     public void Start()
     {
         //rb = GetComponent<Rigidbody2D>();
-        LevelbackgroundScore.Play();
+        //LevelbackgroundScore.Play();
+        AudioManager.instance.PlayMusic(levelBackgroundAudioClip);
         // Loading Game Data
         loadedGameData = GameInstance.instance.getGameData();
         // *** PLAYER HEALTH INITIALIZATION ***
@@ -139,16 +140,7 @@ public class GameManager : MonoBehaviour
             // no a cool thing to do, but won't make that much difference, this to ensure that only one instance of the boss will be spawned
             //enemyCounter++;
             spawnBoss = false;
-            // pause level music
-            if (LevelbackgroundScore.isPlaying)
-            {
-                LevelbackgroundScore.Pause();
-            }
-            // play boss music
-            if (!BossMusic.isPlaying)
-            {
-                BossMusic.Play();
-            }
+            AudioManager.instance.PlayMusic("Level1BossMusic");
             // Trigger Camera Shake
             shakeCamera = true;
         }
@@ -167,16 +159,7 @@ public class GameManager : MonoBehaviour
         // saving the game upon lose which will update game data, because you will have collected some coins and used some portions
         if (player != null && player.health <= 0)
         {
-            if (BossMusic.isPlaying)
-            {
-                BossMusic.Pause();
-            }
-
-            else if(LevelbackgroundScore.isPlaying)
-            {
-                LevelbackgroundScore.Pause();
-            }
-
+            AudioManager.instance.musicSource.Stop();
             deadMenuUI.SetActive(true);
             // to stop player movement
             player.GetComponent<PlayerInput>().enabled = false;
@@ -192,11 +175,8 @@ public class GameManager : MonoBehaviour
         {
             if (bossInstanceRef.GetComponent<CharacterDamage>().Health <= 0)
             {
-                if (BossMusic.isPlaying)
-                {
-                    BossMusic.Pause();
-                }
-                winMenuUI.SetActive(true);
+                AudioManager.instance.musicSource.Stop();
+                winMenuUI.SetActive(true);                
                 Destroy(bossInstanceRef);
                 player.walkSound.Pause();
                 Time.timeScale = 0;
@@ -262,6 +242,28 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
     }
     */
+
+    public void OnClickOptions()
+    {
+        optionsMenuUI.SetActive(true);
+
+    }
+
+    public void OnClickCloseOptions()
+    {
+        optionsMenuUI.SetActive(false);
+
+    }
+
+    public void OnClickControls()
+    {
+        controlsMenuUI.SetActive(true);
+    }
+
+    public void OnClickControlsClose()
+    {
+        controlsMenuUI.SetActive(false);
+    }
 
     public void OnClickTryAgain()
     {
