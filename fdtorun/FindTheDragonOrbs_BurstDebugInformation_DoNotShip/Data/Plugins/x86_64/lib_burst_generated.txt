@@ -1,4 +1,4 @@
-Library: D:\GameDevelopment\FindTheDragonOrbs\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
+Library: F:\git hub\FindTheDragonOrbs\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
 --platform=Windows
 --backend=burst-llvm-14
 --target=X64_SSE2
@@ -8,10 +8,10 @@ Library: D:\GameDevelopment\FindTheDragonOrbs\Temp\BurstOutput\Data\Plugins\x86_
 --float-precision=Standard
 --linker-options=PdbAltPath="FindTheDragonOrbs_Data/Plugins/x86_64/lib_burst_generated.pdb"
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=D:\GameDevelopment\FindTheDragonOrbs\Temp\Burst
+--temp-folder=F:\git hub\FindTheDragonOrbs\Temp\Burst
 --key-folder=C:/Program Files/Unity/Hub/Editor/2022.2.21f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport
---decode-folder=D:\GameDevelopment\FindTheDragonOrbs\Library\Burst
---output=D:\GameDevelopment\FindTheDragonOrbs\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
+--decode-folder=F:\git hub\FindTheDragonOrbs\Library\Burst
+--output=F:\git hub\FindTheDragonOrbs\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=Unity.Burst.BurstCompiler+BurstCompilerHelper, Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::IsBurstEnabled()--8c2be93e18276203cbd918daa2748a10
@@ -54,10 +54,10 @@ Library: D:\GameDevelopment\FindTheDragonOrbs\Temp\BurstOutput\Data\Plugins\x86_
 --float-precision=Standard
 --linker-options=PdbAltPath="FindTheDragonOrbs_Data/Plugins/x86_64/lib_burst_generated.pdb"
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=D:\GameDevelopment\FindTheDragonOrbs\Temp\Burst
+--temp-folder=F:\git hub\FindTheDragonOrbs\Temp\Burst
 --key-folder=C:/Program Files/Unity/Hub/Editor/2022.2.21f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport
---decode-folder=D:\GameDevelopment\FindTheDragonOrbs\Library\Burst
---output=D:\GameDevelopment\FindTheDragonOrbs\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
+--decode-folder=F:\git hub\FindTheDragonOrbs\Library\Burst
+--output=F:\git hub\FindTheDragonOrbs\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=Unity.Burst.BurstCompiler+BurstCompilerHelper, Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::IsBurstEnabled()--8c2be93e18276203cbd918daa2748a10
