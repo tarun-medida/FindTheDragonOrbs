@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9dcb2161a2c43b7408603a13f63d5e45
+guid: 7080facb0f963274c9bc302ae52fba8f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: book_updated_sprite_0
+      name: book_open_anim_updated_final2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -150,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 302131e936c5d0e4eac5ea8df788cc39
-      internalID: -1842895635
+      spriteID: eeba2c9b8823e8649a3a50d58bfcedde
+      internalID: 1696142555
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: book_updated_sprite_1
+      name: book_open_anim_updated_final2_1
       rect:
         serializedVersion: 2
         x: 247
@@ -171,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e05089be163b0d409a14a66dd2f4fa2
-      internalID: -74920762
+      spriteID: 5a587e0594c807248b74c724d6c180dd
+      internalID: -1145317091
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: book_updated_sprite_2
+      name: book_open_anim_updated_final2_2
       rect:
         serializedVersion: 2
         x: 494
@@ -192,14 +192,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9257d05e14321943bbbf8b62761b98e
-      internalID: 753983264
+      spriteID: fa1afe9d1c6539a4d8c86bc40f0cdc77
+      internalID: -2073790405
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: book_updated_sprite_3
+      name: book_open_anim_updated_final2_3
       rect:
         serializedVersion: 2
         x: 741
@@ -213,14 +213,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72b5f208af7b92b4b8c427f370121dbd
-      internalID: -1884186935
+      spriteID: 824d19a6dbf1fae4786f507e20cdc2e9
+      internalID: -503819588
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: book_updated_sprite_4
+      name: book_open_anim_updated_final2_4
       rect:
         serializedVersion: 2
         x: 988
@@ -234,14 +234,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3914373d20d675a4e8d404bab3f3c6c5
-      internalID: 964384456
+      spriteID: a33fc4577fbeb444d8a99757e8659694
+      internalID: -1223370926
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: book_updated_sprite_5
+      name: book_open_anim_updated_final2_5
       rect:
         serializedVersion: 2
         x: 1235
@@ -255,14 +255,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b6951e135606dc41a1b3aa18b36de67
-      internalID: -718738389
+      spriteID: c585062c6b918714993ff98330fda05a
+      internalID: 1613479372
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: book_updated_sprite_6
+      name: book_open_anim_updated_final2_6
       rect:
         serializedVersion: 2
         x: 1482
@@ -276,8 +276,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76b602e7a8ed96b4dbae96881aaa0e90
-      internalID: -1255126303
+      spriteID: 81f34cd12a6b5be4fb36bc1a9965296c
+      internalID: -1347112304
       vertices: []
       indices: 
       edges: []
@@ -293,13 +293,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      book_updated_sprite_0: -1842895635
-      book_updated_sprite_1: -74920762
-      book_updated_sprite_2: 753983264
-      book_updated_sprite_3: -1884186935
-      book_updated_sprite_4: 964384456
-      book_updated_sprite_5: -718738389
-      book_updated_sprite_6: -1255126303
+      book_open_anim_updated_final2_0: 1696142555
+      book_open_anim_updated_final2_1: -1145317091
+      book_open_anim_updated_final2_2: -2073790405
+      book_open_anim_updated_final2_3: -503819588
+      book_open_anim_updated_final2_4: -1223370926
+      book_open_anim_updated_final2_5: 1613479372
+      book_open_anim_updated_final2_6: -1347112304
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

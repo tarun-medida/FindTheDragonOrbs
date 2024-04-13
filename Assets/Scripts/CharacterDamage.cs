@@ -25,7 +25,7 @@ public class CharacterDamage : MonoBehaviour, IDamageable
                 Defeated();
                 if (gameObject.tag == "Player")
                 {
-                    playerMovement.Invoke("Dead", 2f);
+                    playerMovement.Invoke("Dead", 0.5f);
                 }
             }
         }

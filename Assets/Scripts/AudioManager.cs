@@ -38,10 +38,10 @@ public class AudioManager : MonoBehaviour
 
         if (sound != null)
         {
-            //sfxSource.PlayOneShot(sound.AudioClip);
+            sfxSource.PlayOneShot(sound.AudioClip);
 
-            sfxSource.clip = sound.AudioClip;
-            sfxSource.Play();
+            //sfxSource.clip = sound.AudioClip;
+            //sfxSource.Play();
         }
     }
 }
