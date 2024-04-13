@@ -135,7 +135,6 @@ MonoBehaviour:
   maxHealth: 1000
   coins: {fileID: 6201843436008572030, guid: ea5ee8c545beb024793e11ca8d179eda, type: 3}
   playerMovement: {fileID: 3787394740917709967, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
-  PlayerHurtSound: {fileID: 0}
 --- !u!212 &3855809021679708226
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -177,7 +176,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 91162364, guid: e84321a94da12b04cbfea6e34f5aa839, type: 3}
+  m_Sprite: {fileID: -180789155, guid: fdce29c224bd52746b627f7c771deec2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -298,7 +297,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.375, y: 7.25}
+    oldSize: {x: 4.125, y: 7.875}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
