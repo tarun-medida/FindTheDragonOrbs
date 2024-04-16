@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7080facb0f963274c9bc302ae52fba8f
+guid: a444e7d1fce1f4447b4f141e926994fb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -136,12 +136,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: book_open_anim_updated_final2_0
+      name: book_page_turn_anim_updated 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 247
+        width: 330
         height: 204
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -150,19 +150,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eeba2c9b8823e8649a3a50d58bfcedde
-      internalID: 1696142555
+      spriteID: b3f9704c8f6cfd4438e8e5afe5391d92
+      internalID: 939240102
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: book_open_anim_updated_final2_1
+      name: book_page_turn_anim_updated 1_1
       rect:
         serializedVersion: 2
-        x: 247
+        x: 330
         y: 0
-        width: 247
+        width: 330
         height: 204
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -171,19 +171,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a587e0594c807248b74c724d6c180dd
-      internalID: -1145317091
+      spriteID: 4142a058c55175643aab0eb3278b93aa
+      internalID: -1979656211
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: book_open_anim_updated_final2_2
+      name: book_page_turn_anim_updated 1_2
       rect:
         serializedVersion: 2
-        x: 494
+        x: 660
         y: 0
-        width: 247
+        width: 330
         height: 204
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -192,19 +192,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa1afe9d1c6539a4d8c86bc40f0cdc77
-      internalID: -2073790405
+      spriteID: 28e8e2d5d97f392448dd82595c246f7a
+      internalID: 1964684438
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: book_open_anim_updated_final2_3
+      name: book_page_turn_anim_updated 1_3
       rect:
         serializedVersion: 2
-        x: 741
+        x: 990
         y: 0
-        width: 247
+        width: 330
         height: 204
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -213,19 +213,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 824d19a6dbf1fae4786f507e20cdc2e9
-      internalID: -503819588
+      spriteID: 07d7fadc4ea1bb64085eb162bd2cb27e
+      internalID: -235635665
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: book_open_anim_updated_final2_4
+      name: book_page_turn_anim_updated 1_4
       rect:
         serializedVersion: 2
-        x: 988
+        x: 1320
         y: 0
-        width: 247
+        width: 330
         height: 204
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -234,19 +234,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a33fc4577fbeb444d8a99757e8659694
-      internalID: -1223370926
+      spriteID: 5005002530feae9418ccfbe754e7c4fe
+      internalID: -731870374
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: book_open_anim_updated_final2_5
+      name: book_page_turn_anim_updated 1_5
       rect:
         serializedVersion: 2
-        x: 1235
+        x: 1650
         y: 0
-        width: 247
+        width: 330
         height: 204
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -255,19 +255,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c585062c6b918714993ff98330fda05a
-      internalID: 1613479372
+      spriteID: f8ed32278b2992144ab4454352ce90bc
+      internalID: 1238382074
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: book_open_anim_updated_final2_6
+      name: book_page_turn_anim_updated 1_6
       rect:
         serializedVersion: 2
-        x: 1482
+        x: 1980
         y: 0
-        width: 247
+        width: 330
         height: 204
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -276,8 +276,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81f34cd12a6b5be4fb36bc1a9965296c
-      internalID: -1347112304
+      spriteID: 0851d6e217a4cb445bb014db68e80421
+      internalID: 2131043310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: book_page_turn_anim_updated 1_7
+      rect:
+        serializedVersion: 2
+        x: 2310
+        y: 0
+        width: 330
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba9ef7fe31486ec4e909a5bcf1136a80
+      internalID: -1656920971
       vertices: []
       indices: 
       edges: []
@@ -293,13 +314,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      book_open_anim_updated_final2_0: 1696142555
-      book_open_anim_updated_final2_1: -1145317091
-      book_open_anim_updated_final2_2: -2073790405
-      book_open_anim_updated_final2_3: -503819588
-      book_open_anim_updated_final2_4: -1223370926
-      book_open_anim_updated_final2_5: 1613479372
-      book_open_anim_updated_final2_6: -1347112304
+      book_page_turn_anim_updated 1_0: 939240102
+      book_page_turn_anim_updated 1_1: -1979656211
+      book_page_turn_anim_updated 1_2: 1964684438
+      book_page_turn_anim_updated 1_3: -235635665
+      book_page_turn_anim_updated 1_4: -731870374
+      book_page_turn_anim_updated 1_5: 1238382074
+      book_page_turn_anim_updated 1_6: 2131043310
+      book_page_turn_anim_updated 1_7: -1656920971
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

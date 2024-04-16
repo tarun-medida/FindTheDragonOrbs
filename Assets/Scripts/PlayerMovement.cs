@@ -34,9 +34,12 @@ public class PlayerMovement : MonoBehaviour
     public float dashSpeed = 1000f;
     public float dashDuration = 0.2f;
     public float dashCooldown = 3f;
+    public float dashCooldownTimer = 0.0f;
     private bool canDash = true;
     private bool isDashing = false;
+    private bool isInDashCoolDown = false;
     public Collider2D dashCollider;
+    public Image dashRegenTimerImage;
     [SerializeField] private TrailRenderer tr;
 
     private void Start()
@@ -52,6 +55,8 @@ public class PlayerMovement : MonoBehaviour
         health = characterDamage.Health;
         // initially player can use special attack with no cooldown
         specialAttackRegenTimerImage.fillAmount = 0.0f;
+        // intially player can use dash with no colldown
+        dashRegenTimerImage.fillAmount = 0.0f;
 
     }
 
@@ -151,12 +156,16 @@ public class PlayerMovement : MonoBehaviour
 
         health = characterDamage.Health;
 
-        // sprint/walk faster condition
+        // dash condition
         if (canDash && Input.GetKeyDown(KeyCode.LeftShift))
         {
             StartCoroutine(Dash());
         }
 
+        if(isInDashCoolDown)
+        {
+            ApplyDashCoolDown();
+        }
 
     }
 
@@ -199,6 +208,20 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             specialAttackRegenTimerImage.fillAmount = coolDownTimer / coolDownTime;
+        }
+    }
+
+    private void ApplyDashCoolDown()
+    {
+        dashCooldownTimer -= Time.deltaTime;
+        if(dashCooldownTimer < 0.0f)
+        {
+            isInDashCoolDown= false;
+            dashRegenTimerImage.fillAmount = 0.0f;
+        }
+        else
+        {
+            dashRegenTimerImage.fillAmount = dashCooldownTimer / dashCooldown;
         }
     }
 
@@ -251,6 +274,9 @@ public class PlayerMovement : MonoBehaviour
         isDashing = false;
         dashCollider.enabled = true;
         tr.emitting = false;
+        isInDashCoolDown = true;
+        // setting the timer with the cooldown value
+        dashCooldownTimer = dashCooldown;
 
         yield return new WaitForSeconds(dashCooldown);
 
