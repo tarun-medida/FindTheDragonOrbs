@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
     }
 
     // In Game Event UIs
-    public GameObject pauseMenuUI, deadMenuUI, winMenuUI, optionsMenuUI, controlsMenuUI;
+    public GameObject pauseMenuUI, deadMenuUI, winMenuUI, optionsMenuUI, controlsMenuUI, levelMenuUI;
     // In Game Level Music
     public string levelBackgroundAudioClip;
     // In Game UI Elements
@@ -230,11 +230,23 @@ public class GameManager : MonoBehaviour
     }
 
 
+    /*
     public void OnClickPlay()
     {
         SceneManager.LoadScene(1);
     }
-    
+    */
+
+    public void OnClickPlay()
+    {
+        levelMenuUI.SetActive(true);
+    }
+
+    public void OnCloseLevelSelect()
+    {
+        levelMenuUI.SetActive(false);
+    }
+
     /* Unused, only 1 level as of 28_01_2024
     public void NextLevel()
     {
