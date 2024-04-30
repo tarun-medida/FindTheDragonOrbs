@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
 {
     public float speed;
     public float checkRadius;
+    public float shootRadius;
     public float attackRadius;
     public CharacterDamage characterDamage;
 
@@ -24,6 +25,7 @@ public class Enemy : MonoBehaviour
     private SpriteRenderer sprite;
 
     private bool isInChaseRange;
+    private bool isInShootRange;
     private bool isInAttackRange;
     public float attackDamage = 1.0f;
     public GameObject winHud;
@@ -50,6 +52,7 @@ public class Enemy : MonoBehaviour
 
         isInChaseRange = Physics2D.OverlapCircle(transform.position, checkRadius, mask);
         isInAttackRange = Physics2D.OverlapCircle(transform.position, attackRadius, mask);
+        isInShootRange = Physics2D.OverlapCircle(transform.position, shootRadius, mask);
 
         direction = target.position - transform.position;
 
@@ -80,17 +83,22 @@ public class Enemy : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if(isInChaseRange && !isInAttackRange)
+        //if(isInChaseRange)
+        //{
+        //    MoveCharacter(movement);
+        //}
+        if (isInShootRange && !isInAttackRange)
         {
-            MoveCharacter(movement);
+            animator.SetTrigger("Attack");
+            if (Vector2.Distance(target.position, transform.position) <= shootRadius)
+            {
+                if (Vector2.Distance(target.position, transform.position) >= checkRadius)
+                    Shoot();
+            }
         }
         if (isInAttackRange)
         {
             animator.SetTrigger("Attack");
-            if (Vector2.Distance(target.position, transform.position) <= attackRadius)
-            {
-                Shoot();
-            }
         }
     }
 
@@ -117,10 +125,10 @@ public class Enemy : MonoBehaviour
     }
 
 
-    private void MoveCharacter(Vector2 dir)
-    {
-        rb.MovePosition((Vector2) transform.position + (dir * speed * Time.deltaTime));
-    }
+    //private void MoveCharacter(Vector2 dir)
+    //{
+    //    rb.MovePosition((Vector2) transform.position + (dir * speed * Time.deltaTime));
+    //}
 
     //private void OnTriggerEnter2D(Collider2D collision)
     private void OnCollisionEnter2D(Collision2D collision)

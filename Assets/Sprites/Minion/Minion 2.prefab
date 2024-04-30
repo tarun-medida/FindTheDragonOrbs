@@ -315,7 +315,6 @@ MonoBehaviour:
   maxHealth: 150
   coins: {fileID: 6201843436008572030, guid: ea5ee8c545beb024793e11ca8d179eda, type: 3}
   playerMovement: {fileID: 3787394740917709967, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
-  PlayerHurtSound: {fileID: 0}
 --- !u!212 &2976309671951494
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -402,8 +401,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  checkRadius: 200
-  attackRadius: 20
+  checkRadius: 12
+  shootRadius: 20
+  attackRadius: 2
   characterDamage: {fileID: 0}
   shouldRotate: 1
   mask:
@@ -570,6 +570,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1870396013751257188, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
+  checkRadius: 15
+  mask:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &2993687492496979729
 GameObject:
   m_ObjectHideFlags: 0
