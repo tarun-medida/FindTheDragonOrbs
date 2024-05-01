@@ -222,6 +222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   checkRadius: 100
+  shootRadius: 0
   attackRadius: 1
   characterDamage: {fileID: 5753780177004029881}
   shouldRotate: 1
@@ -389,6 +390,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1870396013751257188, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
+  checkRadius: 30
+  mask:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &3162018139261848064
 GameObject:
   m_ObjectHideFlags: 0
