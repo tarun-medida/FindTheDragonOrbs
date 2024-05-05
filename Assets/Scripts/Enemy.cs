@@ -89,7 +89,7 @@ public class Enemy : MonoBehaviour
         //}
         if (isInShootRange && !isInAttackRange)
         {
-            animator.SetTrigger("Attack");
+            
             if (Vector2.Distance(target.position, transform.position) <= shootRadius)
             {
                 if (Vector2.Distance(target.position, transform.position) >= checkRadius)
@@ -111,6 +111,7 @@ public class Enemy : MonoBehaviour
         {
             if (timeToFire <= 0f)
             {
+                animator.SetTrigger("Attack");
                 timeToFire = fireRate;
                 GameObject bullet = Instantiate(bulletPrefab, firePoint.transform.position, firePoint.transform.rotation);
                 Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
