@@ -111,7 +111,7 @@ public class Enemy : MonoBehaviour
         {
             if (timeToFire <= 0f)
             {
-                animator.SetTrigger("Attack");
+                animator.SetTrigger("Shoot");
                 timeToFire = fireRate;
                 GameObject bullet = Instantiate(bulletPrefab, firePoint.transform.position, firePoint.transform.rotation);
                 Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
