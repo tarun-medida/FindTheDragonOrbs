@@ -5771,6 +5771,8 @@ MonoBehaviour:
     AudioClip: {fileID: 8300000, guid: ade8190457805a448a256b87dbce3b0f, type: 3}
   - AudioClipName: Level2Music
     AudioClip: {fileID: 8300000, guid: e39c1682e8232984dbce50140584876d, type: 3}
+  - AudioClipName: Level2BossMusic
+    AudioClip: {fileID: 8300000, guid: 7bb0ea7c0d679b94d9007e4e805dcb70, type: 3}
   sfxSounds:
   - AudioClipName: SpecialAttackSFX
     AudioClip: {fileID: 8300000, guid: 252624b2978a2964a8c70ea2c7b881fa, type: 3}

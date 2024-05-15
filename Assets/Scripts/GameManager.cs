@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
     // In Game Event UIs
     public GameObject pauseMenuUI, deadMenuUI, winMenuUI, optionsMenuUI, controlsMenuUI, levelMenuUI;
     // In Game Level Music
-    public string levelBackgroundAudioClip;
+    public string levelBackgroundAudioClip, bossMusic;
     // In Game UI Elements
     int noOfHealthPortions;
     int coinsCollected = 0;
@@ -76,6 +76,8 @@ public class GameManager : MonoBehaviour
     public bool shakeCamera = false;
     //Level Specific Orb TODO
 
+    //LevelSpecific Minion Attack
+    public bool onlyMelee,onlyBeam,meleeAndBeam;
 
 
     public void Start()
@@ -140,7 +142,8 @@ public class GameManager : MonoBehaviour
             // no a cool thing to do, but won't make that much difference, this to ensure that only one instance of the boss will be spawned
             //enemyCounter++;
             spawnBoss = false;
-            AudioManager.instance.PlayMusic("Level1BossMusic");
+            //AudioManager.instance.PlayMusic("Level1BossMusic");
+            AudioManager.instance.PlayMusic(bossMusic);
             // Trigger Camera Shake
             shakeCamera = true;
         }

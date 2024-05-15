@@ -3796,6 +3796,7 @@ MonoBehaviour:
   controlsMenuUI: {fileID: 0}
   levelMenuUI: {fileID: 0}
   levelBackgroundAudioClip: Level2Music
+  bossMusic: Level2BossMusic
   equippedItemTitleText: {fileID: 0}
   equippedItemDescriptionText: {fileID: 0}
   equippedPortionsCountText: {fileID: 0}
@@ -3821,6 +3822,9 @@ MonoBehaviour:
   weaponDatabase: {fileID: 0}
   itemsCollected: {fileID: 0}
   shakeCamera: 0
+  onlyMelee: 0
+  onlyBeam: 0
+  meleeAndBeam: 1
 --- !u!4 &867214683
 Transform:
   m_ObjectHideFlags: 0

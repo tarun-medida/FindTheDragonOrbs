@@ -12760,6 +12760,7 @@ MonoBehaviour:
   controlsMenuUI: {fileID: 0}
   levelMenuUI: {fileID: 0}
   levelBackgroundAudioClip: Level1Music
+  bossMusic: Level1BossMusic
   equippedItemTitleText: {fileID: 0}
   equippedItemDescriptionText: {fileID: 0}
   equippedPortionsCountText: {fileID: 0}
@@ -16542,6 +16543,7 @@ MonoBehaviour:
     m_Bits: 8
   attackDamage: 0
   winHud: {fileID: 0}
+  attackRate: 0
   fireRate: 0
   firePoint: {fileID: 0}
   bulletForce: 0

@@ -94,7 +94,12 @@ public class Enemy : MonoBehaviour
             if (Vector2.Distance(target.position, transform.position) <= shootRadius)
             {
                 if (Vector2.Distance(target.position, transform.position) >= checkRadius)
-                    Shoot();
+                {
+                    if (GameManager.instance.onlyBeam || GameManager.instance.meleeAndBeam)
+                    {
+                        Shoot();
+                    }
+                }
             }
         }
         if (isInAttackRange)
