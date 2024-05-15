@@ -7,6 +7,7 @@ public class EnemyDamage : MonoBehaviour
     //Script used for dealing damage to the player.
 
     public float attackDamage = 5.0f;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")

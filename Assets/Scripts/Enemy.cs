@@ -29,7 +29,8 @@ public class Enemy : MonoBehaviour
     private bool isInAttackRange;
     public float attackDamage = 1.0f;
     public GameObject winHud;
-
+    public float attackRate;
+    private float timeToAttack = 0f;
     public float fireRate;
     private float timeToFire = 0f;
     public Transform firePoint;
@@ -98,10 +99,22 @@ public class Enemy : MonoBehaviour
         }
         if (isInAttackRange)
         {
-            animator.SetTrigger("Attack");
+            Attack();
         }
     }
+    private void Attack()
+    {
 
+        if (timeToAttack <= 0f)
+        {
+            animator.SetTrigger("Attack");
+            timeToAttack = attackRate;
+        }
+        else
+        {
+            timeToAttack -= Time.deltaTime;
+        }
+    }
 
 
     private void Shoot()
