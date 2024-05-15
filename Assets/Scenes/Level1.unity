@@ -12786,6 +12786,9 @@ MonoBehaviour:
   weaponDatabase: {fileID: 0}
   itemsCollected: {fileID: 0}
   shakeCamera: 0
+  onlyMelee: 0
+  onlyBeam: 0
+  meleeAndBeam: 0
 --- !u!1 &1029476731
 GameObject:
   m_ObjectHideFlags: 0
@@ -20010,6 +20013,10 @@ PrefabInstance:
       propertyPath: tr
       value: 
       objectReference: {fileID: 148949387174649931}
+    - target: {fileID: 3787394740917709967, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
+      propertyPath: no_of_hearts
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3787394740917709967, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
       propertyPath: dashRegenTimerImage
       value: 

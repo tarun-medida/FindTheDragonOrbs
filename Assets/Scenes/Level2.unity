@@ -6208,6 +6208,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1198065634}
     - target: {fileID: 3787394740917709967, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
+      propertyPath: no_of_hearts
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3787394740917709967, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
       propertyPath: dashRegenTimerImage
       value: 
       objectReference: {fileID: 1425341516}

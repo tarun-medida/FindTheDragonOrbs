@@ -13285,6 +13285,7 @@ MonoBehaviour:
   controlsMenuUI: {fileID: 1729958947}
   levelMenuUI: {fileID: 1986390509}
   levelBackgroundAudioClip: MainMenuMusic
+  bossMusic: 
   equippedItemTitleText: {fileID: 1333082487}
   equippedItemDescriptionText: {fileID: 1385966714}
   equippedPortionsCountText: {fileID: 1969403619}
@@ -13305,6 +13306,9 @@ MonoBehaviour:
   weaponDatabase: {fileID: 2082563863}
   itemsCollected: {fileID: 613945520}
   shakeCamera: 0
+  onlyMelee: 0
+  onlyBeam: 0
+  meleeAndBeam: 0
 --- !u!82 &1672913714
 AudioSource:
   m_ObjectHideFlags: 0
@@ -15130,7 +15134,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.566
   m_Pitch: 1
   Loop: 1
   Mute: 0
