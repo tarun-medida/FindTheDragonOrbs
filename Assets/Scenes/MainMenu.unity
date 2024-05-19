@@ -5786,6 +5786,8 @@ MonoBehaviour:
     AudioClip: {fileID: 8300000, guid: 1652bb7a9e6782b40a79e879665cfa5a, type: 3}
   - AudioClipName: PageFlipSFX
     AudioClip: {fileID: 8300000, guid: bd386708ac07dbb4d8e6205032c2e41e, type: 3}
+  - AudioClipName: RadialAttackSFX
+    AudioClip: {fileID: 8300000, guid: 7940287c64c9f3d4383d86f3569ef9b9, type: 3}
   musicSource: {fileID: 1877868429}
   sfxSource: {fileID: 2047825960}
 --- !u!1 &669603834

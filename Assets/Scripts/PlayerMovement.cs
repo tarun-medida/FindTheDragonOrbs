@@ -238,7 +238,7 @@ public class PlayerMovement : MonoBehaviour
     private void DoRangedAttack()
     {
         //specialAttackSFX.Play();
-        AudioManager.instance.PlaySFX("SpecialAttackSFX");
+        AudioManager.instance.PlaySFX("RadialAttackSFX");
         animator.SetTrigger("RangedAttack");
         return;
     }

@@ -32,6 +32,7 @@ public class WeaponDatabase : MonoBehaviour
 
     public List<Weapons> availableWeapons = new List<Weapons>();
     public List<Weapons> collectedWeapons = new List<Weapons>();
+    public List<Weapons> weaponsDb = new List<Weapons>();
 
     private Weapons electraCut, drogFire, hammer;
 
@@ -45,8 +46,12 @@ public class WeaponDatabase : MonoBehaviour
         drogFire = new("Sword Of Helios", "DMG: 10\r\nSpecial: Fire DMG\r\n\r\nThe sword made by Hephastus from the fragments of Helios (god of sun and light).", 65, 10);
         hammer = new("Hammer", "DMG: 25\r\nSpecial: Power DMG\r\n\r\nCreated from the teeth of the dragon SolidBorne", 70, 25);
         availableWeapons.Add(electraCut);
-        availableWeapons.Add(drogFire);
+        weaponsDb.Add(electraCut);
+        // not required as it is the starting weapon
+        //availableWeapons.Add(drogFire);
+        weaponsDb.Add(drogFire);
         availableWeapons.Add(hammer);
+        weaponsDb.Add(hammer);
     }
 
 
@@ -94,7 +99,7 @@ public class WeaponDatabase : MonoBehaviour
     // for game manager to set the current equipped weapon along with its description
     public Weapons GetWeaponDetailsByTitle(string title)
     {
-        foreach (var weapon in availableWeapons)
+        foreach (var weapon in weaponsDb)
         {
             if (title == weapon.title)
             {
