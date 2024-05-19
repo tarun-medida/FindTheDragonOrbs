@@ -30,6 +30,13 @@ public class PlayerMovement : MonoBehaviour
     public Image specialAttackRegenTimerImage;
     public SpecialAttack attack;
 
+    //ranged attack delay and time variables
+    private readonly float coolDownTimeRt = 8f;
+    private float coolDownTimerRt = 0.0f;
+    private bool isInCoolDownRt = false;
+    public Image radialAttackRegenTimerImage;
+
+
     //Variables used for dash
     public float dashSpeed = 1000f;
     public float dashDuration = 0.2f;
@@ -57,7 +64,8 @@ public class PlayerMovement : MonoBehaviour
         specialAttackRegenTimerImage.fillAmount = 0.0f;
         // intially player can use dash with no colldown
         dashRegenTimerImage.fillAmount = 0.0f;
-
+        // initially player can use radial attack with no cooldown
+        radialAttackRegenTimerImage.fillAmount = 0.0f;
     }
 
     private void FixedUpdate()
@@ -140,18 +148,18 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // drink portion
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             GameManager.instance.DrinkPortion();
         }
 
         //do special attack
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.J))
         {
             DoSpecialAttackAnim();
         }
-
-        if (Input.GetKeyDown(KeyCode.Q))
+        //radial attack/shockwave
+        if (Input.GetKeyDown(KeyCode.L))
         {
             //animator.SetTrigger("RangedAttack");
             DoRangedAttackAnim();
@@ -171,6 +179,11 @@ public class PlayerMovement : MonoBehaviour
         if(isInDashCoolDown)
         {
             ApplyDashCoolDown();
+        }
+
+        if(isInCoolDownRt)
+        {
+            ApplyCooldownRt();
         }
 
     }
@@ -196,19 +209,19 @@ public class PlayerMovement : MonoBehaviour
     }
     private bool DoRangedAttackAnim()
     {
-        if (isInCoolDown == true)
+        if (isInCoolDownRt == true)
         {
             // in cool down, cannot do speical attack
             return false;
         }
         else
         {
-            // perform special attack
+            // perform radial attack
             // not in cool down
             DoRangedAttack();
-            isInCoolDown = true;
+            isInCoolDownRt = true;
             // setting the timer with the cooldown value
-            coolDownTimer = coolDownTime;
+            coolDownTimerRt = coolDownTimeRt;
             return true;
 
         }
@@ -240,6 +253,20 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             specialAttackRegenTimerImage.fillAmount = coolDownTimer / coolDownTime;
+        }
+    }
+
+    private void ApplyCooldownRt()
+    {
+        coolDownTimerRt -= Time.deltaTime;
+        if (coolDownTimerRt < 0.0f)
+        {
+            isInCoolDownRt = false;
+            radialAttackRegenTimerImage.fillAmount = 0.0f;
+        }
+        else
+        {
+            radialAttackRegenTimerImage.fillAmount = coolDownTimerRt / coolDownTimeRt;
         }
     }
 

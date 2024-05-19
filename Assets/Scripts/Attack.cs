@@ -21,15 +21,16 @@ public class Attack : MonoBehaviour
             Debug.Log("Attack Collider not set");
         }
 
-        if (isSpecialAttack == false)
+        // basic attack
+        if (isSpecialAttack == false && isRadialDamage == false)
             attackDamage = GameInstance.instance.getEquippedWeaponDamage();
-        else
+
+        // sp1
+        if(isSpecialAttack)
             attackDamage = 70;
-        
-        if(isRadialDamage == true)
-        {
-            attackDamage = 70;
-        }
+        // sp2
+        if(isRadialDamage)
+            attackDamage = 50;
     }
 
 
@@ -42,7 +43,6 @@ public class Attack : MonoBehaviour
             Vector3 parentPosition = transform.parent.position;
             Vector2 direction = (Vector2)(col.transform.position - parentPosition).normalized;
             Vector2 knockback = direction * knockbackForce;
-
             damageableObject.Hit(attackDamage, knockback);
         }
     }
