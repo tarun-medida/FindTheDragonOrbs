@@ -150,17 +150,17 @@ public class Enemy : MonoBehaviour
     //}
 
     //private void OnTriggerEnter2D(Collider2D collision)
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if(collision.gameObject.tag == "Player")
-    //    //if(collision.tag == "Player")
-    //     {
-    //            IDamageable damageableObject = collision.collider.GetComponent<IDamageable>();
-    //            //IDamageable damageableObject = collision.GetComponent<IDamageable>();
-    //        if (damageableObject != null)
-    //        {
-    //            damageableObject.Hit(attackDamage);
-    //        }
-    //    }
-    //}
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Player" && gameObject.tag == "Boss")
+        //if(collision.tag == "Player")
+         {
+                IDamageable damageableObject = collision.collider.GetComponent<IDamageable>();
+                //IDamageable damageableObject = collision.GetComponent<IDamageable>();
+            if (damageableObject != null)
+            {
+                damageableObject.Hit(attackDamage);
+            }
+        }
+    }
 }

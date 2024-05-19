@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 7275188775543183868}
   - component: {fileID: 784065196821931839}
   m_Layer: 0
-  m_Name: Enemy 1
+  m_Name: Boss1
   m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -175,7 +175,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 15
   m_Sprite: {fileID: -180789155, guid: fdce29c224bd52746b627f7c771deec2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -231,6 +231,7 @@ MonoBehaviour:
     m_Bits: 8
   attackDamage: 10
   winHud: {fileID: 0}
+  attackRate: 0
   fireRate: 0
   firePoint: {fileID: 0}
   bulletForce: 0
@@ -606,7 +607,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 16
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0

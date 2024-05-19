@@ -55,10 +55,20 @@ public class GameInstance : MonoBehaviour
     public void UpdateLevelsCompleted(int levelCount)
     {
         // as there is only one level as of now and to ensure that levels completed doesn't increase everytime we play the same level
+        /* Not applicable anymore because we have 2 levels as of 19/05/2024
         if (gameData.levelsCompleted == 0)
         {
             gameData.levelsCompleted += levelCount;
         }
+        */
+        if (gameData.levelsCompleted == 0)
+            gameData.levelsCompleted += levelCount;
+        else if (gameData.levelsCompleted == 1)
+            gameData.levelsCompleted += levelCount;
+        else
+            // only 2 levels
+            gameData.levelsCompleted = gameData.levelsCompleted;
+
     }
 
     // should be called when player equips a weapon in inventory

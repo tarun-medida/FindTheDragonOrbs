@@ -9371,9 +9371,7 @@ MonoBehaviour:
   - {fileID: 1516345266}
   - {fileID: 1604830736}
   - {fileID: 846084872}
-  count: 50
-  spawnRate: 0.5
-  state: 2
+  spawnRate: 5
 --- !u!61 &531677340
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9381,7 +9379,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 531677337}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -12774,7 +12772,8 @@ MonoBehaviour:
   player: {fileID: 1911549667}
   boss: {fileID: 2199941372347920905, guid: 2f97a2eb25178214fbaff2db66be0cb9, type: 3}
   bossInstanceRef: {fileID: 0}
-  numberOfMinionsToSpawn: 5
+  numberOfMinionsToSpawn: 20
+  numberOfEnemiesSpanwed: 0
   minionsToKillCount: 10
   randomBossSpawnLocations:
   - {fileID: 1626270288}
@@ -14673,7 +14672,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 100
-  field of view: 90.7
+  field of view: 112.5
   orthographic: 0
   orthographic size: 10
   m_Depth: 0
@@ -19189,7 +19188,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.7902107, y: 0.5666809}
+  m_Offset: {x: -6.199135, y: 0.5666809}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -19200,7 +19199,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 22.743584, y: 2.1333618}
+  m_Size: {x: 29.561432, y: 2.1333618}
   m_EdgeRadius: 0
 --- !u!4 &2032906297
 Transform:

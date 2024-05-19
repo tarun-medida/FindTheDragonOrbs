@@ -66,6 +66,7 @@ public class GameManager : MonoBehaviour
     private bool spawnBoss = true;
     // Level Parameters
     public int numberOfMinionsToSpawn;
+    public int numberOfEnemiesSpanwed;
     public int minionsToKillCount;
     public Transform[] randomBossSpawnLocations;
     public int enemyCounter = 0;
@@ -305,6 +306,7 @@ public class GameManager : MonoBehaviour
             UpdateGameDataOnLose();
             GameInstance.instance.SaveGame();
         }
+        AudioManager.instance.sfxSource.Stop();
         SceneManager.LoadScene(0);
         Time.timeScale = 1;
     }
@@ -432,6 +434,7 @@ public class GameManager : MonoBehaviour
     public void UpdateEnemyCounter()
     {
         enemyCounter++;
+        numberOfEnemiesSpanwed--;
     }
 
     // *** TO GET ENEMIES KILLED COUNT FOR SHOWING IN UI ***
