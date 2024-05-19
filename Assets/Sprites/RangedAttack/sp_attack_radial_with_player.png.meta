@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e84321a94da12b04cbfea6e34f5aa839
+guid: 5bcb367243f636545b8366ba04bbb112
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -50,7 +50,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 8
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: enemy_ftdo_0
+      name: sp_attack_radial_with_player_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 194
-        width: 27
-        height: 58
+        x: 0
+        y: 18
+        width: 128
+        height: 110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4325d25997b4554a8a27435deaba4eb
-      internalID: 91162364
+      spriteID: 7065313d871e95e448f6cd7d9f900024
+      internalID: -1483676642
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_ftdo_1
+      name: sp_attack_radial_with_player_1
       rect:
         serializedVersion: 2
-        x: 35
-        y: 194
-        width: 27
-        height: 58
+        x: 128
+        y: 18
+        width: 128
+        height: 110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31afbf11134556d48917f71849f68a85
-      internalID: 101514122
+      spriteID: e3381d50d2afea546b2d0fecd834f813
+      internalID: -1643793048
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_ftdo_2
+      name: sp_attack_radial_with_player_2
       rect:
         serializedVersion: 2
-        x: 66
-        y: 194
-        width: 24
-        height: 59
+        x: 256
+        y: 18
+        width: 128
+        height: 110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96eec9001d9e3f3408d71652bec5800b
-      internalID: 1575682511
+      spriteID: 4a431a36d8a4148449c2e4a93fab9b31
+      internalID: 121832622
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_ftdo_3
+      name: sp_attack_radial_with_player_3
       rect:
         serializedVersion: 2
-        x: 94
-        y: 194
-        width: 24
-        height: 59
+        x: 384
+        y: 18
+        width: 128
+        height: 110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 670056d0e21e3d049aaec36d13fbc42b
-      internalID: -846836652
+      spriteID: 2fb5ee2c0befe0e438c3171d78c75b34
+      internalID: -939185542
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_ftdo_4
+      name: sp_attack_radial_with_player_4
       rect:
         serializedVersion: 2
-        x: 122
-        y: 194
-        width: 27
-        height: 59
+        x: 512
+        y: 18
+        width: 128
+        height: 110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ae24a41204187445a7304e512bea708
-      internalID: -829052198
+      spriteID: f58068eb02222e14480111a9415b566c
+      internalID: 1131444003
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_ftdo_5
+      name: sp_attack_radial_with_player_5
       rect:
         serializedVersion: 2
-        x: 9
-        y: 128
-        width: 24
-        height: 58
+        x: 640
+        y: 18
+        width: 128
+        height: 110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,20 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91e9dd71a84ae6445b39e70c0188af34
-      internalID: -888825682
+      spriteID: 91ab187af407ed94e823da2bb5164390
+      internalID: -918424505
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_ftdo_6
+      name: sp_attack_radial_with_player_6
       rect:
         serializedVersion: 2
-        x: 37
-        y: 128
-        width: 25
-        height: 59
+        x: 768
+        y: 18
+        width: 128
+        height: 110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,20 +263,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70d66a4ca647d8542ad688adc78d07de
-      internalID: -572808785
+      spriteID: da50f90c35638274d965e3d0188e90d1
+      internalID: -1492199806
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_ftdo_7
+      name: sp_attack_radial_with_player_7
       rect:
         serializedVersion: 2
-        x: 66
-        y: 128
-        width: 24
-        height: 58
+        x: 896
+        y: 18
+        width: 128
+        height: 110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,20 +284,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3dc6e9ad3e5f3ae4db17ae322586e388
-      internalID: -1073533193
+      spriteID: b198ebb729a91764e9ec9efc4b7a95f9
+      internalID: -231503937
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_ftdo_8
+      name: sp_attack_radial_with_player_8
       rect:
         serializedVersion: 2
-        x: 94
-        y: 128
-        width: 25
-        height: 59
+        x: 1024
+        y: 18
+        width: 128
+        height: 110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,20 +305,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f7b85ec104602c44a2c6c0a7982ad43
-      internalID: 1699166866
+      spriteID: 29c7cdc64d1c3d641ab9512446e56eb1
+      internalID: 1417505471
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_ftdo_9
+      name: sp_attack_radial_with_player_9
       rect:
         serializedVersion: 2
-        x: 5
-        y: 65
-        width: 32
-        height: 56
+        x: 1152
+        y: 18
+        width: 128
+        height: 110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -326,155 +326,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48066d8c80195a347ae4828890b61207
-      internalID: 1160374182
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy_ftdo_10
-      rect:
-        serializedVersion: 2
-        x: 41
-        y: 65
-        width: 24
-        height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 57d8ab8764ee7084daa972e6a0e4e314
-      internalID: -2138998364
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy_ftdo_11
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 65
-        width: 30
-        height: 57
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3f60d19facfa4db47a489742a213bf47
-      internalID: 1889723372
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy_ftdo_12
-      rect:
-        serializedVersion: 2
-        x: 103
-        y: 65
-        width: 24
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ebface8003c8be5449a60620cdde4a8f
-      internalID: 433167198
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy_ftdo_13
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 0
-        width: 24
-        height: 59
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e35507c8c9c59814a85a6417faa744d8
-      internalID: -580917705
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy_ftdo_14
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 0
-        width: 25
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0fa7498c49e6ba346a1c5cd5c04ccb58
-      internalID: 757102150
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy_ftdo_15
-      rect:
-        serializedVersion: 2
-        x: 65
-        y: 0
-        width: 24
-        height: 59
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 70dd8589c0dd6a3469734ca27d41bd97
-      internalID: -1977546610
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy_ftdo_16
-      rect:
-        serializedVersion: 2
-        x: 93
-        y: 0
-        width: 25
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0a7ea08301563564eae211ea66a5e9d0
-      internalID: -790528992
+      spriteID: ca63146955e3bab499c29af239fedb9b
+      internalID: -378739505
       vertices: []
       indices: 
       edges: []
@@ -490,23 +343,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      enemy_ftdo_0: 91162364
-      enemy_ftdo_1: 101514122
-      enemy_ftdo_10: -2138998364
-      enemy_ftdo_11: 1889723372
-      enemy_ftdo_12: 433167198
-      enemy_ftdo_13: -580917705
-      enemy_ftdo_14: 757102150
-      enemy_ftdo_15: -1977546610
-      enemy_ftdo_16: -790528992
-      enemy_ftdo_2: 1575682511
-      enemy_ftdo_3: -846836652
-      enemy_ftdo_4: -829052198
-      enemy_ftdo_5: -888825682
-      enemy_ftdo_6: -572808785
-      enemy_ftdo_7: -1073533193
-      enemy_ftdo_8: 1699166866
-      enemy_ftdo_9: 1160374182
+      sp_attack_radial_with_player_0: -1483676642
+      sp_attack_radial_with_player_1: -1643793048
+      sp_attack_radial_with_player_2: 121832622
+      sp_attack_radial_with_player_3: -939185542
+      sp_attack_radial_with_player_4: 1131444003
+      sp_attack_radial_with_player_5: -918424505
+      sp_attack_radial_with_player_6: -1492199806
+      sp_attack_radial_with_player_7: -231503937
+      sp_attack_radial_with_player_8: 1417505471
+      sp_attack_radial_with_player_9: -378739505
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

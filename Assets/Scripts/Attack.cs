@@ -10,6 +10,7 @@ public class Attack : MonoBehaviour
     public Vector3 left = new Vector3(-1.86f, 0f, 0f);
     public float knockbackForce = 5f;
     public bool isSpecialAttack;
+    public bool isRadialDamage;
 
 
     // Start is called before the first frame update
@@ -25,6 +26,10 @@ public class Attack : MonoBehaviour
         else
             attackDamage = 70;
         
+        if(isRadialDamage == true)
+        {
+            attackDamage = 70;
+        }
     }
 
 

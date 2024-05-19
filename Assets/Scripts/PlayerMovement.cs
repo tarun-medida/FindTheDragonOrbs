@@ -151,6 +151,12 @@ public class PlayerMovement : MonoBehaviour
             DoSpecialAttackAnim();
         }
 
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            //animator.SetTrigger("RangedAttack");
+            DoRangedAttackAnim();
+        }
+
         if (isInCoolDown)
             ApplyCooldown();
 
@@ -188,6 +194,25 @@ public class PlayerMovement : MonoBehaviour
 
         }
     }
+    private bool DoRangedAttackAnim()
+    {
+        if (isInCoolDown == true)
+        {
+            // in cool down, cannot do speical attack
+            return false;
+        }
+        else
+        {
+            // perform special attack
+            // not in cool down
+            DoRangedAttack();
+            isInCoolDown = true;
+            // setting the timer with the cooldown value
+            coolDownTimer = coolDownTime;
+            return true;
+
+        }
+    }
 
     private void DoSpecialAttack()
     {
@@ -197,6 +222,13 @@ public class PlayerMovement : MonoBehaviour
         return;
     }
 
+    private void DoRangedAttack()
+    {
+        //specialAttackSFX.Play();
+        AudioManager.instance.PlaySFX("SpecialAttackSFX");
+        animator.SetTrigger("RangedAttack");
+        return;
+    }
     private void ApplyCooldown()
     {
         coolDownTimer -= Time.deltaTime;
