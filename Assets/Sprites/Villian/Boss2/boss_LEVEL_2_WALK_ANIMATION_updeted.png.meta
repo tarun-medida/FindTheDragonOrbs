@@ -1,0 +1,549 @@
+fileFormatVersion: 2
+guid: a52e0a90b3446bf46ab6fd4f54d241c0
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 8
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: boss_LEVEL_2_WALK_ANIMATION_updeted_0
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 400
+        width: 41
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3b9cae7898a13a4e8e0d0e286c0ba7c
+      internalID: 1258364256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_LEVEL_2_WALK_ANIMATION_updeted_1
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 400
+        width: 41
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42eaf99b98d86d44fa3da3c2ba523787
+      internalID: -1559991755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_LEVEL_2_WALK_ANIMATION_updeted_2
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 320
+        width: 28
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 290b53c198a3ac44597acd020264c15b
+      internalID: 1201398602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_LEVEL_2_WALK_ANIMATION_updeted_3
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 320
+        width: 44
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3d8be2d0ac13c74eae17f8a06dc9f61
+      internalID: 1243113172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_LEVEL_2_WALK_ANIMATION_updeted_4
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 320
+        width: 28
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e495a5eaa4e98544996806b8f6a7b30e
+      internalID: -1333745922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_LEVEL_2_WALK_ANIMATION_updeted_5
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 320
+        width: 44
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22c00466a90799248861216cbd42d1aa
+      internalID: -995983917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_LEVEL_2_WALK_ANIMATION_updeted_6
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 240
+        width: 35
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e91e37a7617488f48b0e6d69bf33344e
+      internalID: 279139763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_LEVEL_2_WALK_ANIMATION_updeted_7
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 240
+        width: 35
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0e7ba57aaf4bad4a93659728417f18f
+      internalID: 2078074914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_LEVEL_2_WALK_ANIMATION_updeted_8
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 176
+        width: 31
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6460ebaeeeb2a6048a7559427382a2db
+      internalID: -663980641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_LEVEL_2_WALK_ANIMATION_updeted_9
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 176
+        width: 46
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 895ff55d028b6994f976fa97240c4079
+      internalID: 1546269753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_LEVEL_2_WALK_ANIMATION_updeted_10
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 176
+        width: 31
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bdaf7600cef9384ab06bb3e89b15863
+      internalID: 553763335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_LEVEL_2_WALK_ANIMATION_updeted_11
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 176
+        width: 46
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2078756b814592a4f93233abb211fded
+      internalID: 816196970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_LEVEL_2_WALK_ANIMATION_updeted_12
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 96
+        width: 41
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a76f1f7b909caa45acd7447f7e509c1
+      internalID: 1472255255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_LEVEL_2_WALK_ANIMATION_updeted_13
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 96
+        width: 41
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae1d4ae6db969b343b120be87982085f
+      internalID: 2013359095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_LEVEL_2_WALK_ANIMATION_updeted_14
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 16
+        width: 28
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c9a238e68c6576459e5dc5c58405320
+      internalID: 1098356503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_LEVEL_2_WALK_ANIMATION_updeted_15
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 16
+        width: 44
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd4751735f5bbd447b700b5d29109048
+      internalID: 2140428669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_LEVEL_2_WALK_ANIMATION_updeted_16
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 16
+        width: 28
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eb39ef7067a6744099f1f6cb8e31b9a
+      internalID: -1832238629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_LEVEL_2_WALK_ANIMATION_updeted_17
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 16
+        width: 44
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5285df8d687e92249a98007d46d863c5
+      internalID: -176634354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      boss_LEVEL_2_WALK_ANIMATION_updeted_0: 1258364256
+      boss_LEVEL_2_WALK_ANIMATION_updeted_1: -1559991755
+      boss_LEVEL_2_WALK_ANIMATION_updeted_10: 553763335
+      boss_LEVEL_2_WALK_ANIMATION_updeted_11: 816196970
+      boss_LEVEL_2_WALK_ANIMATION_updeted_12: 1472255255
+      boss_LEVEL_2_WALK_ANIMATION_updeted_13: 2013359095
+      boss_LEVEL_2_WALK_ANIMATION_updeted_14: 1098356503
+      boss_LEVEL_2_WALK_ANIMATION_updeted_15: 2140428669
+      boss_LEVEL_2_WALK_ANIMATION_updeted_16: -1832238629
+      boss_LEVEL_2_WALK_ANIMATION_updeted_17: -176634354
+      boss_LEVEL_2_WALK_ANIMATION_updeted_2: 1201398602
+      boss_LEVEL_2_WALK_ANIMATION_updeted_3: 1243113172
+      boss_LEVEL_2_WALK_ANIMATION_updeted_4: -1333745922
+      boss_LEVEL_2_WALK_ANIMATION_updeted_5: -995983917
+      boss_LEVEL_2_WALK_ANIMATION_updeted_6: 279139763
+      boss_LEVEL_2_WALK_ANIMATION_updeted_7: 2078074914
+      boss_LEVEL_2_WALK_ANIMATION_updeted_8: -663980641
+      boss_LEVEL_2_WALK_ANIMATION_updeted_9: 1546269753
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
