@@ -66,12 +66,28 @@ public class TutorialPopUps : MonoBehaviour
         else if (popUpIndex == 4)
         {
             TutorialPopUp(popUpIndex);
-            if (Input.GetKey(KeyCode.F))
+            if (Input.GetKey(KeyCode.J))
             {
                 popUpIndex++;
             }
         }
         else if (popUpIndex == 5)
+        {
+            TutorialPopUp(popUpIndex);
+            if (Input.GetKey(KeyCode.L))
+            {
+                popUpIndex++;
+            }
+        }
+        else if (popUpIndex == 6)
+        {
+            TutorialPopUp(popUpIndex);
+            if (Input.GetKey(KeyCode.F))
+            {
+                popUpIndex++;
+            }
+        }
+        else if (popUpIndex == 7)
         {       
             TutorialPopUp(popUpIndex);
             if (Input.GetKey(KeyCode.K))

@@ -14364,7 +14364,10 @@ MonoBehaviour:
   - 'Press A to move left and D to move right. '
   - Hold Left shift to use dash ability.
   - Press K button to attack.
-  - Press F button to perform special attack and wait for the timer to perform again.
+  - Press J button to perform special attack and wait for the timer to perform again.
+  - Press L button to perform special radial attack and wait for the timer to perform
+    again.
+  - Press F to drink potion.
   - Kill the Dummy to enter the Play Area.
   tutorialText: {fileID: 241217476}
   wordSpeed: 0
