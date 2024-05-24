@@ -302,7 +302,7 @@ public class PlayerMovement : MonoBehaviour
     
     public void UpdateHealth()
     {
-        characterDamage.Health += 20f;
+        characterDamage.Health += 12.5f;
     }
     IEnumerator Dash()
     {

@@ -407,6 +407,7 @@ MonoBehaviour:
   maxHealth: 150
   coins: {fileID: 6201843436008572030, guid: ea5ee8c545beb024793e11ca8d179eda, type: 3}
   playerMovement: {fileID: 3787394740917709967, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
+  sprite: {fileID: 2976309671951494}
 --- !u!212 &2976309671951494
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -501,7 +502,7 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 8
-  attackDamage: 0
+  attackDamage: 2
   winHud: {fileID: 0}
   attackRate: 2
   fireRate: 2

@@ -227,7 +227,7 @@ Transform:
   - {fileID: 5497142921129296556}
   - {fileID: 3349825959453163431}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4809445052441674620
 SpriteRenderer:
@@ -452,6 +452,7 @@ MonoBehaviour:
   maxHealth: 100
   coins: {fileID: 6201843436008572030, guid: ea5ee8c545beb024793e11ca8d179eda, type: 3}
   playerMovement: {fileID: 3787394740917709967}
+  sprite: {fileID: 4809445052441674620}
 --- !u!82 &2648324376709365208
 AudioSource:
   m_ObjectHideFlags: 0

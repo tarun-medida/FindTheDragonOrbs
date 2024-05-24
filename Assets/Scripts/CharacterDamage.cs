@@ -15,6 +15,7 @@ public class CharacterDamage : MonoBehaviour, IDamageable
     private int no_of_coins;
     BossHealthBar healthBar;
     public PlayerMovement playerMovement;
+    public SpriteRenderer sprite;
     public float Health
     {
         set
@@ -88,6 +89,7 @@ public class CharacterDamage : MonoBehaviour, IDamageable
     {
         Health = health - damage;
         animator.SetTrigger("hurt");
+        StartCoroutine(FlashForDamage());
         AudioManager.instance.PlaySFX("PlayerHurtSFX");
         //PlayerHurtSound.Play();
         
@@ -97,9 +99,18 @@ public class CharacterDamage : MonoBehaviour, IDamageable
     public void Hit(float damage,Vector2 push)
     {
         animator.SetTrigger("hurt");
+        StartCoroutine(FlashForDamage());
         Health = health - damage;
         rb.AddForce(push);
         healthBar.UpdateHealth(health,maxHealth);
         animator.SetTrigger("unhurt");
+    }
+
+
+    IEnumerator FlashForDamage()
+    {
+        sprite.color= new Color(0.1792453f, 0.1792453f, 0.1792453f, 1f);
+        yield return new WaitForSeconds(0.2f);
+        sprite.color = Color.white;
     }
 }

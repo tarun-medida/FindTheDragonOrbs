@@ -68,15 +68,21 @@ public class HealthBarUI : MonoBehaviour
             }
         }
 
-        if(health%Mathf.Floor(health) == 0.75)
+        // old code
+        //if(health%Mathf.Floor(health) == 0.75)
+        if(health%Mathf.Floor(health) >= 0.75 && health % Mathf.Floor(health) <= 1)
         {
             hearts[(int)Mathf.Ceil(health) - 1].sprite = ThreeQuarterHeart;
         }
-        else if(health% Mathf.Floor(health) == 0.5)
+        // old code
+        //else if(health% Mathf.Floor(health) == 0.5)
+        else if (health % Mathf.Floor(health) >= 0.5 && health % Mathf.Floor(health) <= 0.75)
         {
             hearts[(int)Mathf.Ceil(health) - 1].sprite = HalfHeart;
         }
-        else if(health% Mathf.Floor(health) == 0.25)
+        // old code
+        //else if(health% Mathf.Floor(health) == 0.25)
+        else if (health % Mathf.Floor(health) >= 0.25 && health % Mathf.Floor(health) <= 0.5)
         {
             hearts[(int)Mathf.Ceil(health) - 1].sprite = QuarterHeart;
         }
