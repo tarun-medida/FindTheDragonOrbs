@@ -15,13 +15,22 @@ public class TutorialPopUps : MonoBehaviour
     private int popUpIndex=0;
     public float wordSpeed;
     public GameObject Dummy;
+    public GameObject cutScene;
+
     //variable used for blocking player from entering play area
 
     public bool enterPlayArea = false;
     private void Start()
     {
-        if(GameInstance.instance.getGameData().tutorialCompleted == false)
+        if (GameInstance.instance.getGameData().tutorialCompleted == false)
+        {   // play cut scene
+            if (cutScene != null)
+            {
+                cutScene.SetActive(true);
+                StartCoroutine(PlayCustScene());
+            }
             tutorialPanel.SetActive(true);
+        }
         else
         {
             popUpIndex = popUps.Length;
@@ -109,5 +118,13 @@ public class TutorialPopUps : MonoBehaviour
     private void TutorialPopUp(int popUpIndex)
     {
         tutorialText.SetText(popUps[popUpIndex]);
+    }
+
+    IEnumerator PlayCustScene()
+    {
+        float delay = 2f;
+        float animTime = cutScene.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length;
+        Destroy(cutScene.gameObject,animTime+delay);
+        yield return null;
     }
 }

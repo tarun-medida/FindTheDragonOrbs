@@ -80,6 +80,9 @@ public class GameManager : MonoBehaviour
     //LevelSpecific Minion Attack
     public bool onlyMelee,onlyBeam,meleeAndBeam;
 
+    //CutsceneChecker variable
+    public bool isCutSceneOver = false;
+
 
     public void Start()
     {
