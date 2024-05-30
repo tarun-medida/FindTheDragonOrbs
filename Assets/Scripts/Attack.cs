@@ -20,16 +20,20 @@ public class Attack : MonoBehaviour
         {
             Debug.Log("Attack Collider not set");
         }
+    }
+
+    private void Update()
+    {
 
         // basic attack
         if (isSpecialAttack == false && isRadialDamage == false)
             attackDamage = GameInstance.instance.getEquippedWeaponDamage();
 
         // sp1
-        if(isSpecialAttack)
+        if (isSpecialAttack)
             attackDamage = 70;
         // sp2
-        if(isRadialDamage)
+        if (isRadialDamage)
             attackDamage = 50;
     }
 

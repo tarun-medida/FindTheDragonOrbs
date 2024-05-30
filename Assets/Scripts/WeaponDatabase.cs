@@ -34,7 +34,7 @@ public class WeaponDatabase : MonoBehaviour
     public List<Weapons> collectedWeapons = new List<Weapons>();
     public List<Weapons> weaponsDb = new List<Weapons>();
 
-    private Weapons electraCut, drogFire, hammer;
+    private Weapons electraCut, swordOfHelios, hammer;
 
     public WeaponDatabase() 
     {
@@ -42,14 +42,14 @@ public class WeaponDatabase : MonoBehaviour
         // when switchin between scense the weapon database game object was loading later than game manager causing the data to not be loaded in time
         // the data loads before game manager only on game start
         // moving it here removes the issue
-        electraCut = new("ElectraCut", "DMG: 20\r\nSpecial: Lightining DMG\r\n\r\nCreated from the scales of the atlantic dragon LitBorne", 50, 20);
-        drogFire = new("Sword Of Helios", "DMG: 10\r\nSpecial: Fire DMG\r\n\r\nThe sword made by Hephastus from the fragments of Helios (god of sun and light).", 65, 10);
-        hammer = new("Hammer", "DMG: 25\r\nSpecial: Power DMG\r\n\r\nCreated from the teeth of the dragon SolidBorne", 70, 25);
+        swordOfHelios = new("Sword Of Helios", "DMG: 20\r\nSpecial: Fire DMG\r\n\r\nThe sword made by Hephastus from the fragments of Helios (god of sun and light).", 65, 20);
+        electraCut = new("ElectraCut", "DMG: 30\r\nSpecial: Lightining DMG\r\n\r\nCreated from the scales of the atlantic dragon LitBorne", 50, 30);
+        hammer = new("Hammer", "DMG: 45\r\nSpecial: Power DMG\r\n\r\nCreated from the teeth of the dragon SolidBorne", 70, 45);
         availableWeapons.Add(electraCut);
         weaponsDb.Add(electraCut);
         // not required as it is the starting weapon
         //availableWeapons.Add(drogFire);
-        weaponsDb.Add(drogFire);
+        weaponsDb.Add(swordOfHelios);
         availableWeapons.Add(hammer);
         weaponsDb.Add(hammer);
     }
@@ -64,7 +64,7 @@ public class WeaponDatabase : MonoBehaviour
 
     public void LoadWeaponSprites()
     {
-        LoadWeaponSprite(drogFire);
+        LoadWeaponSprite(swordOfHelios);
         LoadWeaponSprite(electraCut);
         LoadWeaponSprite(hammer);
     }
