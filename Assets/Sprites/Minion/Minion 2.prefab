@@ -408,6 +408,7 @@ MonoBehaviour:
   coins: {fileID: 6201843436008572030, guid: ea5ee8c545beb024793e11ca8d179eda, type: 3}
   playerMovement: {fileID: 3787394740917709967, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
   sprite: {fileID: 2976309671951494}
+  floatingDamageText: {fileID: 3205419424382869151, guid: 111d5158df33168479c74cb8d65704f8, type: 3}
 --- !u!212 &2976309671951494
 SpriteRenderer:
   m_ObjectHideFlags: 0

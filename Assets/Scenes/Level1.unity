@@ -16779,6 +16779,7 @@ MonoBehaviour:
   coins: {fileID: 6201843436008572030, guid: ea5ee8c545beb024793e11ca8d179eda, type: 3}
   playerMovement: {fileID: 3787394740917709967, guid: 93251d0dd6aadb14484eeac42235109d, type: 3}
   sprite: {fileID: 0}
+  floatingDamageText: {fileID: 0}
 --- !u!4 &1656361879
 Transform:
   m_ObjectHideFlags: 0

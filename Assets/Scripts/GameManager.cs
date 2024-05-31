@@ -130,8 +130,6 @@ public class GameManager : MonoBehaviour
             GameInstance.instance.setWeaponDamage(weaponDatabase.GetWeaponDetailsByTitle(GameInstance.instance.getGameData().weaponEquipped).damage);
         }
 
-
-
     }
 
     void Update()

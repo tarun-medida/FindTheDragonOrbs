@@ -100,6 +100,7 @@ public class CharacterDamage : MonoBehaviour, IDamageable
     {
         animator.SetTrigger("hurt");
         StartCoroutine(FlashForDamage());
+        //FloatingDamage
         Health = health - damage;
         rb.AddForce(push);
         healthBar.UpdateHealth(health,maxHealth);

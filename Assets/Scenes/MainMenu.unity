@@ -13522,6 +13522,7 @@ MonoBehaviour:
   onlyMelee: 0
   onlyBeam: 0
   meleeAndBeam: 0
+  isCutSceneOver: 0
 --- !u!1 &1680177333
 GameObject:
   m_ObjectHideFlags: 0

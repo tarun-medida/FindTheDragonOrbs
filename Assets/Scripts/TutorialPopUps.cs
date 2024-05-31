@@ -26,6 +26,7 @@ public class TutorialPopUps : MonoBehaviour
         {   // play cut scene
             if (cutScene != null)
             {
+                AudioManager.instance.musicSource.Pause();
                 cutScene.SetActive(true);
                 StartCoroutine(PlayCustScene());
             }
@@ -124,7 +125,9 @@ public class TutorialPopUps : MonoBehaviour
     {
         float delay = 2f;
         float animTime = cutScene.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length;
-        Destroy(cutScene.gameObject,animTime+delay);
-        yield return null;
+        float timeToDestroy = animTime + delay;
+        Destroy(cutScene.gameObject, timeToDestroy);
+        yield return new WaitForSeconds(timeToDestroy);
+        AudioManager.instance.musicSource.UnPause();
     }
 }
