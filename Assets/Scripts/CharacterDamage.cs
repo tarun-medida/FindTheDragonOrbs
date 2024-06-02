@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Serialization;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -16,6 +17,7 @@ public class CharacterDamage : MonoBehaviour, IDamageable
     BossHealthBar healthBar;
     public PlayerMovement playerMovement;
     public SpriteRenderer sprite;
+    public GameObject floatingDamageText;
     public float Health
     {
         set
@@ -101,6 +103,8 @@ public class CharacterDamage : MonoBehaviour, IDamageable
         animator.SetTrigger("hurt");
         StartCoroutine(FlashForDamage());
         //FloatingDamage
+        if(transform.gameObject.tag == "Minion" || transform.gameObject.tag == "Boss")
+        ShowFloatingDamageText(damage);
         Health = health - damage;
         rb.AddForce(push);
         healthBar.UpdateHealth(health,maxHealth);
@@ -113,5 +117,11 @@ public class CharacterDamage : MonoBehaviour, IDamageable
         sprite.color= new Color(0.1792453f, 0.1792453f, 0.1792453f, 1f);
         yield return new WaitForSeconds(0.2f);
         sprite.color = Color.white;
+    }
+
+    void ShowFloatingDamageText(float dmg)
+    {
+        var damageText = Instantiate(floatingDamageText, transform.position, Quaternion.identity,transform);
+        damageText.GetComponent<TextMeshPro>().text = dmg.ToString();
     }
 }
