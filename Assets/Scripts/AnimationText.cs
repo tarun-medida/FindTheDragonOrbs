@@ -8,23 +8,28 @@ public class AnimationText : MonoBehaviour
     public GameObject storyPanel;
     public TMP_Text storyText;
     public string[] dialogues;
-    private int index = 0;
+    private int index = 0, totalVisisbleCharacters,counter = 0;
 
     private float typeSpeed = 0.1f;
     IEnumerator Typing()
     {
-         //storyText.text = dialogues[index];
+         
          index++;
          yield return null;
+         
 
         // type writing effect
         /*
-        int totalVisisbleCharacters = storyText.textInfo.characterCount;
+        totalVisisbleCharacters = storyText.textInfo.characterCount;
+        Debug.Log(totalVisisbleCharacters);
         Debug.Log(storyText.text);
-        int counter = 0;
+        counter = 0;
         while(true)
         {
             int visibleCount = counter % (totalVisisbleCharacters + 1);
+            Debug.Log(counter);
+            Debug.Log(visibleCount);
+            Debug.Log(totalVisisbleCharacters);
             storyText.maxVisibleCharacters = visibleCount;
             if(visibleCount >= totalVisisbleCharacters)
             {
@@ -40,12 +45,13 @@ public class AnimationText : MonoBehaviour
     void NextLine()
     {
         //if (index < dialogues.Length - 1)
-        if(storyPanel.activeSelf == false) 
+
+        if (index < dialogues.Length)
         {
-            storyPanel.SetActive(true);
-        }   
-        if (index <= dialogues.Length - 1)
-        {
+            if (storyPanel.activeSelf == false)
+            {
+                storyPanel.SetActive(true);
+            }
             storyText.text = dialogues[index];
             StartCoroutine(Typing());
         }

@@ -12048,13 +12048,13 @@ MonoBehaviour:
   storyPanel: {fileID: 40637048}
   storyText: {fileID: 1239093505}
   dialogues:
-  - Giryu a regular fishermen came across an strange anamoly
-  - He finds an area with the water still and a enormous books floating in the center
-    of 7 rocks
-  - Out of curiosity Giyru touches the book and the seven symbols on the book emerges
-    out with flashing lights and Giryu dissappears!!!
-  - The rocks start rising up forming huge islands......... and Giryu finds himself
-    in a strange island........
+  - One day somewhere in the ocean Giryu a Fisherman saw a mysterious silent pond
+    surrounded by seven stones in the middle of the raging ocean.
+  - Out of curiosity, he visits the pond and discovers a book titled ORBITONIA.
+  - He touches the book, and immediately seven dragon orbs escape from the book,
+    unlocking the wormhole.
+  - The seven stones transforms into the seven islands unleasing monsters of atlantis
+    on the world and now it is Giryu's responsibility to save the world.
 --- !u!1 &921234759
 GameObject:
   m_ObjectHideFlags: 0
