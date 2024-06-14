@@ -22,62 +22,62 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: -1588196101, guid: 5cf5dc9bfc811ad4ba3c78608a26646e, type: 3}
-    - time: 0.6
+    - time: 1
       value: {fileID: 525321012, guid: 5cf5dc9bfc811ad4ba3c78608a26646e, type: 3}
-    - time: 1.2
+    - time: 2
       value: {fileID: 644310616, guid: 5cf5dc9bfc811ad4ba3c78608a26646e, type: 3}
-    - time: 1.8
+    - time: 2.25
       value: {fileID: 21300000, guid: 68d2a5d8d3b9aeb4386fb762d409d68b, type: 3}
-    - time: 2.4
+    - time: 2.5
       value: {fileID: -158225104, guid: f0e0d5370a20a2f488abba721518fd7b, type: 3}
-    - time: 3
+    - time: 3.5
       value: {fileID: -1064531765, guid: f0e0d5370a20a2f488abba721518fd7b, type: 3}
-    - time: 3.6
+    - time: 4.5
       value: {fileID: 8605014, guid: f0e0d5370a20a2f488abba721518fd7b, type: 3}
-    - time: 4.2
+    - time: 5
       value: {fileID: 21300000, guid: 68d2a5d8d3b9aeb4386fb762d409d68b, type: 3}
-    - time: 4.8
+    - time: 5.25
       value: {fileID: -1485523612, guid: a493b85eee3d5e04dba4464a8be52ba3, type: 3}
-    - time: 5.2
+    - time: 5.75
       value: {fileID: 189337609, guid: a493b85eee3d5e04dba4464a8be52ba3, type: 3}
-    - time: 5.6
+    - time: 6.25
       value: {fileID: -1077719765, guid: a493b85eee3d5e04dba4464a8be52ba3, type: 3}
-    - time: 6
+    - time: 6.75
       value: {fileID: 1887497669, guid: a493b85eee3d5e04dba4464a8be52ba3, type: 3}
-    - time: 6.4
+    - time: 7.25
       value: {fileID: 941066065, guid: a493b85eee3d5e04dba4464a8be52ba3, type: 3}
-    - time: 6.8
+    - time: 7.75
       value: {fileID: 826200, guid: a493b85eee3d5e04dba4464a8be52ba3, type: 3}
-    - time: 7.2
+    - time: 8.25
       value: {fileID: 233977192, guid: a493b85eee3d5e04dba4464a8be52ba3, type: 3}
-    - time: 7.6
+    - time: 8.75
       value: {fileID: -1773392135, guid: a493b85eee3d5e04dba4464a8be52ba3, type: 3}
-    - time: 8
+    - time: 9.25
       value: {fileID: 1927218449, guid: a493b85eee3d5e04dba4464a8be52ba3, type: 3}
-    - time: 8.4
+    - time: 9.75
       value: {fileID: 601749388, guid: a493b85eee3d5e04dba4464a8be52ba3, type: 3}
-    - time: 8.8
+    - time: 10.25
       value: {fileID: -935229023, guid: a493b85eee3d5e04dba4464a8be52ba3, type: 3}
-    - time: 9.2
+    - time: 10.75
       value: {fileID: -1072042397, guid: a493b85eee3d5e04dba4464a8be52ba3, type: 3}
-    - time: 9.6
+    - time: 11.25
       value: {fileID: 21300000, guid: 68d2a5d8d3b9aeb4386fb762d409d68b, type: 3}
-    - time: 10
+    - time: 11.75
       value: {fileID: 1621130111, guid: b8955a07648741c40860ba70e254d5ea, type: 3}
-    - time: 10.6
+    - time: 12.75
       value: {fileID: 973005747, guid: b8955a07648741c40860ba70e254d5ea, type: 3}
-    - time: 11.2
+    - time: 13.75
       value: {fileID: -1920453996, guid: b8955a07648741c40860ba70e254d5ea, type: 3}
-    - time: 11.8
+    - time: 14.75
       value: {fileID: 2026061701, guid: b8955a07648741c40860ba70e254d5ea, type: 3}
-    - time: 12.4
+    - time: 15.75
       value: {fileID: -998922969, guid: b8955a07648741c40860ba70e254d5ea, type: 3}
     attribute: m_Sprite
     path: 
     classID: 114
     script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
     flags: 2
-  m_SampleRate: 5
+  m_SampleRate: 4
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -125,7 +125,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 13
+    m_StopTime: 16
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -152,28 +152,28 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 2.4
+  - time: 2.5
     functionName: NextLine
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 4.8
+  - time: 5.25
     functionName: NextLine
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 10
+  - time: 11.75
     functionName: NextLine
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 13
+  - time: 15.75
     functionName: StopTypingText
     data: 
     objectReferenceParameter: {fileID: 0}

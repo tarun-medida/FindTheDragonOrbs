@@ -9,13 +9,14 @@ public class AnimationText : MonoBehaviour
     public TMP_Text storyText;
     public string[] dialogues;
     private int index = 0, totalVisisbleCharacters,counter = 0;
+    public Animator cutsceneAnimator;
 
     private float typeSpeed = 0.1f;
     IEnumerator Typing()
     {
          
-         index++;
-         yield return null;
+        index++;
+        yield return null;
          
 
         // type writing effect
@@ -40,6 +41,17 @@ public class AnimationText : MonoBehaviour
             yield return new WaitForSeconds(typeSpeed);
         }     
         */
+    }
+    void PauseCutScene()
+    {
+        StartCoroutine(PauseScene());
+    }
+
+    IEnumerator PauseScene()
+    {
+        cutsceneAnimator.speed = 0f;
+        yield return new WaitForSeconds(2f);
+        cutsceneAnimator.speed = 1f;
     }
 
     void NextLine()

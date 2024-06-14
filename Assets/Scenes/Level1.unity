@@ -12055,6 +12055,7 @@ MonoBehaviour:
     unlocking the wormhole.
   - The seven stones transforms into the seven islands unleasing monsters of atlantis
     on the world and now it is Giryu's responsibility to save the world.
+  cutsceneAnimator: {fileID: 911983128}
 --- !u!1 &921234759
 GameObject:
   m_ObjectHideFlags: 0
