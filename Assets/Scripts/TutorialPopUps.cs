@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 
@@ -129,5 +131,6 @@ public class TutorialPopUps : MonoBehaviour
         Destroy(cutScene.gameObject, timeToDestroy);
         yield return new WaitForSeconds(timeToDestroy);
         AudioManager.instance.musicSource.UnPause();
+
     }
 }

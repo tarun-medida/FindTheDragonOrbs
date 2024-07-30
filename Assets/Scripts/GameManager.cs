@@ -155,8 +155,11 @@ public class GameManager : MonoBehaviour
         // activate Pause Menu
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            pauseMenuUI.SetActive(true);
-            Time.timeScale = 0;
+            if(GameInstance.instance.getGameData().tutorialCompleted == true)
+            {
+                pauseMenuUI.SetActive(true);
+                Time.timeScale = 0;
+            }
         }
         // *** LOSE CONDITION ***
         // checking player health to activate Game Over Menu
